@@ -357,9 +357,9 @@ class DarkstoreScene(RoboCasaSceneBuilder):
                     fixture_config = default_config
 
                 if fixture_config["type"] == "wall":
-                    fixture_config['texture'] = str(list(Path('assets/textures/walls').iterdir())[wall_texture_id].resolve())
+                    fixture_config['texture'] = str(sorted(list(Path('assets/textures/walls').iterdir()))[wall_texture_id].resolve())
                 elif fixture_config["type"] == "floor":
-                    fixture_config['texture'] = str(list(Path('assets/textures/floors').iterdir())[floor_texture_id].resolve())
+                    fixture_config['texture'] = str(sorted(list(Path('assets/textures/floors').iterdir()))[floor_texture_id].resolve())
 
                 # set fixture type
                 if fixture_config["type"] not in FIXTURES:
@@ -369,7 +369,7 @@ class DarkstoreScene(RoboCasaSceneBuilder):
                 # modify type to ceiling
                 if fixture_config['name'] == "ceiling_room":
                     fixture_config['type'] = Ceiling
-                    fixture_config['texture'] = str(list(Path('assets/textures/ceilings').iterdir())[ceiling_texture_id].resolve())
+                    fixture_config['texture'] = str(sorted(list(Path('assets/textures/ceilings').iterdir()))[ceiling_texture_id].resolve())
 
                 # pre-processing for fixture size
                 size = fixture_config.get("size", None)
