@@ -66,6 +66,7 @@ def parse_args(args=None):
     parser.add_argument("-r", "--robot-uids", type=str, default="ds_fetch_basket", help=f"Robot id")
     parser.add_argument("--vis", action="store_true", help="whether or not to open a GUI to visualize the solution live")
     parser.add_argument("--save-video", action="store_true", help="whether or not to save videos locally")
+    parser.add_argument("--save-traj", action="store_true", help="whether or not to save trajectory locally")
     parser.add_argument("--traj-name", type=str, help="The name of the trajectory .h5 file that will be created.")
     parser.add_argument("--shader", default="default", type=str, help="Change shader used for rendering. Default is 'default' which is very fast. Can also be 'rt' for ray tracing and generating photo-realistic renders. Can also be 'rt-fast' for a faster but lower quality ray-traced renderer")
      
@@ -191,7 +192,9 @@ def main(args) -> str:
 
         successes.append(success)
 
-        env.flush_trajectory()
+        if args.save_traj:
+            env.flush_trajectory()
+
         if args.save_video:
             env.flush_video(str(seed))
         pbar.update(1)
