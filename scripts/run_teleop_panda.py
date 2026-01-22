@@ -151,7 +151,7 @@ def solve(env: BaseEnv, debug=False, vis=False):
             joint_acc_limits=0.5,
             joint_vel_limits=0.5,
         )
-    viewer = env.render_human()
+    viewer = env.render()
 
     last_checkpoint_state = None
     gripper_open = True
@@ -168,7 +168,7 @@ def solve(env: BaseEnv, debug=False, vis=False):
         # print(transform_window.ghost_objects, transform_window._gizmo_pose)
         # planner.grasp_pose_visual.set_pose(transform_window._gizmo_pose)
 
-        env.render_human()
+        env.render()
         execute_current_pose = False
         if viewer.window.key_press("h"):
             print("""Available commands:

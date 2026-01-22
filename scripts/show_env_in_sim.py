@@ -101,17 +101,17 @@ def main(args):
         obs, reward, terminated, truncated, info = env.step(action)
         print(info)
         if gui:
-            env.render_human()
+            env.render()
 
     # render wait
     if gui:
-        viewer = env.render_human()
+        viewer = env.render()
         while True:
             if viewer.closed:
                 exit()
             if viewer.window.key_down("c"):
                 break
-            env.render_human()
+            env.render()
         
 
     env.close()

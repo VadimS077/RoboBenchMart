@@ -165,7 +165,7 @@ def main(args) -> str:
                 i += 1
 
             if args.vis:
-                env.render_human()
+                env.render()
 
             if done or trunc:
                 break
