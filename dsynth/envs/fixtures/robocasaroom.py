@@ -176,7 +176,7 @@ class DarkstoreScene(RoboCasaSceneBuilder):
             lamp = self.env.assets_lib['fixtures.lamp'].ms_build_actor(f'[ENV#{scene_idx}]_lamp_{n}', self.scene, pose=pose, scene_idxs=[scene_idx])
             self.env.actors["fixtures"]["lamps"][f'lamp_{n}'] = lamp
     
-    def _load_lighting(self, scene_idx, lamps_coords, height, intensity=10, light_type="spot"):
+    def _load_lighting(self, scene_idx, lamps_coords, height, intensity=10, light_type="area"):
         shadow = self.env.enable_shadow
 
         # disable shadows when gui is used with many parallel scenes
