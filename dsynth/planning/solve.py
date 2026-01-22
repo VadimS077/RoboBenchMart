@@ -36,7 +36,7 @@ from mani_skill.envs.tasks import PickCubeEnv
 from mani_skill.utils.geometry.trimesh_utils import get_component_mesh
 from mani_skill.examples.motionplanning.panda.motionplanner import \
     PandaArmMotionPlanningSolver
-from mani_skill.examples.motionplanning.panda.utils import (
+from mani_skill.examples.motionplanning.base_motionplanner.utils import (
     compute_grasp_info_by_obb, get_actor_obb)
 from mani_skill.utils import common
 

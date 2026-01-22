@@ -9,10 +9,10 @@ from mani_skill.agents.base_agent import BaseAgent
 from mani_skill.envs.sapien_env import BaseEnv
 from mani_skill.envs.scene import ManiSkillScene
 from mani_skill.utils.structs.pose import to_sapien_pose
-from mani_skill.examples.motionplanning.panda.motionplanner import (
-    build_panda_gripper_grasp_pose_visual,
-    PandaArmMotionPlanningSolver
-)
+from mani_skill.examples.motionplanning.panda.motionplanner import PandaArmMotionPlanningSolver
+
+from mani_skill.examples.motionplanning.two_finger_gripper.motionplanner import build_two_finger_gripper_grasp_pose_visual
+
 from mplib.collision_detection.fcl import FCLObject
 from mplib.sapien_utils.conversion import convert_object_name
 from mplib.sapien_utils import SapienPlanner, SapienPlanningWorld
@@ -57,7 +57,7 @@ class PandaArmMotionPlanningSolverV2(PandaArmMotionPlanningSolver):
         self.grasp_pose_visual = None
         if self.vis and self.visualize_target_grasp_pose:
             if "grasp_pose_visual" not in self.base_env.scene.actors:
-                self.grasp_pose_visual = build_panda_gripper_grasp_pose_visual(
+                self.grasp_pose_visual = build_two_finger_gripper_grasp_pose_visual(
                     self.base_env.scene
                 )
             else:
