@@ -175,7 +175,7 @@ def load_assets_lib(products_hierarchy_dict: DictConfig, disable_caching=False):
         if not isinstance(val, Dict):
             assets_dict[key] = val
         else:
-            assets_dict[key] = load_assets_lib(products_hierarchy_dict[key])
+            assets_dict[key] = load_assets_lib(products_hierarchy_dict[key], disable_caching=disable_caching)
     return assets_dict
 
 
