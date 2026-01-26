@@ -7,6 +7,7 @@ from omegaconf import DictConfig, OmegaConf
 from transforms3d import quaternions
 import torch
 import numpy as np
+import trimesh
 
 import scene_synthesizer as synth
 from scene_synthesizer import utils
@@ -32,6 +33,7 @@ class Asset:
 
     disable_caching: bool = False
     _ss_asset: Any = None
+    _ss_asset_convex: Any = None
     _trimesh_scene: Any = None
     _ms_scale: Any = None
     _ms_origin: Any = None
@@ -57,6 +59,20 @@ class Asset:
             self._ss_asset = ss_asset
 
         return ss_asset
+
+    @property
+    def ss_asset_convex(self):
+        if self._ss_asset_convex is not None:
+            return self._ss_asset_convex
+        
+        ss_asset_convex = self.ss_asset
+        ss_asset_convex._model = trimesh.Scene(ss_asset_convex._model.convex_hull)
+
+        if not self.disable_caching:
+            self._ss_asset_convex = ss_asset_convex
+
+        return ss_asset_convex
+        
     
     @property
     def trimesh_scene(self):
