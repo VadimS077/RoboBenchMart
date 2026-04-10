@@ -805,5 +805,218 @@ def solve_fetch_pick_to_basket_one_prod_old(env: PickToBasketSpriteEnv, seed=Non
     planner.render_wait()
     return res
 
+def solve_fetch_pick_to_basket_cont_one_prod_by_name(
+    env: PickToBasketContEnv,
+    target_product_actor_name="[ENV#0]_food.CRACKERS_COOKIES.OreoLemonCremeSandwichCookies:0:0:1:0",
+    seed=None,
+    debug=False,
+    vis=True,
+    verbose=False
+):
+    """
+    Same pipeline as solve_fetch_pick_to_basket_cont_one_prod, but picks a specific product
+    by actor name (e.g. '[ENV#0]_food.ENERGY_DRINKS.MonsterEnergyDrink:0:2:0:0') instead of
+    the one closest to the base.
+    """
+    env.reset(seed=seed, options={"reconfigure": True})
+    planner = FetchMotionPlanningSapienSolver(
+        env,
+        debug=debug,
+        vis=vis,
+        base_pose=env.unwrapped.agent.robot.pose,
+        visualize_target_grasp_pose=vis,
+        print_env_info=False,
+        disable_actors_collision=False,
+        verbose=debug
+    )
+    def get_obb_center(obb):
+        T = np.array(obb.primitive.transform)
+        return T[:3, 3]
 
+    def get_base_pose():
+        return env.agent.base_link.pose
+
+    def get_tcp_pose():
+        return env.agent.tcp.pose
+
+    def get_tcp_matrix():
+        tcp_pose = get_tcp_pose()
+        return tcp_pose.to_transformation_matrix()[0].cpu().numpy()
+
+    def get_tcp_center():
+        return get_tcp_matrix()[:3, 3]
+
+    if len(planner.planner.planning_world.check_collision()) > 0:
+        return BAD_ENV_ERROR_CODE
+
+    FINGER_LENGTH = 0.04
+    env = env.unwrapped
+
+    products = env.actors.get("products", {})
+    if target_product_actor_name not in products:
+        print(f"target_product_actor_name not in products: {target_product_actor_name}")
+        return -1
+    
+    target_product_actor = products[target_product_actor_name]
+    obb = get_actor_obb(target_product_actor)
+    target_product_center = get_obb_center(obb)
+
+    # -------------------------------------------------------------------------- #
+    # Go to shelf
+    # -------------------------------------------------------------------------- #
+    actor_shelf_name = env.active_shelves[0][0]
+    shelf_pose = env.actors["fixtures"]["shelves"][actor_shelf_name].pose.sp
+    origin = shelf_pose.p - 1.4 * env.directions_to_shelf[0]
+
+    res = planner.drive_base(origin)
+    if res == -1:
+        return res
+    view_to_target = target_product_center - get_base_pose().sp.p
+    view_to_target[2] = 0.0
+    res = planner.rotate_base_z(view_to_target)
+    if res == -1:
+        return res
+
+    planner.planner.update_from_simulation()
+
+    # -------------------------------------------------------------------------- #
+    # Lift end-effector hand
+    # -------------------------------------------------------------------------- #
+
+    lift_ee_pos = get_tcp_pose().sp.p
+
+    # lift the hand to the level of product
+    lift_ee_pos[2] = target_product_center[2]
+
+    lift_ee_pose = sapien.Pose(p=lift_ee_pos, q=get_tcp_pose().sp.q)
+
+    # lift 0.45 in front of the robot
+    lift_ee_pose = lift_ee_pose * sapien.Pose(p=[0, 0, 0.4])  # lift
+
+    res = planner.static_manipulation(lift_ee_pose, n_init_qpos=50, disable_lift_joint=False)
+    if res == -1:
+        return res
+    planner.planner.update_from_simulation()
+
+    # -------------------------------------------------------------------------- #
+    # Move to pre-grasp pose
+    # -------------------------------------------------------------------------- #
+
+    pre_grasp_base_translation = target_product_center - get_tcp_center()
+    pre_grasp_base_translation[2] = 0.0
+
+    # move base to position 0.15m in front of the target object
+    base_target_pos = get_base_pose().sp.p + (
+        1 - 0.15 / np.linalg.norm(pre_grasp_base_translation)
+    ) * pre_grasp_base_translation
+
+    res = planner.drive_base(base_target_pos)
+    if res == -1:
+        return res
+    view_to_target = target_product_center - get_base_pose().sp.p
+    view_to_target[2] = 0.0
+    res = planner.rotate_base_z(view_to_target)
+    if res == -1:
+        return res
+    planner.planner.update_from_simulation()
+
+    # -------------------------------------------------------------------------- #
+    # Grasp target object
+    # -------------------------------------------------------------------------- #
+
+    if is_mesh_cylindrical(target_product_actor):
+        grasp_approaching = env.directions_to_shelf[0].copy()
+        grasp_approaching[2] = 0.0
+        grasp_approaching = common.np_normalize_vector(grasp_approaching)
+
+        grasp_closing = np.cross(grasp_approaching, [0.0, 0.0, 1.0])
+        grasp_center = target_product_center
+
+    else:  # mesh is a rectangular box, pick from the thinnest side
+        grasp_info = compute_grasp_info_by_obb(
+            obb,
+            approaching=get_tcp_matrix()[:3, 2],
+            target_closing=get_tcp_matrix()[:3, 1],
+            depth=FINGER_LENGTH,
+        )
+        grasp_closing, grasp_center, grasp_approaching = (
+            grasp_info["closing"],
+            grasp_info["center"],
+            grasp_info["approaching"],
+        )
+
+    grasp_pose = env.agent.build_grasp_pose(grasp_approaching, grasp_closing, grasp_center)
+
+    planner.planner.planning_world.get_allowed_collision_matrix().set_default_entry(
+        get_fcl_object_name(target_product_actor), True
+    )
+    
+    res = planner.static_manipulation(grasp_pose, n_init_qpos=400, disable_lift_joint=False)
+    if res == -1:
+        print(f"grasp_pose failed: {res}")
+        return res
+
+    res = planner.close_gripper()
+    if res == -1:
+        return res
+
+    kwargs = {
+        "name": get_fcl_object_name(target_product_actor),
+        "art_name": "scene-0_ds_fetch_basket_1",
+        "link_id": planner.planner.move_group_link_id,
+    }
+    planner.planner.planning_world.attach_object(**kwargs)
+    planner.planner.update_from_simulation()
+
+    # -------------------------------------------------------------------------- #
+    # Lift product
+    # -------------------------------------------------------------------------- #
+    lift_pose = grasp_pose * sapien.Pose([0.06, 0.0, 0.0])
+    res = planner.static_manipulation(lift_pose, n_init_qpos=200, disable_lift_joint=False)
+    if res == -1:
+        return res
+    planner.planner.update_from_simulation()
+
+    # -------------------------------------------------------------------------- #
+    # Move backward
+    # -------------------------------------------------------------------------- #
+
+    res = planner.move_forward_delta(delta=-0.4)
+    if res == -1:
+        return res
+    planner.planner.update_from_simulation()
+
+    # -------------------------------------------------------------------------- #
+    # Drop to basket
+    # -------------------------------------------------------------------------- #
+    def _calc_basket_target_pose_world(env) -> sapien.Pose:
+        """
+        Pick-to-basket fallback for envs without `calc_target_pose()`.
+        Mirrors `pick_to_basket.py`: base_link * [0.3, 0.25, 0.14].
+        """
+        base_pose = env.unwrapped.agent.base_link.pose.sp
+        basket_shift = sapien.Pose(p=[0.3, 0.25, 0.14])
+        return base_pose * basket_shift
+    goal_center = _calc_basket_target_pose_world(env).p
+    goal_center = goal_center  # add shift from base to basket
+
+    goal_approaching = np.array([0, 0.0, -1.0])
+    goal_closing = -get_base_pose().sp.to_transformation_matrix()[:3, 1]
+
+    goal_pose = env.agent.build_grasp_pose(goal_approaching, goal_closing, goal_center)
+    goal_pose = goal_pose * sapien.Pose(p=[-0.03, 0.0, -0.35])
+
+    res = planner.static_manipulation(goal_pose, n_init_qpos=100, disable_lift_joint=False)
+    if res == -1:
+        return res
+
+    res = planner.open_gripper()
+    if res == -1:
+        return res
+    planner.planner.update_from_simulation()
+
+    res = planner.idle_steps(t=10)
+
+    planner.render_wait()
+    return res
 

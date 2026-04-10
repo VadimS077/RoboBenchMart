@@ -95,8 +95,9 @@ def _main(args, proc_id: int = 0, start_seed: int = 0) -> str:
     failed_motion_plans = 0
     passed = 0
     while True:
-        try:
-            res = solve(env, seed=seed, debug=args.debug, vis=True if args.vis else False)
+        try: 
+            print(args.debug)
+            res = solve(env, seed=0,target_product_actor_name="[ENV#0]_food.HOUSEHOLD.VanishStainRemover:0:3:1:0",debug=args.debug, vis=True if args.vis else False)
         except Exception as e:
             print(f"Cannot find valid solution because of an error in motion planning solution: {e}")
             res = -1
@@ -134,7 +135,7 @@ def _main(args, proc_id: int = 0, start_seed: int = 0) -> str:
                     success_rate=np.mean(successes),
                     failed_motion_plan_rate=failed_motion_plans / (seed + 1),
                     avg_episode_length=np.mean(solution_episode_lengths),
-                    max_episode_length=np.max(solution_episode_lengths),
+                    #max_episode_length=np.max(solution_episode_lengths),
                     # min_episode_length=np.min(solution_episode_lengths)
                 )
             )

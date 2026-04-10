@@ -442,15 +442,15 @@ class PickToBasketContEnv(DarkstoreContinuousBaseEnv):
                     0,
                     0,
                     0,
-                    0.34,
+                    0.36,
+                    0, #unused
                     0,
+                    0, #unused
+                    0.75,
                     0,
+                    0.81,
                     0,
-                    1.4,
-                    0,
-                    0.76,
-                    0,
-                    - 2 * np.pi / 3,
+                    -0.78,
                     0,
                     0.015,
                     0.015,
@@ -593,3 +593,21 @@ class PickToBasketContDuffEnv(PickToBasketContEnv):
     TARGET_PRODUCT_NAME = 'Duff Beer Can'
 
 PickToBasketContDuffEnv.__doc__ = PICK_TO_BASKET_DOC_STRING.format(product_name='Duff Beer Can')
+
+@register_env('PickToBasketContOreoEnv', max_episode_steps=200000)
+class PickToBasketContOreoEnv(PickToBasketContEnv):
+    TARGET_PRODUCT_NAME = 'Oreo Lemon Creme Sandwich Cookies'
+
+PickToBasketContOreoEnv.__doc__ = PICK_TO_BASKET_DOC_STRING.format(product_name='Oreo Lemon Creme Sandwich Cookies')
+
+@register_env('PickToBasketContMonsterEnv', max_episode_steps=200000)
+class PickToBasketContMonsterEnv(PickToBasketContEnv):
+    TARGET_PRODUCT_NAME = 'Monster Energy Drink'
+
+PickToBasketContMonsterEnv.__doc__ = PICK_TO_BASKET_DOC_STRING.format(product_name='Monster Energy Drink')
+
+@register_env('PickToBasketContVanishEnv', max_episode_steps=200000)
+class PickToBasketContVanishEnv(PickToBasketContEnv):
+    TARGET_PRODUCT_NAME = 'Vanish Stain Remover'
+
+PickToBasketContVanishEnv.__doc__ = PICK_TO_BASKET_DOC_STRING.format(product_name='Vanish Stain Remover')

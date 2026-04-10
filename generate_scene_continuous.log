@@ -1,0 +1,680 @@
+[2026-04-06 20:22:53,853][__main__][INFO] - Write results to: generated_envs/ds_small_scene
+[2026-04-06 20:22:55,956][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 20:22:55,987][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:22:56,061][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 20:22:58,902][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:22:59,008][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 20:23:07,547][scene_synthesizer][INFO] - Loading asset assets/preprocessed/milkCarton.glb
+[2026-04-06 20:23:09,204][scene_synthesizer][INFO] - Loading asset assets/preprocessed/coffeePackaging.glb
+[2026-04-06 20:23:13,231][__main__][INFO] - Done
+[2026-04-06 20:40:32,539][__main__][INFO] - Write results to: generated_envs/ds_small_scene
+[2026-04-06 20:40:34,608][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 20:40:34,623][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:40:34,694][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 20:40:37,446][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:40:37,536][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 20:40:38,701][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 20:40:41,176][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 20:40:51,786][__main__][INFO] - Done
+[2026-04-06 20:42:47,933][__main__][INFO] - Write results to: generated_envs/ds_small_scene
+[2026-04-06 20:42:49,963][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 20:42:49,978][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:42:50,050][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 20:42:52,781][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:42:52,872][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 20:42:52,974][dsynth.scene_gen.scene_generator][ERROR] - Failed to generate ds_small_scene_dea6018d_0! Unexpected error: high - low < 0
+[2026-04-06 20:42:52,977][__main__][INFO] - All generations are failed
+[2026-04-06 20:43:17,412][__main__][INFO] - Write results to: generated_envs/ds_small_scene
+[2026-04-06 20:43:19,459][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 20:43:19,474][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:43:19,545][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 20:43:22,267][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:43:22,355][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 20:43:22,456][dsynth.scene_gen.scene_generator][ERROR] - Failed to generate ds_small_scene_7d6657e1_0! Unexpected error: high - low < 0
+[2026-04-06 20:43:22,458][__main__][INFO] - All generations are failed
+[2026-04-06 20:44:16,688][__main__][INFO] - Write results to: generated_envs/ds_small_scene
+[2026-04-06 20:44:18,720][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 20:44:18,734][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:44:18,804][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 20:44:21,521][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:44:21,610][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 20:44:22,762][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 20:44:25,206][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 20:44:35,805][__main__][INFO] - Done
+[2026-04-06 20:45:39,442][__main__][INFO] - Write results to: generated_envs/ds_small_scene
+[2026-04-06 20:45:41,475][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 20:45:41,490][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:45:41,562][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 20:45:44,328][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:45:44,418][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 20:45:45,581][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 20:45:48,032][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 20:45:58,609][__main__][INFO] - Done
+[2026-04-06 20:46:47,343][__main__][INFO] - Write results to: generated_envs/ds_small_scene
+[2026-04-06 20:46:49,446][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 20:46:49,461][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:46:49,533][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 20:46:52,285][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:46:52,374][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 20:46:53,539][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 20:46:55,961][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 20:47:06,561][__main__][INFO] - Done
+[2026-04-06 20:52:02,519][__main__][INFO] - Write results to: generated_envs/ds_small_scene
+[2026-04-06 20:52:04,573][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 20:52:04,588][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:52:04,659][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 20:52:07,436][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:52:07,528][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 20:52:31,185][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 20:52:31,713][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 20:52:32,887][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 20:52:35,393][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 20:52:42,556][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 20:52:43,056][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 20:52:43,821][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 20:52:44,264][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 20:52:59,417][__main__][INFO] - Done
+[2026-04-06 20:58:52,743][__main__][INFO] - Write results to: generated_envs/ds_small_scene
+[2026-04-06 20:58:55,022][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 20:58:55,037][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:58:55,107][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 20:58:57,860][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 20:58:57,950][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 20:59:16,907][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 20:59:17,389][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 20:59:17,795][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 20:59:20,315][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 20:59:27,702][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 20:59:51,578][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 20:59:52,793][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 20:59:53,287][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 20:59:54,066][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:00:16,203][__main__][INFO] - Done
+[2026-04-06 21:09:06,700][__main__][INFO] - Write results to: generated_envs/ds_small_scene
+[2026-04-06 21:09:08,722][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:09:08,736][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:09:08,808][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:09:11,608][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:09:11,698][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:09:35,339][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:09:35,860][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:09:37,018][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 21:09:39,525][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:09:46,762][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:09:47,298][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:09:48,105][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:09:48,553][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:10:03,621][__main__][INFO] - Done
+[2026-04-06 21:12:08,471][__main__][INFO] - Write results to: generated_envs/ds_small_scene
+[2026-04-06 21:12:10,716][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:12:10,730][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:12:10,800][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:12:13,472][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:12:13,561][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:12:14,045][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:12:15,244][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 21:12:32,934][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:12:33,343][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 21:12:35,802][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:12:59,598][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:13:07,344][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:13:07,843][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:13:08,680][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:13:29,328][__main__][INFO] - Done
+[2026-04-06 21:15:09,690][__main__][INFO] - Write results to: generated_envs/ds_small_scene
+[2026-04-06 21:15:11,956][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:15:11,971][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:15:12,041][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:15:25,178][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:15:25,274][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:15:32,527][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:15:33,731][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 21:15:36,071][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:15:51,996][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 21:16:11,053][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:16:11,554][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:16:14,437][scene_synthesizer][INFO] - Loading asset assets/preprocessed/fanta_naranja_2l_rotated.glb
+[2026-04-06 21:16:15,646][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:16:17,844][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:16:18,305][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:16:30,565][__main__][INFO] - Done
+[2026-04-06 21:19:16,600][__main__][INFO] - Write results to: generated_envs/ds_small_scene
+[2026-04-06 21:19:18,662][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:19:18,676][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:19:18,748][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:19:21,547][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:19:21,638][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:19:45,406][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:19:45,926][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:19:47,098][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 21:19:49,634][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:19:56,922][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:19:57,401][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:19:58,177][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:19:58,660][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:20:13,688][__main__][INFO] - Done
+[2026-04-06 21:26:55,447][__main__][INFO] - Write results to: generated_envs/ds_small_scene_0
+[2026-04-06 21:26:57,593][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:26:57,608][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:26:57,680][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:27:00,643][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:27:00,736][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:27:01,935][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:27:02,451][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:27:26,975][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:27:27,793][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:27:30,113][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:27:30,535][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 21:27:33,052][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:27:40,435][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:27:53,152][__main__][INFO] - Done
+[2026-04-06 21:29:34,483][__main__][INFO] - Write results to: generated_envs/ds_small_scene_0
+[2026-04-06 21:29:36,534][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:29:36,549][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:29:36,622][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:29:39,386][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:29:39,477][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:29:40,643][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:29:41,123][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:30:04,841][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:30:05,632][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:30:08,070][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:30:08,490][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 21:30:10,990][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:30:18,346][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:30:31,645][__main__][INFO] - Done
+[2026-04-06 21:31:42,285][__main__][INFO] - Write results to: generated_envs/ds_small_scene_1
+[2026-04-06 21:31:44,604][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:31:44,619][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:31:44,690][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:31:47,398][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:31:47,488][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:31:47,958][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:31:55,221][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:32:19,118][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:32:19,650][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 21:32:39,077][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:32:40,628][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:32:41,408][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:32:43,807][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:32:44,243][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 21:33:05,996][__main__][INFO] - Done
+[2026-04-06 21:38:41,268][__main__][INFO] - Write results to: generated_envs/ds_small_scene_0
+[2026-04-06 21:38:43,317][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:38:43,331][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:38:43,402][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:38:46,176][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:38:46,266][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:38:46,740][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:38:47,973][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:39:11,902][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:39:12,393][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 21:39:31,745][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:39:32,512][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:39:34,915][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:39:35,834][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:39:43,188][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 21:40:04,208][__main__][INFO] - Done
+[2026-04-06 21:40:24,171][__main__][INFO] - Write results to: generated_envs/ds_small_scene_1
+[2026-04-06 21:40:26,456][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:40:26,471][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:40:26,543][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:40:29,278][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:40:29,372][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:40:29,851][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:40:37,166][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:41:01,664][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:41:02,187][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 21:41:22,312][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:41:23,738][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:41:24,537][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:41:27,162][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:41:27,637][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 21:41:50,518][__main__][INFO] - Done
+[2026-04-06 21:42:13,038][__main__][INFO] - Write results to: generated_envs/ds_small_scene_0
+[2026-04-06 21:42:15,320][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:42:15,335][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:42:15,407][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:42:18,119][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:42:18,209][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:42:18,691][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:42:19,883][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:42:43,692][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:42:44,174][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 21:43:03,442][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:43:04,198][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:43:06,495][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:43:07,431][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:43:14,719][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 21:43:35,769][__main__][INFO] - Done
+[2026-04-06 21:43:45,254][__main__][INFO] - Write results to: generated_envs/ds_small_scene_2
+[2026-04-06 21:43:47,512][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:43:47,526][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:43:47,607][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:44:00,910][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:44:01,000][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:44:24,962][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:44:26,455][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:44:27,393][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 21:44:46,571][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:44:47,113][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:44:50,009][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:44:57,356][scene_synthesizer][INFO] - Loading asset assets/preprocessed/fanta_naranja_2l_rotated.glb
+[2026-04-06 21:44:59,639][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:45:00,123][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:45:19,594][__main__][INFO] - Done
+[2026-04-06 21:45:30,151][__main__][INFO] - Write results to: generated_envs/ds_small_scene_3
+[2026-04-06 21:45:32,445][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:45:32,459][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:45:32,529][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:45:35,320][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:45:35,414][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:45:40,873][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:45:41,433][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 21:45:59,225][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:46:22,964][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 21:46:25,528][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:46:28,367][scene_synthesizer][INFO] - Loading asset assets/preprocessed/fanta_naranja_2l_rotated.glb
+[2026-04-06 21:46:29,572][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:46:30,799][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:46:31,255][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:46:31,747][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:46:50,160][__main__][INFO] - Done
+[2026-04-06 21:47:01,168][__main__][INFO] - Write results to: generated_envs/ds_small_scene_4
+[2026-04-06 21:47:03,458][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:47:03,473][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:47:03,546][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:47:06,833][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:47:06,922][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:47:30,775][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 21:47:33,278][scene_synthesizer][INFO] - Loading asset assets/preprocessed/fanta_naranja_2l_rotated.glb
+[2026-04-06 21:47:34,399][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:47:34,881][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:47:36,072][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:47:42,054][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:47:42,505][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 21:48:01,991][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:48:02,793][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:48:03,295][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:48:25,159][__main__][INFO] - Done
+[2026-04-06 21:49:35,833][__main__][INFO] - Write results to: generated_envs/ds_small_scene_0
+[2026-04-06 21:49:38,129][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:49:38,143][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:49:38,214][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:49:40,915][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:49:41,003][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:49:41,477][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:49:42,686][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:50:06,655][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:50:07,145][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 21:50:26,604][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:50:27,363][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:50:29,772][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:50:30,683][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:50:38,070][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 21:50:58,607][__main__][INFO] - Done
+[2026-04-06 21:55:04,229][__main__][INFO] - Write results to: generated_envs/ds_small_scene_2
+[2026-04-06 21:55:16,953][__main__][INFO] - Write results to: generated_envs/ds_small_scene_2
+[2026-04-06 21:55:19,207][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:55:19,222][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:55:19,294][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:55:32,341][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:55:32,430][scene_synthesizer][INFO] - Loading asset assets/preprocessed/fanta_naranja_2l_rotated.glb
+[2026-04-06 21:55:33,619][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:55:34,065][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:55:34,529][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:55:36,920][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 21:55:55,981][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:55:56,964][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:56:05,170][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:56:29,082][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:56:30,549][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:56:50,836][__main__][INFO] - Done
+[2026-04-06 21:56:58,996][__main__][INFO] - Write results to: generated_envs/ds_small_scene_3
+[2026-04-06 21:57:01,306][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:57:01,321][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:57:01,391][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:57:04,192][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:57:04,281][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:57:04,752][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:57:05,172][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:57:05,946][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 21:57:25,021][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:57:30,577][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:57:31,577][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:57:32,817][scene_synthesizer][INFO] - Loading asset assets/preprocessed/fanta_naranja_2l_rotated.glb
+[2026-04-06 21:57:34,031][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:57:57,968][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 21:58:00,543][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:58:22,473][__main__][INFO] - Done
+[2026-04-06 21:58:30,387][__main__][INFO] - Write results to: generated_envs/ds_small_scene_4
+[2026-04-06 21:58:32,671][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 21:58:32,685][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:58:32,756][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 21:58:36,055][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 21:58:36,146][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 21:58:36,938][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 21:58:37,407][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 21:58:39,839][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 21:58:40,252][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 21:58:59,352][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 21:58:59,901][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 21:59:01,075][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 21:59:07,101][scene_synthesizer][INFO] - Loading asset assets/preprocessed/fanta_naranja_2l_rotated.glb
+[2026-04-06 21:59:08,309][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 21:59:32,418][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 21:59:54,178][__main__][INFO] - Done
+[2026-04-06 22:01:42,832][__main__][INFO] - Write results to: generated_envs/ds_small_scene_2
+[2026-04-06 22:01:45,119][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 22:01:45,133][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 22:01:45,203][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 22:01:58,455][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 22:01:58,545][scene_synthesizer][INFO] - Loading asset assets/preprocessed/fanta_naranja_2l_rotated.glb
+[2026-04-06 22:01:59,752][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 22:02:00,174][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 22:02:00,644][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 22:02:03,018][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 22:02:22,056][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 22:02:22,999][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 22:02:31,204][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 22:02:55,012][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 22:02:56,515][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 22:03:16,557][__main__][INFO] - Done
+[2026-04-06 22:04:23,270][__main__][INFO] - Write results to: generated_envs/ds_small_scene_3
+[2026-04-06 22:04:25,531][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 22:04:25,545][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 22:04:25,616][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 22:04:28,382][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 22:04:28,471][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 22:04:28,940][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 22:04:29,361][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 22:04:30,144][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 22:04:49,174][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 22:04:54,560][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 22:04:55,524][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 22:04:56,751][scene_synthesizer][INFO] - Loading asset assets/preprocessed/fanta_naranja_2l_rotated.glb
+[2026-04-06 22:04:57,974][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 22:05:21,993][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 22:05:24,564][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 22:05:46,380][__main__][INFO] - Done
+[2026-04-06 22:06:52,744][__main__][INFO] - Write results to: generated_envs/ds_small_scene_4
+[2026-04-06 22:06:54,994][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-06 22:06:55,008][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 22:06:55,078][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-06 22:06:58,346][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-06 22:06:58,435][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-06 22:06:59,215][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-06 22:06:59,712][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-06 22:07:02,153][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-06 22:07:02,569][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-06 22:07:21,891][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-06 22:07:22,456][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-06 22:07:23,625][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-06 22:07:29,619][scene_synthesizer][INFO] - Loading asset assets/preprocessed/fanta_naranja_2l_rotated.glb
+[2026-04-06 22:07:30,834][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-06 22:07:55,023][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-06 22:08:16,829][__main__][INFO] - Done
+[2026-04-07 21:15:59,751][__main__][INFO] - Write results to: generated_envs/ds_small_scene_0
+[2026-04-07 21:16:01,965][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-07 21:16:01,993][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-07 21:16:02,063][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-07 21:16:05,007][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-07 21:16:05,123][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-07 21:16:05,621][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-07 21:16:06,670][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-07 21:16:27,317][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-07 21:16:27,766][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-07 21:16:45,501][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-07 21:16:46,149][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-07 21:16:48,583][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-07 21:16:49,393][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-07 21:16:55,557][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-07 21:17:11,219][__main__][INFO] - Done
+[2026-04-07 21:19:39,993][__main__][INFO] - Write results to: generated_envs/ds_small_scene_0
+[2026-04-07 21:19:42,144][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-07 21:19:42,159][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-07 21:19:42,230][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-07 21:19:45,085][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-07 21:19:45,174][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-07 21:19:45,678][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-07 21:19:46,853][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-07 21:20:10,989][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-07 21:20:11,470][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-07 21:20:30,791][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-07 21:20:31,559][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-07 21:20:33,963][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-07 21:20:34,879][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-07 21:20:42,316][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-07 21:21:02,503][__main__][INFO] - Done
+[2026-04-07 21:25:32,333][__main__][INFO] - Write results to: generated_envs/ds_small_scene_0
+[2026-04-07 21:25:34,538][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-07 21:25:34,553][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-07 21:25:34,624][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-07 21:25:37,454][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-07 21:25:37,542][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-07 21:25:38,008][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-07 21:25:38,936][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-07 21:26:00,259][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-07 21:26:00,749][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-07 21:26:16,807][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-07 21:26:17,326][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-07 21:26:19,712][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-07 21:26:20,247][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-07 21:26:27,514][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-07 21:26:41,467][__main__][INFO] - Done
+[2026-04-08 22:12:15,071][__main__][INFO] - Write results to: generated_envs/ds_small_scene_0
+[2026-04-08 22:12:17,166][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-08 22:12:17,198][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-08 22:12:17,271][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-08 22:12:19,996][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-08 22:12:20,118][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-08 22:12:39,143][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-08 22:12:39,725][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-08 22:12:41,632][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-08 22:12:47,230][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-08 22:13:10,854][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-08 22:13:11,717][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-08 22:13:12,233][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-08 22:13:12,768][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-08 22:13:15,192][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-08 22:13:35,018][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-08 22:13:35,029][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-08 22:13:35,092][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-08 22:13:37,670][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-08 22:13:37,752][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-08 22:13:38,021][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-08 22:13:38,516][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-08 22:13:40,942][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-08 22:13:41,783][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-08 22:13:42,259][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-08 22:14:03,608][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-08 22:14:22,693][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-08 22:14:23,101][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-08 22:14:30,556][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-08 22:14:49,061][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-08 22:14:49,072][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-08 22:14:49,137][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-08 22:14:59,701][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-08 22:14:59,783][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-08 22:15:02,073][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-08 22:15:02,568][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-08 22:15:02,847][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-08 22:15:26,232][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-08 22:15:27,076][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-08 22:15:27,491][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-08 22:15:46,412][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-08 22:15:46,813][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-08 22:15:48,915][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-08 22:16:13,328][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-08 22:16:13,340][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-08 22:16:13,423][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-08 22:16:16,443][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-08 22:16:16,525][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-08 22:16:18,282][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-08 22:16:18,527][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-08 22:16:24,504][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-08 22:16:40,838][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-08 22:16:41,322][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-08 22:16:42,199][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-08 22:17:03,404][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-08 22:17:05,862][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-08 22:17:06,391][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-08 22:17:19,681][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-08 22:17:19,692][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-08 22:17:19,757][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-08 22:17:22,885][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-08 22:17:22,970][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-08 22:17:25,370][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-08 22:17:25,663][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-08 22:17:26,179][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-08 22:17:33,513][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-08 22:17:33,795][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-08 22:17:35,084][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-08 22:17:54,815][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-08 22:18:19,320][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-08 22:18:20,246][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-08 22:18:39,469][__main__][INFO] - Done
+[2026-04-09 21:37:25,392][__main__][INFO] - Write results to: generated_envs/ds_small_scene_0
+[2026-04-09 21:37:27,507][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-09 21:37:27,534][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 21:37:27,608][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-09 21:37:30,356][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 21:37:30,462][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-09 21:37:49,292][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-09 21:37:49,941][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-09 21:37:51,821][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-09 21:37:58,521][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-09 21:38:22,383][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-09 21:38:23,310][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-09 21:38:23,797][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-09 21:38:24,346][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-09 21:38:26,740][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-09 21:38:46,789][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-09 21:38:46,800][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 21:38:46,863][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-09 21:38:49,476][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 21:38:49,557][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-09 21:38:49,821][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-09 21:38:50,304][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-09 21:38:52,684][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-09 21:38:53,537][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-09 21:38:53,999][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-09 21:39:18,430][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-09 21:39:37,792][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-09 21:39:38,308][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-09 21:39:45,928][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-09 21:40:08,646][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-09 21:40:08,660][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 21:40:08,728][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-09 21:40:19,435][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 21:40:19,517][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-09 21:40:21,810][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-09 21:40:22,306][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-09 21:40:22,589][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-09 21:40:45,788][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-09 21:40:46,674][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-09 21:40:47,145][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-09 21:41:05,869][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-09 21:41:06,381][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-09 21:41:08,598][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-09 21:41:34,852][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-09 21:41:34,863][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 21:41:34,927][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-09 21:41:37,964][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 21:41:38,047][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-09 21:41:39,827][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-09 21:41:40,071][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-09 21:41:47,117][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-09 21:42:05,819][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-09 21:42:06,288][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-09 21:42:07,152][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-09 21:42:30,686][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-09 21:42:33,075][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-09 21:42:33,602][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-09 21:42:53,468][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-09 21:42:53,481][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 21:42:53,549][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-09 21:42:56,641][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 21:42:56,723][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-09 21:42:59,026][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-09 21:42:59,304][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-09 21:42:59,806][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-09 21:43:06,993][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-09 21:43:07,312][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-09 21:43:08,933][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-09 21:43:28,120][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-09 21:43:51,817][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-09 21:43:52,744][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-09 21:44:11,954][__main__][INFO] - Done
+[2026-04-09 22:59:24,971][__main__][INFO] - Write results to: generated_envs/ds_small_scene_0
+[2026-04-09 22:59:27,043][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-09 22:59:27,080][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 22:59:27,151][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-09 22:59:41,612][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 22:59:41,740][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-09 22:59:42,035][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-09 22:59:43,960][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-09 22:59:50,666][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-09 23:00:14,561][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-09 23:00:15,519][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-09 23:00:16,129][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-09 23:00:16,653][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-09 23:00:16,965][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-09 23:00:19,912][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-09 23:00:59,227][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-09 23:00:59,238][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 23:00:59,304][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-09 23:01:01,972][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 23:01:02,053][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-09 23:01:26,089][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-09 23:01:26,579][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-09 23:01:27,451][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-09 23:01:46,494][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-09 23:01:46,976][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-09 23:01:49,353][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-09 23:01:49,638][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-09 23:01:50,174][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-09 23:01:52,149][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-09 23:02:20,046][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-09 23:02:20,057][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 23:02:20,121][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-09 23:02:23,327][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 23:02:23,438][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-09 23:02:30,880][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-09 23:02:32,725][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-09 23:02:32,946][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-09 23:02:33,253][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-09 23:02:36,103][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-09 23:02:36,691][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-09 23:02:37,181][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-09 23:02:38,084][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-09 23:03:01,874][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-09 23:03:42,012][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-09 23:03:42,024][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 23:03:42,087][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-09 23:03:47,994][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 23:03:48,079][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-09 23:03:50,388][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-09 23:03:50,903][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-09 23:03:51,214][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-09 23:03:51,689][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-09 23:04:10,650][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-09 23:04:12,817][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-09 23:04:19,796][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-09 23:04:20,285][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-09 23:04:21,182][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-09 23:05:05,453][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-09 23:05:05,464][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 23:05:05,528][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-09 23:05:09,844][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-09 23:05:09,929][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-09 23:05:28,994][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-09 23:05:29,454][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-09 23:05:31,802][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-09 23:05:32,345][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-09 23:05:32,651][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-09 23:05:40,251][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-09 23:05:41,894][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-09 23:05:42,388][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-09 23:06:06,399][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-09 23:06:25,444][__main__][INFO] - Done

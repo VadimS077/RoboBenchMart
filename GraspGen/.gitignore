@@ -1,0 +1,91 @@
+# Copyright (c) 2021, NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+#
+# NVIDIA CORPORATION and its licensors retain all intellectual property
+# and proprietary rights in and to this software, related documentation
+# and any modifications thereto. Any use, reproduction, disclosure or
+# distribution of this software and related documentation without an express
+# license agreement from NVIDIA CORPORATION is strictly prohibited.
+
+#######################################################
+# KEEP ITEMS IN ALPHABETICAL ORDER WITHIN THEIR GROUP #
+#######################################################
+
+# Temporary and binary files
+*~
+*.py[cod]
+*.so
+*.cfg
+!.isort.cfg
+!setup.cfg
+*.orig
+*.log
+*.pot
+__pycache__/*
+.cache/*
+.*.swp
+*/.ipynb_checkpoints/*
+.DS_Store
+
+# Project files
+
+.ropeproject
+.project
+.pydevproject
+.settings
+.idea
+.vscode
+tags
+*.zip
+ngc/
+osmo/
+bash/
+checkpoints/
+docker/
+notes/
+
+# Package files
+*.egg
+*.eggs/
+.installed.cfg
+*.egg-info
+
+# Unittest and coverage
+htmlcov/*
+.coverage
+.coverage.*
+.tox
+junit*.xml
+coverage.xml
+.pytest_cache/
+
+# Build and docs folder/files
+_build/*
+_coverage/*
+build/*
+dist/*
+sdist/*
+docs/_api/*
+docs/_rst/*
+docs/_build/*
+docs/_out/*
+docs/python_api/*
+cover/*
+MANIFEST
+public/
+
+# Per-project virtualenvs
+.venv*/
+.conda*/
+venv*/*
+
+# Jupyter files
+*checkpoint.ipynb
+
+# Specific to project
+__pycache__
+*.egg-info
+outputs
+logs/*
+cache/
+misc/*
+data/*
