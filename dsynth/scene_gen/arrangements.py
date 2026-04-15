@@ -159,7 +159,7 @@ def add_objects_to_shelf_v2(
             start_point = np.array([start_point_x, start_point_y])
             board_arrangement = [(arr_value.split(':')[0], int(arr_value.split(':')[1])) for arr_value in board_arrangement]
             for product, num_col in board_arrangement:
-                obj = product_assets_lib['products_hierarchy.' + product].ss_asset
+                obj = product_assets_lib['products_hierarchy.' + product].ss_asset_convex
                 dims = obj.get_extents()
 
                 bounds = support_data[0].polygon.bounds
