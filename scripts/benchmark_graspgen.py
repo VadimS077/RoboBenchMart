@@ -42,7 +42,8 @@ from tqdm import tqdm
 from transforms3d.quaternions import mat2quat
 
 from mani_skill.utils.wrappers.record import RecordEpisode
-#from mani_skill.utils.wrappers.record import RecordEpisodegraspgen
+from recorder import MyRecordEpisode
+# from mani_skill.utils.wrappers.record import RecordEpisodegraspgen
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
@@ -52,7 +53,14 @@ _GRASPGEN_ROOT = Path(os.environ.get("GRASPGEN_ROOT", "")).expanduser() if os.en
 if _GRASPGEN_ROOT and not (_GRASPGEN_ROOT / "grasp_gen").is_dir():
     _GRASPGEN_ROOT = None
 if _GRASPGEN_ROOT is None:
-    _GRASPGEN_ROOT = ROOT_DIR.parent / "GraspGen"
+    # Prefer the common monorepo layout: <repo>/GraspGen.
+    for _candidate in (ROOT_DIR / "GraspGen", ROOT_DIR.parent / "GraspGen"):
+        if (_candidate / "grasp_gen").is_dir():
+            _GRASPGEN_ROOT = _candidate
+            break
+    else:
+        # Keep backward-compatible fallback even if directory does not exist yet.
+        _GRASPGEN_ROOT = ROOT_DIR / "GraspGen"
 if str(_GRASPGEN_ROOT) not in sys.path:
     sys.path.insert(0, str(_GRASPGEN_ROOT))
 
@@ -165,6 +173,23 @@ def sample_random_product_and_target(
         return None
     i = int(rng.integers(len(pool)))
     return pool[i]
+
+
+def product_to_targets_from_products_df(env_u, product_slugs: List[str]) -> Dict[str, List[str]]:
+    """
+    Для текущей (уже reset) сцены вернуть доступные actor_name по каждому продукту.
+    """
+    df = getattr(env_u, "products_df", None)
+    out: Dict[str, List[str]] = {p: [] for p in product_slugs}
+    if df is None or len(df) == 0:
+        return out
+    for ps in product_slugs:
+        out[ps] = front_row_instances_from_products_df(df, ps)
+    return out
+
+
+def _all_product_quotas_done(quotas: Dict[str, int]) -> bool:
+    return all(v <= 0 for v in quotas.values())
 
 
 def _resolve_selected_id(env, name_arg: str) -> Optional[int]:
@@ -669,11 +694,11 @@ def solve_dummy(
     planner.planner.update_from_simulation()
 
     # --- Lift ---
-    lift_pose = grasp_pose * sapien.Pose([0.06, 0.0, 0.0])
-    res = planner.static_manipulation(lift_pose, n_init_qpos=200, disable_lift_joint=False)
-    if res == -1:
-        return False, float("inf")
-    planner.planner.update_from_simulation()
+    # lift_pose = grasp_pose * sapien.Pose([0.0, 0.0, 0.0])
+    # res = planner.static_manipulation(lift_pose, n_init_qpos=200, disable_lift_joint=False)
+    # if res == -1:
+    #     return False, float("inf")
+    # planner.planner.update_from_simulation()
 
     # --- Backoff ---
     if post_grasp_backoff > 0:
@@ -720,7 +745,7 @@ def _make_env(
         num_envs=1,
         control_mode="pd_joint_pos",
         obs_mode=obs_mode,
-        render_mode="human" if args.vis else "rgb_array",
+        render_mode="rgb_array",# if args.vis else "rgb_array",
         enable_shadow=True,
         viewer_camera_configs=dict(shader_pack=args.shader, width=320, height=240),
         human_render_camera_configs=dict(shader_pack=args.shader, width=320, height=240),
@@ -735,7 +760,7 @@ def parse_args():
     p.add_argument("--scenes-root", type=Path, default=ROOT_DIR / "generated_envs", help="Dir with ds_small_scene_* dirs")
     p.add_argument("--products", nargs="+", default=["oreo", "monster", "vanish"])
     p.add_argument("--num-traj", type=int, default=5,
-                   help="Число эпизодов на сцену (random-режим) или на (сцену, продукт) в legacy")
+                   help="Число эпизодов на (сцену, продукт) для обоих режимов")
     p.add_argument("--legacy-per-product-loop", action="store_true",
                    help="Старый режим: отдельный env на каждый продукт, цели из scene_items.csv до reset")
     p.add_argument("--env-id", type=str, default="DarkstoreContinuousBaseEnv")
@@ -759,10 +784,10 @@ def parse_args():
 
 def _wrap_record(env, record_dir: str, traj_name: str, save_video: bool, video_fps: int):
     """Wrap env with RecordEpisode for trajectory/video saving."""
-    env.sensor_configs = dict(width=124, height=124, shader_pack="minimal")
-    env.human_render_camera_configs = dict(width=124, height=124, shader_pack="minimal")
-    env.viewer_camera_configs = dict(width=124, height=124, shader_pack="minimal")
-    return RecordEpisode(
+    # env.sensor_configs = dict(width=124, height=124, shader_pack="minimal")
+    # env.human_render_camera_configs = dict(width=124, height=124, shader_pack="minimal")
+    # env.viewer_camera_configs = dict(width=124, height=124, shader_pack="minimal")
+    return MyRecordEpisode(
         env,
         output_dir=record_dir,
         trajectory_name=traj_name,
@@ -778,7 +803,7 @@ def _wrap_record(env, record_dir: str, traj_name: str, save_video: bool, video_f
 def _flush_episode(env, success: bool, *, save_video: bool, only_success: bool):
     """Flush trajectory/video after one episode. Saves if allowed."""
     save = success or not only_success
-    #env.flush_trajectory(save=save)
+    env.flush_trajectory(save=save)
     if save_video:
         env.flush_video(save=save)
 
@@ -852,7 +877,7 @@ def main():
 
     print(f"Scenes: {[d.name for d in scene_dirs]}")
     print(f"Product pool: {args.products}")
-    print(f"Episodes per scene: {args.num_traj}")
+    print(f"Episodes per product per scene: {args.num_traj}")
     if args.legacy_per_product_loop:
         print("Mode: legacy (per-product env + scene_items.csv before reset)")
     else:
@@ -869,7 +894,7 @@ def main():
     results: Dict[str, Any] = {}
 
     if not args.legacy_per_product_loop:
-        # ---------- Случайный продукт и экземпляр после reset ----------
+        # ---------- Баланс по продуктам: num_traj на каждый продукт ----------
         for scene_dir in scene_dirs:
             scene_name = scene_dir.name
             record_dir = str(scene_dir / "demos" / "benchmark")
@@ -878,6 +903,8 @@ def main():
             by_prod_dm: Dict[str, List[bool]] = {p: [] for p in args.products}
             overall_gg: List[bool] = []
             overall_dm: List[bool] = []
+            remaining_gg: Dict[str, int] = {p: int(args.num_traj) for p in args.products}
+            remaining_dm: Dict[str, int] = {p: int(args.num_traj) for p in args.products}
 
             env_gg = None
             if not args.skip_graspgen and graspgen_client is not None:
@@ -897,101 +924,137 @@ def main():
                         save_video=args.save_video, video_fps=args.video_fps,
                     )
 
-            pbar = tqdm(range(args.num_traj), desc=f"[Bench] {scene_name}")
-            for seed_idx in pbar:
-                sampled_gg: Optional[Tuple[str, str]] = None
+            episodes_target = int(args.num_traj) * len(args.products)
+            pbar = tqdm(total=episodes_target, desc=f"[Bench] {scene_name}")
+            max_attempts = max(episodes_target * 20, 100)
+            attempts = 0
 
-                if env_gg is not None:
+            while attempts < max_attempts:
+                gg_done = env_gg is None or _all_product_quotas_done(remaining_gg)
+                dm_done = env_dm is None or _all_product_quotas_done(remaining_dm)
+                if gg_done and dm_done:
+                    break
+                gg_active = env_gg is not None and not gg_done
+                dm_active = env_dm is not None and not dm_done
+
+                seed_idx = attempts
+                attempts += 1
+                rng_ep = np.random.default_rng(int(seed_idx))
+
+                obs_gg = None
+                obs_dm = None
+                cand_gg: Dict[str, List[str]] = {p: [] for p in args.products}
+                cand_dm: Dict[str, List[str]] = {p: [] for p in args.products}
+
+                if gg_active:
                     obs_gg, _ = env_gg.reset(seed=seed_idx, options={"reconfigure": True})
-                    sampled_gg = sample_random_product_and_target(
-                        env_gg.unwrapped, np.random.default_rng(int(seed_idx)), args.products
-                    )
-                    if sampled_gg is None:
-                        print(f"\n[{scene_name}] seed={seed_idx}: нет кандидатов (GraspGen) среди {args.products}")
-                        if record:
+                    cand_gg = product_to_targets_from_products_df(env_gg.unwrapped, args.products)
+                if dm_active:
+                    obs_dm, _ = env_dm.reset(seed=seed_idx, options={"reconfigure": True})
+                    cand_dm = product_to_targets_from_products_df(env_dm.unwrapped, args.products)
+
+                selectable_products: List[str] = []
+                for p in args.products:
+                    ok = True
+                    if gg_active and remaining_gg[p] > 0 and len(cand_gg.get(p, [])) == 0:
+                        ok = False
+                    if dm_active and remaining_dm[p] > 0 and len(cand_dm.get(p, [])) == 0:
+                        ok = False
+                    if gg_active and remaining_gg[p] <= 0 and not dm_active:
+                        ok = False
+                    if dm_active and remaining_dm[p] <= 0 and not gg_active:
+                        ok = False
+                    if gg_active and dm_active and (remaining_gg[p] <= 0 or remaining_dm[p] <= 0):
+                        ok = False
+                    if ok:
+                        selectable_products.append(p)
+
+                if not selectable_products:
+                    if record:
+                        if gg_active and obs_gg is not None:
                             _flush_episode(
                                 env_gg, False,
                                 save_video=args.save_video,
                                 only_success=args.only_count_success,
                             )
-                    else:
-                        product_slug, target_actor = sampled_gg
-                        print(f"\n--- seed={seed_idx} product={product_slug} target={target_actor} ---")
-                        try:
-                            ok_gg, dist_gg = solve_graspgen(
-                                env_gg,
-                                target_actor,
-                                graspgen_client,
-                                seed=seed_idx,
-                                debug=args.debug,
-                                vis=args.vis,
-                                max_grasps=args.max_grasps,
-                                basket_success_radius=args.basket_success_radius,
-                                skip_reset=True,
-                                initial_obs=obs_gg,
-                            )
-                        except Exception as e:
-                            print(f"[GraspGen] Exception: {e}")
-                            ok_gg, dist_gg = False, float("inf")
-                        overall_gg.append(ok_gg)
-                        by_prod_gg[product_slug].append(ok_gg)
-                        print(f"  GraspGen: success={ok_gg}, dist={dist_gg:.4f}")
-                        if record:
-                            _flush_episode(
-                                env_gg, ok_gg,
-                                save_video=args.save_video,
-                                only_success=args.only_count_success,
-                            )
-
-                if env_dm is not None:
-                    obs_dm, _ = env_dm.reset(seed=seed_idx, options={"reconfigure": True})
-                    rng_ep_dm = np.random.default_rng(int(seed_idx))
-                    sampled_dm = sample_random_product_and_target(
-                        env_dm.unwrapped, rng_ep_dm, args.products
-                    )
-                    if sampled_dm is None:
-                        print(f"\n[{scene_name}] seed={seed_idx}: нет кандидатов (Dummy) среди {args.products}")
-                        if record:
+                        if dm_active and obs_dm is not None:
                             _flush_episode(
                                 env_dm, False,
                                 save_video=args.save_video,
                                 only_success=args.only_count_success,
                             )
-                    else:
-                        use_slug, use_actor = sampled_dm
-                        if sampled_gg is not None and sampled_dm != sampled_gg:
-                            print(
-                                f"  [warn] цель Dummy != GraspGen: {sampled_dm} vs {sampled_gg} "
-                                f"(проверьте детерминизм reconfigure по seed)"
-                            )
-                        print(f"\n--- [Dummy] seed={seed_idx} product={use_slug} target={use_actor} ---")
-                        try:
-                            ok_dm, dist_dm = solve_dummy(
-                                env_dm,
-                                use_actor,
-                                debug=args.debug,
-                                seed=seed_idx,
-                                vis=args.vis,
-                                basket_success_radius=args.basket_success_radius,
-                                skip_reset=True,
-                            )
-                        except Exception as e:
-                            print(f"[Dummy] Exception: {e}")
-                            ok_dm, dist_dm = False, float("inf")
-                        overall_dm.append(ok_dm)
-                        by_prod_dm[use_slug].append(ok_dm)
-                        print(f"  Dummy:    success={ok_dm}, dist={dist_dm:.4f}")
-                        if record:
-                            _flush_episode(
-                                env_dm, ok_dm,
-                                save_video=args.save_video,
-                                only_success=args.only_count_success,
-                            )
+                    continue
 
+                product_slug = selectable_products[int(rng_ep.integers(len(selectable_products)))]
+
+                if gg_active and remaining_gg[product_slug] > 0:
+                    gg_targets = cand_gg[product_slug]
+                    target_actor_gg = gg_targets[int(rng_ep.integers(len(gg_targets)))]
+                    print(f"\n--- [GraspGen] seed={seed_idx} product={product_slug} target={target_actor_gg} ---")
+                    try:
+                        ok_gg, dist_gg = solve_graspgen(
+                            env_gg,
+                            target_actor_gg,
+                            graspgen_client,
+                            seed=seed_idx,
+                            debug=args.debug,
+                            vis=args.vis,
+                            max_grasps=args.max_grasps,
+                            basket_success_radius=args.basket_success_radius,
+                            skip_reset=True,
+                            initial_obs=obs_gg,
+                        )
+                    except Exception as e:
+                        print(f"[GraspGen] Exception: {e}")
+                        ok_gg, dist_gg = False, float("inf")
+                    overall_gg.append(ok_gg)
+                    by_prod_gg[product_slug].append(ok_gg)
+                    remaining_gg[product_slug] -= 1
+                    print(f"  GraspGen: success={ok_gg}, dist={dist_gg:.4f}, left={remaining_gg[product_slug]}")
+                    if record:
+                        _flush_episode(
+                            env_gg, ok_gg,
+                            save_video=args.save_video,
+                            only_success=args.only_count_success,
+                        )
+
+                if dm_active and remaining_dm[product_slug] > 0:
+                    dm_targets = cand_dm[product_slug]
+                    target_actor_dm = dm_targets[int(rng_ep.integers(len(dm_targets)))]
+                    print(f"\n--- [Dummy]    seed={seed_idx} product={product_slug} target={target_actor_dm} ---")
+                    try:
+                        ok_dm, dist_dm = solve_dummy(
+                            env_dm,
+                            target_actor_dm,
+                            debug=args.debug,
+                            seed=seed_idx,
+                            vis=args.vis,
+                            basket_success_radius=args.basket_success_radius,
+                            skip_reset=True,
+                        )
+                    except Exception as e:
+                        print(f"[Dummy] Exception: {e}")
+                        ok_dm, dist_dm = False, float("inf")
+                    overall_dm.append(ok_dm)
+                    by_prod_dm[product_slug].append(ok_dm)
+                    remaining_dm[product_slug] -= 1
+                    print(f"  Dummy:    success={ok_dm}, dist={dist_dm:.4f}, left={remaining_dm[product_slug]}")
+                    if record:
+                        _flush_episode(
+                            env_dm, ok_dm,
+                            save_video=args.save_video,
+                            only_success=args.only_count_success,
+                        )
+
+                pbar.update(1)
                 pbar.set_postfix(
                     gg=f"{np.mean(overall_gg):.2f}" if overall_gg else "—",
                     dm=f"{np.mean(overall_dm):.2f}" if overall_dm else "—",
                 )
+
+            pbar.close()
+            if attempts >= max_attempts:
+                print(f"[{scene_name}] Достигнут предел попыток ({max_attempts}); не все квоты закрыты.")
 
             if env_gg is not None:
                 env_gg.close()

@@ -678,3 +678,1426 @@
 [2026-04-09 23:05:42,388][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
 [2026-04-09 23:06:06,399][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
 [2026-04-09 23:06:25,444][__main__][INFO] - Done
+[2026-04-15 19:22:49,881][__main__][INFO] - Write results to: generated_envs/ds_small_scene_0
+[2026-04-15 19:22:50,926][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/baby.glb does not exist!
+[2026-04-15 19:22:50,927][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cerealsForSS.glb does not exist!
+[2026-04-15 19:22:50,928][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cerealescornflakescora.glb does not exist!
+[2026-04-15 19:22:50,929][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cornFlakesRetroEditionSmall.glb does not exist!
+[2026-04-15 19:22:50,929][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nestleFitnessChocolateCerealBox.glb does not exist!
+[2026-04-15 19:22:50,932][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk.glb does not exist!
+[2026-04-15 19:22:50,932][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milkHandle.glb does not exist!
+[2026-04-15 19:22:50,933][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milkCarton.glb does not exist!
+[2026-04-15 19:22:50,942][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cocaColaCan.glb does not exist!
+[2026-04-15 19:22:50,942][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi.glb does not exist!
+[2026-04-15 19:22:50,943][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fanta.glb does not exist!
+[2026-04-15 19:22:50,944][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/mountainDew.glb does not exist!
+[2026-04-15 19:22:50,945][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/chaosCola2l.glb does not exist!
+[2026-04-15 19:22:50,945][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cocaColaNoSugar1p5l.glb does not exist!
+[2026-04-15 19:22:50,946][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sprite2p25l.glb does not exist!
+[2026-04-15 19:22:50,947][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fantaNaranja1p35l.glb does not exist!
+[2026-04-15 19:22:50,948][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffeePackaging.glb does not exist!
+[2026-04-15 19:22:50,948][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffeePaperBag.glb does not exist!
+[2026-04-15 19:22:50,949][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffeePackaging1.glb does not exist!
+[2026-04-15 19:22:50,950][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffeeCapsulesDolceGusto.glb does not exist!
+[2026-04-15 19:22:50,950][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nescafesimple.glb does not exist!
+[2026-04-15 19:22:50,951][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pgTipsTeaBox.glb does not exist!
+[2026-04-15 19:22:50,952][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sirWinstonTea.glb does not exist!
+[2026-04-15 19:22:50,962][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_fish-freepoly.org_rotated.glb does not exist!
+[2026-04-15 19:22:50,963][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_fish_2-freepoly.org_rotated.glb does not exist!
+[2026-04-15 19:22:50,964][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tuna_can.glb does not exist!
+[2026-04-15 19:22:50,964][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/vintage_canned_corn_1.glb does not exist!
+[2026-04-15 19:22:50,965][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_bean_rotated.glb does not exist!
+[2026-04-15 19:22:50,966][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/food_can_rotated.glb does not exist!
+[2026-04-15 19:22:50,967][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_food_rotated.glb does not exist!
+[2026-04-15 19:22:50,967][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/food_can_415g_rotated.glb does not exist!
+[2026-04-15 19:22:50,968][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/beef_can_rotated.glb does not exist!
+[2026-04-15 19:22:50,969][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb does not exist!
+[2026-04-15 19:22:50,970][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canarian_cafe-_jar_of_olives_rotated.glb does not exist!
+[2026-04-15 19:22:50,970][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pickled_cucumbers_rotated.glb does not exist!
+[2026-04-15 19:22:50,971][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/beans_rotated.glb does not exist!
+[2026-04-15 19:22:50,972][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/a_can_of_beans_rotated.glb does not exist!
+[2026-04-15 19:22:50,973][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/green_beans_rotated.glb does not exist!
+[2026-04-15 19:22:50,973][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bean_tin_rotated.glb does not exist!
+[2026-04-15 19:22:50,974][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/can_of_sweet_corn.glb does not exist!
+[2026-04-15 19:22:50,982][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_coffee_-_lighting_test.glb does not exist!
+[2026-04-15 19:22:50,983][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/extreme_wonda.glb does not exist!
+[2026-04-15 19:22:50,984][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/detwilers_salted_caramel__coffee_grounds_bag_rotated.glb does not exist!
+[2026-04-15 19:22:50,984][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/spice_tea-_black_tea_collada.glb does not exist!
+[2026-04-15 19:22:50,985][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffee_pack_rotated.glb does not exist!
+[2026-04-15 19:22:50,986][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jacobsmilka.glb does not exist!
+[2026-04-15 19:22:50,987][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/vintage_dutch_tin_of_chocolate_powder_rotated.glb does not exist!
+[2026-04-15 19:22:50,988][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffee_packaging_2.glb does not exist!
+[2026-04-15 19:22:50,988][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffee_paper_bag_3d_scan_1.glb does not exist!
+[2026-04-15 19:22:50,989][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffee_capsules_pack_dolce_gusto_espresso_1.glb does not exist!
+[2026-04-15 19:22:50,990][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nescafesimple_1_rotated.glb does not exist!
+[2026-04-15 19:22:50,991][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pg_tips_tea_box_1_rotated.glb does not exist!
+[2026-04-15 19:22:50,991][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sir_winston_tea_1_rotated.glb does not exist!
+[2026-04-15 19:22:51,004][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/heart_in_a_jar.glb does not exist!
+[2026-04-15 19:22:51,004][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/vintage_marmalade_jar_rotated.glb does not exist!
+[2026-04-15 19:22:51,005][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jam_jam_rotated.glb does not exist!
+[2026-04-15 19:22:51,006][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nutella_rotated.glb does not exist!
+[2026-04-15 19:22:51,006][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nutella_2_rotated.glb does not exist!
+[2026-04-15 19:22:51,007][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/casual_jar_of_raspberry_jam_rotated.glb does not exist!
+[2026-04-15 19:22:51,008][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jam_2k_3_rotated.glb does not exist!
+[2026-04-15 19:22:51,009][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jam_2k_4_rotated.glb does not exist!
+[2026-04-15 19:22:51,009][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fruit_gum_rotated.glb does not exist!
+[2026-04-15 19:22:51,010][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/chewing_gum_love_is_rotated.glb does not exist!
+[2026-04-15 19:22:51,011][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/box_oreo_rotated.glb does not exist!
+[2026-04-15 19:22:51,012][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/choco_pie_rotated.glb does not exist!
+[2026-04-15 19:22:51,012][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tanuki_drops_candy__japanese_hard_candy.glb does not exist!
+[2026-04-15 19:22:51,013][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/mint_candy_box_rotated.glb does not exist!
+[2026-04-15 19:22:51,014][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wonka_runts_box_rotated.glb does not exist!
+[2026-04-15 19:22:51,015][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sakuma_drops_candy.glb does not exist!
+[2026-04-15 19:22:51,015][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tic_tac_rotated.glb does not exist!
+[2026-04-15 19:22:51,016][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/honey_bear_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,017][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/honey_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,018][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/peanut_butter_1_rotated.glb does not exist!
+[2026-04-15 19:22:51,018][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/peanut_butter_rotated.glb does not exist!
+[2026-04-15 19:22:51,028][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/campbells_can_rotated.glb does not exist!
+[2026-04-15 19:22:51,029][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/buckethead_chicken_noodles_rotated.glb does not exist!
+[2026-04-15 19:22:51,030][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/can_soup_rotated.glb does not exist!
+[2026-04-15 19:22:51,030][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/creamy_chicken_soup_can_rotated.glb does not exist!
+[2026-04-15 19:22:51,031][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/campbells_chicken_noodle_soup_rotated.glb does not exist!
+[2026-04-15 19:22:51,032][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/f43bb07e13bd4422bb7d4cbe6a213957_rotated.glb does not exist!
+[2026-04-15 19:22:51,033][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/royco_quick_soup_rotated.glb does not exist!
+[2026-04-15 19:22:51,033][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/b71c925d07134c2b869ffd778bbb0616_rotated.glb does not exist!
+[2026-04-15 19:22:51,034][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nissin_cup_noodles_-_seafood_flavour.glb does not exist!
+[2026-04-15 19:22:51,035][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/noodle_cup_rotated.glb does not exist!
+[2026-04-15 19:22:51,036][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jin-ramen_cup_noodle_rotated.glb does not exist!
+[2026-04-15 19:22:51,037][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ramen.glb does not exist!
+[2026-04-15 19:22:51,037][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/carbonara_buldack_cup_rotated.glb does not exist!
+[2026-04-15 19:22:51,038][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/maruchan_con_camaron_rotated.glb does not exist!
+[2026-04-15 19:22:51,039][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/scan_instant_noodles-freepoly.org_1_rotated.glb does not exist!
+[2026-04-15 19:22:51,040][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nissin_cup_noodles_-_chicken_flavour_rotated.glb does not exist!
+[2026-04-15 19:22:51,049][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/generic_beverage_can_rotated.glb does not exist!
+[2026-04-15 19:22:51,050][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/samuel_beer_rotated.glb does not exist!
+[2026-04-15 19:22:51,050][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/kani_beer.glb does not exist!
+[2026-04-15 19:22:51,051][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/heibeken_beer.glb does not exist!
+[2026-04-15 19:22:51,052][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bud_light_rotated.glb does not exist!
+[2026-04-15 19:22:51,053][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/beer_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,054][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/duff_can_rotated.glb does not exist!
+[2026-04-15 19:22:51,054][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/beer_bottle_1_rotated.glb does not exist!
+[2026-04-15 19:22:51,055][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/asahi_beer_can_rotated.glb does not exist!
+[2026-04-15 19:22:51,056][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/beer_rotated.glb does not exist!
+[2026-04-15 19:22:51,056][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/asahi_beer_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,057][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/corona_extra_355ml_bottle_japan_rotated.glb does not exist!
+[2026-04-15 19:22:51,058][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/japanese_beer_rotated.glb does not exist!
+[2026-04-15 19:22:51,059][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottle_beer_nadir_rotated.glb does not exist!
+[2026-04-15 19:22:51,060][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/guinness_beer_can_rotated.glb does not exist!
+[2026-04-15 19:22:51,060][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/6955f9c074ee4969b131c746e26be16f_rotated.glb does not exist!
+[2026-04-15 19:22:51,067][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/rice_a_roni_long_grain_rice_box.glb does not exist!
+[2026-04-15 19:22:51,068][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_sample.glb does not exist!
+[2026-04-15 19:22:51,068][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta.glb does not exist!
+[2026-04-15 19:22:51,069][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_1.glb does not exist!
+[2026-04-15 19:22:51,070][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_2_rotated.glb does not exist!
+[2026-04-15 19:22:51,071][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_elbow_macaroni.glb does not exist!
+[2026-04-15 19:22:51,071][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_3_rotated.glb does not exist!
+[2026-04-15 19:22:51,072][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_benea_rotated.glb does not exist!
+[2026-04-15 19:22:51,073][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/banza_pasta_higher_res_rotated.glb does not exist!
+[2026-04-15 19:22:51,074][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_benea_propuesta_rotated.glb does not exist!
+[2026-04-15 19:22:51,074][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/day_205_dinner_rotated.glb does not exist!
+[2026-04-15 19:22:51,083][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/olive_oil_rotated.glb does not exist!
+[2026-04-15 19:22:51,083][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/calve_mayonaise.glb does not exist!
+[2026-04-15 19:22:51,084][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ketchup_rotated.glb does not exist!
+[2026-04-15 19:22:51,085][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ketchup_aridll_rotated.glb does not exist!
+[2026-04-15 19:22:51,086][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/carbonara_jar_rotated.glb does not exist!
+[2026-04-15 19:22:51,087][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/350_jar_rotated.glb does not exist!
+[2026-04-15 19:22:51,087][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/glass_bottle_3d_scan_rotated.glb does not exist!
+[2026-04-15 19:22:51,088][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tomato_paste_tin.glb does not exist!
+[2026-04-15 19:22:51,089][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tabasco_sauce_rotated.glb does not exist!
+[2026-04-15 19:22:51,089][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hellmanns_hot_sauce_rotated.glb does not exist!
+[2026-04-15 19:22:51,090][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sweet_baby_rays_bbq_sauce_rotated.glb does not exist!
+[2026-04-15 19:22:51,091][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/soy_sauce_1_rotated.glb does not exist!
+[2026-04-15 19:22:51,092][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hot_sauce_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,093][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/3d_sauce_bottle_-_optimized_and_ready_for_use_rotated.glb does not exist!
+[2026-04-15 19:22:51,100][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/plastic_yogurt_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,101][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yogurt_rotated.glb does not exist!
+[2026-04-15 19:22:51,101][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/chobani_yogurt_no_base.glb does not exist!
+[2026-04-15 19:22:51,102][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yogurt_aridll.glb does not exist!
+[2026-04-15 19:22:51,103][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/drinking_yogurt_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,104][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yogurt_natural_de_arandano_dulce_gaby_individual_rotated.glb does not exist!
+[2026-04-15 19:22:51,105][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/lacchi_rotated.glb does not exist!
+[2026-04-15 19:22:51,105][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/teos__yogurt__bottle_0225151825_texture22222_rotated.glb does not exist!
+[2026-04-15 19:22:51,106][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yoguruppe_rotated.glb does not exist!
+[2026-04-15 19:22:51,107][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yogurth_fresa_rotated.glb does not exist!
+[2026-04-15 19:22:51,108][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yoghurt_rotated.glb does not exist!
+[2026-04-15 19:22:51,109][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/official_bosetti__actimel_collab_rotated.glb does not exist!
+[2026-04-15 19:22:51,134][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/toothpaste_box_no_base_rotated.glb does not exist!
+[2026-04-15 19:22:51,134][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/mouthwash_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,135][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/head__shoulder_shampoo_tube.glb does not exist!
+[2026-04-15 19:22:51,136][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shampoo_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,137][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/head__shoulder_shampoo_rotated.glb does not exist!
+[2026-04-15 19:22:51,138][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/native_moisturizing_shampoo___coconut__vanilla_rotated.glb does not exist!
+[2026-04-15 19:22:51,138][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coconut_shampoo_with_moisturizing_oils.glb does not exist!
+[2026-04-15 19:22:51,140][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/il_gele_shampoo_rotated.glb does not exist!
+[2026-04-15 19:22:51,141][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shampoo-dora-y-sus-amigos_rotated.glb does not exist!
+[2026-04-15 19:22:51,141][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_man_shampoo.glb does not exist!
+[2026-04-15 19:22:51,142][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/savanah_shampoo_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,143][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shampoo_grandes_heroes_rotated.glb does not exist!
+[2026-04-15 19:22:51,144][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/old_spice_deodorant_rotated.glb does not exist!
+[2026-04-15 19:22:51,144][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shampoo_2_rotated.glb does not exist!
+[2026-04-15 19:22:51,145][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/elmers_glue_shampoo_rotated.glb does not exist!
+[2026-04-15 19:22:51,146][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shampoo1_rotated.glb does not exist!
+[2026-04-15 19:22:51,147][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/maimara_botella_producto_de_belleza_rotated.glb does not exist!
+[2026-04-15 19:22:51,147][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/old_spice_deodorant_1_rotated.glb does not exist!
+[2026-04-15 19:22:51,148][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/axe_rotated.glb does not exist!
+[2026-04-15 19:22:51,149][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/old_spice_rotated.glb does not exist!
+[2026-04-15 19:22:51,150][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/old_spice_deodorant_lowpoly_rotated.glb does not exist!
+[2026-04-15 19:22:51,150][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/oldspice_deodorant_stick_rotated.glb does not exist!
+[2026-04-15 19:22:51,151][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/axe_deodorant_rotated.glb does not exist!
+[2026-04-15 19:22:51,152][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/deodrant_rotated.glb does not exist!
+[2026-04-15 19:22:51,153][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hand_sanitiser_spray_rotated.glb does not exist!
+[2026-04-15 19:22:51,153][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/propoleo_spray_rotated.glb does not exist!
+[2026-04-15 19:22:51,154][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/spray_crema_nivea_50_rotated.glb does not exist!
+[2026-04-15 19:22:51,155][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tododia_spray_datiles_y_canela_rotated.glb does not exist!
+[2026-04-15 19:22:51,156][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/goop_tin_rotated.glb does not exist!
+[2026-04-15 19:22:51,157][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cosmetics__skin_care_product_-_free_rotated.glb does not exist!
+[2026-04-15 19:22:51,157][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/face_eyes_moisturizer_cream_rotated.glb does not exist!
+[2026-04-15 19:22:51,158][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/neutrogena_cream.glb does not exist!
+[2026-04-15 19:22:51,159][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_-_refreshing_day_cream_-_by_smakologg_rotated.glb does not exist!
+[2026-04-15 19:22:51,160][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hand_cream_rotated.glb does not exist!
+[2026-04-15 19:22:51,160][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/barbasol_shaving_cream_can_rotated.glb does not exist!
+[2026-04-15 19:22:51,161][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/face_eye_moisturizer_cream_rotated.glb does not exist!
+[2026-04-15 19:22:51,162][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_cream_bottle_model_rotated.glb does not exist!
+[2026-04-15 19:22:51,163][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottle_of_soap.glb does not exist!
+[2026-04-15 19:22:51,163][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_body_lotion_rotated.glb does not exist!
+[2026-04-15 19:22:51,164][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_aftershave_rotated.glb does not exist!
+[2026-04-15 19:22:51,165][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_handcreme.glb does not exist!
+[2026-04-15 19:22:51,166][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_zonnebrand_rotated.glb does not exist!
+[2026-04-15 19:22:51,166][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb does not exist!
+[2026-04-15 19:22:51,167][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shea_butter_jar_rotated.glb does not exist!
+[2026-04-15 19:22:51,176][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/crackers_box_rotated.glb does not exist!
+[2026-04-15 19:22:51,177][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/snack.glb does not exist!
+[2026-04-15 19:22:51,178][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/barnums_animal_crackers_-_scanned_w_metashape_rotated.glb does not exist!
+[2026-04-15 19:22:51,178][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coconut_flavour_pocky.glb does not exist!
+[2026-04-15 19:22:51,179][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/macha_green_tea_pocky.glb does not exist!
+[2026-04-15 19:22:51,180][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/snacksinabox.glb does not exist!
+[2026-04-15 19:22:51,181][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/boite_biscuits_en_metal_cookies_box_rotated.glb does not exist!
+[2026-04-15 19:22:51,181][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cookies_cora_rotated.glb does not exist!
+[2026-04-15 19:22:51,182][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cookie_-_galleta__-_shin_chan_rotated.glb does not exist!
+[2026-04-15 19:22:51,183][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hershey_cookie_korean_vr_rotated.glb does not exist!
+[2026-04-15 19:22:51,184][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb does not exist!
+[2026-04-15 19:22:51,185][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fudgey_rounds_rotated.glb does not exist!
+[2026-04-15 19:22:51,186][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/box_of_sugar_biscuits_delicia_rotated.glb does not exist!
+[2026-04-15 19:22:51,186][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/biscuit_sponge_cake_rotated.glb does not exist!
+[2026-04-15 19:22:51,187][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/banania_boite_en_tole.glb does not exist!
+[2026-04-15 19:22:51,189][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/chicken_fried_rice_rotated.glb does not exist!
+[2026-04-15 19:22:51,190][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pizza_box_ristorante_prosciutto_funghi_rotated.glb does not exist!
+[2026-04-15 19:22:51,198][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_box_rice_krispies_label_low_poly_style.glb does not exist!
+[2026-04-15 19:22:51,199][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/boite_metal_avec_fermeture_kelloggs_rotated.glb does not exist!
+[2026-04-15 19:22:51,200][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/dark_chocolate_cereal_box_rotated.glb does not exist!
+[2026-04-15 19:22:51,201][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_box_rotated.glb does not exist!
+[2026-04-15 19:22:51,202][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cerealescornflakescora_1_rotated.glb does not exist!
+[2026-04-15 19:22:51,202][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/corn_flakes_retro_edition_1_rotated.glb does not exist!
+[2026-04-15 19:22:51,203][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nestle_fitness_chocolate_cereal_box_rotated.glb does not exist!
+[2026-04-15 19:22:51,204][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_rotated.glb does not exist!
+[2026-04-15 19:22:51,205][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_box_1.glb does not exist!
+[2026-04-15 19:22:51,205][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/caja_cereal_nesk.glb does not exist!
+[2026-04-15 19:22:51,206][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_cocoa_critters.glb does not exist!
+[2026-04-15 19:22:51,207][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_box_test_rotated.glb does not exist!
+[2026-04-15 19:22:51,208][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_-_honey_star.glb does not exist!
+[2026-04-15 19:22:51,208][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/spider-man_across_the_spiderverse_cereal_box_rotated.glb does not exist!
+[2026-04-15 19:22:51,218][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_carton.glb does not exist!
+[2026-04-15 19:22:51,219][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_1_rotated.glb does not exist!
+[2026-04-15 19:22:51,220][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_carton_1.glb does not exist!
+[2026-04-15 19:22:51,221][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/super_awesome_milk_carton.glb does not exist!
+[2026-04-15 19:22:51,221][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_packaging_rotated.glb does not exist!
+[2026-04-15 19:22:51,222][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bom_ba_milk_rotated.glb does not exist!
+[2026-04-15 19:22:51,223][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/brazilian_milk_bottle.glb does not exist!
+[2026-04-15 19:22:51,224][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/oat_milk_oatly_rotated.glb does not exist!
+[2026-04-15 19:22:51,224][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_test_rotated.glb does not exist!
+[2026-04-15 19:22:51,225][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_carton_2_rotated.glb does not exist!
+[2026-04-15 19:22:51,226][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_of_human_kindness_rotated.glb does not exist!
+[2026-04-15 19:22:51,227][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/vita_chocolate_milk_rotated.glb does not exist!
+[2026-04-15 19:22:51,227][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_box_french_rotated.glb does not exist!
+[2026-04-15 19:22:51,228][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/dos_pinos_-_leche_descremada_0_rotated.glb does not exist!
+[2026-04-15 19:22:51,229][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/43b88b2c6fa6462aa4c9d2d3c5e062a0_rotated.glb does not exist!
+[2026-04-15 19:22:51,230][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_2_rotated.glb does not exist!
+[2026-04-15 19:22:51,230][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/acidophilic_milk_rotated.glb does not exist!
+[2026-04-15 19:22:51,239][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/perwoll_detergent_3d_model.glb does not exist!
+[2026-04-15 19:22:51,240][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tide_detergent_bottle_3d_model_fanmade.glb does not exist!
+[2026-04-15 19:22:51,241][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottle_of_detergent.glb does not exist!
+[2026-04-15 19:22:51,241][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/dish_detergent.glb does not exist!
+[2026-04-15 19:22:51,242][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/parquet_detergent_with_almond_oil_1220ml.glb does not exist!
+[2026-04-15 19:22:51,243][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ace.glb does not exist!
+[2026-04-15 19:22:51,244][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/vanish_remover.glb does not exist!
+[2026-04-15 19:22:51,244][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/carpet_cleaner_1200ml.glb does not exist!
+[2026-04-15 19:22:51,245][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cleaning_spray_rotated.glb does not exist!
+[2026-04-15 19:22:51,246][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hair_spray_rotated.glb does not exist!
+[2026-04-15 19:22:51,247][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cc0_-_spray_cleaner_siffie.glb does not exist!
+[2026-04-15 19:22:51,247][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/room_spray_rotated.glb does not exist!
+[2026-04-15 19:22:51,248][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/kitchen_spray_rotated.glb does not exist!
+[2026-04-15 19:22:51,249][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/spray_bottle_raw_rotated.glb does not exist!
+[2026-04-15 19:22:51,250][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/scan_3d_mau_chai_vim_rotated.glb does not exist!
+[2026-04-15 19:22:51,256][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bag_of_bread_flour.glb does not exist!
+[2026-04-15 19:22:51,257][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/salt_caster_-_cooking.glb does not exist!
+[2026-04-15 19:22:51,258][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/salt_rotated.glb does not exist!
+[2026-04-15 19:22:51,259][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cc0_-_salt_package_rotated.glb does not exist!
+[2026-04-15 19:22:51,259][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cooking_salt_aridll.glb does not exist!
+[2026-04-15 19:22:51,260][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/table_salt_aridll.glb does not exist!
+[2026-04-15 19:22:51,261][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tesco_table_salt_photogrammetry_rotated.glb does not exist!
+[2026-04-15 19:22:51,262][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/frying_oil_jug_rotated.glb does not exist!
+[2026-04-15 19:22:51,262][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/package_of_oats_havre_gryn_rotated.glb does not exist!
+[2026-04-15 19:22:51,263][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/stock_powder_tin_rotated.glb does not exist!
+[2026-04-15 19:22:51,264][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/butter_tub_aridll.glb does not exist!
+[2026-04-15 19:22:51,281][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca-_cola_zero_sugar_byte_no_base_rotated.glb does not exist!
+[2026-04-15 19:22:51,282][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/topo_chico_mineral_water_rotated.glb does not exist!
+[2026-04-15 19:22:51,282][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/prime_-_tropical_punch_rotated.glb does not exist!
+[2026-04-15 19:22:51,283][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/prime_-_lemon_lime_rotated.glb does not exist!
+[2026-04-15 19:22:51,284][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orange_juice_1_rotated.glb does not exist!
+[2026-04-15 19:22:51,285][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca-cola_can_rotated.glb does not exist!
+[2026-04-15 19:22:51,285][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi_coke_can__pepsi__kola_kutusu_2_rotated.glb does not exist!
+[2026-04-15 19:22:51,286][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fanta_can_1_rotated.glb does not exist!
+[2026-04-15 19:22:51,287][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/soda_can_1.glb does not exist!
+[2026-04-15 19:22:51,288][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/chaos_cola_2_liter_rotated.glb does not exist!
+[2026-04-15 19:22:51,288][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca-cola_no_sugar_1.5l_rotated.glb does not exist!
+[2026-04-15 19:22:51,289][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sprite_2.25l_rotated.glb does not exist!
+[2026-04-15 19:22:51,290][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fanta_naranja_2l_rotated.glb does not exist!
+[2026-04-15 19:22:51,290][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca_600_sin_azucar_rotated.glb does not exist!
+[2026-04-15 19:22:51,291][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca_cola_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,292][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coke_light_rotated.glb does not exist!
+[2026-04-15 19:22:51,293][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/diet_coke_can_color_3d_scan_rotated.glb does not exist!
+[2026-04-15 19:22:51,294][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fallout_4_nuka_cola_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,294][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coke_zero_rotated.glb does not exist!
+[2026-04-15 19:22:51,295][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca-coka_can_rotated.glb does not exist!
+[2026-04-15 19:22:51,296][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/old_coca_cola_can_rotated.glb does not exist!
+[2026-04-15 19:22:51,296][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi_max_lime_bottle_0.5_l_rotated.glb does not exist!
+[2026-04-15 19:22:51,297][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi_can_rotated.glb does not exist!
+[2026-04-15 19:22:51,298][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/soda_can_2_rotated.glb does not exist!
+[2026-04-15 19:22:51,299][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi_max_coke_can__pepsi_max_kola_kutusu_rotated.glb does not exist!
+[2026-04-15 19:22:51,300][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi_max_can_rotated.glb does not exist!
+[2026-04-15 19:22:51,300][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/soda_can_3_rotated.glb does not exist!
+[2026-04-15 19:22:51,301][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/grape_fanta_can_rotated.glb does not exist!
+[2026-04-15 19:22:51,302][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sprite_bottle_custom_rotated.glb does not exist!
+[2026-04-15 19:22:51,305][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cc0_-_potato_chips_tube_2_rotated.glb does not exist!
+[2026-04-15 19:22:51,306][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pringles_cheddar_cheese_rotated.glb does not exist!
+[2026-04-15 19:22:51,306][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cans_pringles_rotated.glb does not exist!
+[2026-04-15 19:22:51,307][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pringles.glb does not exist!
+[2026-04-15 19:22:51,316][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/gfuel__spiderman_edition__gameready__energy_rotated.glb does not exist!
+[2026-04-15 19:22:51,317][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/redbull_1_rotated.glb does not exist!
+[2026-04-15 19:22:51,318][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/monster_energy_drink_rotated.glb does not exist!
+[2026-04-15 19:22:51,319][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/energy_drink_game_ready_model_rotated.glb does not exist!
+[2026-04-15 19:22:51,319][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/lit_energy_-_energy_drink_by_mikhail_litvin_rotated.glb does not exist!
+[2026-04-15 19:22:51,320][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/redbull__green_energy_drink_can_rotated.glb does not exist!
+[2026-04-15 19:22:51,321][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/energy_drink_can_free_model_rotated.glb does not exist!
+[2026-04-15 19:22:51,322][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/monster_zero_ultra_rotated.glb does not exist!
+[2026-04-15 19:22:51,323][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_energy_drink_art-soul_rotated.glb does not exist!
+[2026-04-15 19:22:51,323][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/monster_ultra_white_rotated.glb does not exist!
+[2026-04-15 19:22:51,324][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/guoba_chili_energy_drink_rotated.glb does not exist!
+[2026-04-15 19:22:51,325][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/kendu_energy_drink_can_rotated.glb does not exist!
+[2026-04-15 19:22:51,326][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/monster_energy_pipeline_punch_355ml_jpn_rotated.glb does not exist!
+[2026-04-15 19:22:51,326][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shock_energy_drink.glb does not exist!
+[2026-04-15 19:22:51,327][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/non_stop_energy_rotated.glb does not exist!
+[2026-04-15 19:22:51,353][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/revo_original_rotated.glb does not exist!
+[2026-04-15 19:22:51,354][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/baileys_tiramisu_rotated.glb does not exist!
+[2026-04-15 19:22:51,354][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/absolut_vodka_1l_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,355][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/rose_liquor_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,356][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/turron_rotated.glb does not exist!
+[2026-04-15 19:22:51,357][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/liquor_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,357][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jagermeister_0.7l_bottle_japan_rotated.glb does not exist!
+[2026-04-15 19:22:51,358][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/malaespina_mezcal_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,359][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/volcan_de_mi_tierra_x.a_reposado_rotated.glb does not exist!
+[2026-04-15 19:22:51,360][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/botella_de_tequila_no_base_rotated.glb does not exist!
+[2026-04-15 19:22:51,360][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottlea_rotated.glb does not exist!
+[2026-04-15 19:22:51,361][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pirate_rum_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,362][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/staceys_rum_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,363][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottle_of_brazilian_rum_-_j._haberfeld_factory_rotated.glb does not exist!
+[2026-04-15 19:22:51,363][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/rum_bottle.glb does not exist!
+[2026-04-15 19:22:51,364][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/le_coq_-_cognac_extract.glb does not exist!
+[2026-04-15 19:22:51,365][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/topvalu_bestprice_whisky_rotated.glb does not exist!
+[2026-04-15 19:22:51,366][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ginger_gin_rotated.glb does not exist!
+[2026-04-15 19:22:51,367][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bombay_sapphire_rotated.glb does not exist!
+[2026-04-15 19:22:51,367][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/whiskey_jb_rotated.glb does not exist!
+[2026-04-15 19:22:51,368][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jameson_whiskey_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,369][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hennessy_very_special_cognac_rotated.glb does not exist!
+[2026-04-15 19:22:51,370][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ballantines.glb does not exist!
+[2026-04-15 19:22:51,370][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/whisky_white_horse_rotated.glb does not exist!
+[2026-04-15 19:22:51,371][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/low-poly_japanese_whisky_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,372][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/gameready_wine_bottle.glb does not exist!
+[2026-04-15 19:22:51,373][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Baileys_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:51,373][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Becherovka_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:51,374][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Chivas_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:51,375][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Cointreau_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:51,376][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Crema_di_Limoncino_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:51,376][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Curacao_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:51,377][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Havana_Club_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:51,378][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Jack_Daniel's_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:51,379][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Kahlua_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:51,379][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Malibu_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:51,380][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Martel_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:51,381][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Olmeca_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:51,382][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Pernod_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:51,382][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Ramazzotti_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:51,383][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Sortilege_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:51,395][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_1.glb does not exist!
+[2026-04-15 19:22:51,396][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/classic_wine_bottle_with_label_rotated.glb does not exist!
+[2026-04-15 19:22:51,397][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_2.glb does not exist!
+[2026-04-15 19:22:51,398][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/3d_wine_bottle_model_rotated.glb does not exist!
+[2026-04-15 19:22:51,399][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/red_spirit_wine.glb does not exist!
+[2026-04-15 19:22:51,399][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_3_rotated.glb does not exist!
+[2026-04-15 19:22:51,400][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_4.glb does not exist!
+[2026-04-15 19:22:51,401][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottle_of_wine_rotated.glb does not exist!
+[2026-04-15 19:22:51,402][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/low_poly_wine_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,402][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_5_rotated.glb does not exist!
+[2026-04-15 19:22:51,403][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_6_rotated.glb does not exist!
+[2026-04-15 19:22:51,404][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_7.glb does not exist!
+[2026-04-15 19:22:51,404][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_8_rotated.glb does not exist!
+[2026-04-15 19:22:51,405][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_9_rotated.glb does not exist!
+[2026-04-15 19:22:51,406][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shiraz_wine_no_base_rotated.glb does not exist!
+[2026-04-15 19:22:51,407][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_10_rotated.glb does not exist!
+[2026-04-15 19:22:51,407][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bouteille_de_vinbottle_of_wine_rotated.glb does not exist!
+[2026-04-15 19:22:51,408][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/modern_wine_bottle.glb does not exist!
+[2026-04-15 19:22:51,409][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_203_rotated.glb does not exist!
+[2026-04-15 19:22:51,410][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_3d_model_for_archviz__decoration_rotated.glb does not exist!
+[2026-04-15 19:22:51,410][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_11_rotated.glb does not exist!
+[2026-04-15 19:22:51,424][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/thick_vegetable_charge_juice_rotated.glb does not exist!
+[2026-04-15 19:22:51,425][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/the_vegetable_life_100_green_smoothie_rotated.glb does not exist!
+[2026-04-15 19:22:51,425][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juice_rotated.glb does not exist!
+[2026-04-15 19:22:51,426][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juice_2_rotated.glb does not exist!
+[2026-04-15 19:22:51,427][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orange_juice_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:51,428][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cepita_peach_juice_bottle.glb does not exist!
+[2026-04-15 19:22:51,428][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orange_juice_rotated.glb does not exist!
+[2026-04-15 19:22:51,429][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/gameready_lowpoly_juice_bottle_free_download_rotated.glb does not exist!
+[2026-04-15 19:22:51,430][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orange_juice__02.12.21.glb does not exist!
+[2026-04-15 19:22:51,431][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juice_box_rotated.glb does not exist!
+[2026-04-15 19:22:51,431][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/grape_juice_rotated.glb does not exist!
+[2026-04-15 19:22:51,432][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/apple_juice_rotated.glb does not exist!
+[2026-04-15 19:22:51,433][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juice_pack_3d_scan.glb does not exist!
+[2026-04-15 19:22:51,434][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juicebox00.glb does not exist!
+[2026-04-15 19:22:51,434][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/dos_pinos_-_jugo_verde_detox_rotated.glb does not exist!
+[2026-04-15 19:22:51,435][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/the_perfect_juice_rotated.glb does not exist!
+[2026-04-15 19:22:51,436][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/royal_goyave_rose_bio_1l_rotated.glb does not exist!
+[2026-04-15 19:22:51,437][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/grape_juice_1.glb does not exist!
+[2026-04-15 19:22:51,437][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juice_box_1_rotated.glb does not exist!
+[2026-04-15 19:22:51,438][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orange_juice_200_ml_rotated.glb does not exist!
+[2026-04-15 19:22:51,439][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yasai_seikatsu_100_berry_salad_juice_rotated.glb does not exist!
+[2026-04-15 19:22:51,440][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/3d_juice_box_rotated.glb does not exist!
+[2026-04-15 19:22:51,440][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orangejuicebox.glb does not exist!
+[2026-04-15 19:22:51,451][dsynth.assets.asset][WARNING] - Asset path assets/shelf_woodenglb.glb does not exist!
+[2026-04-15 19:22:51,452][dsynth.assets.asset][WARNING] - Asset path assets/shelf_woodenglb_low_res.glb does not exist!
+[2026-04-15 19:22:51,453][dsynth.assets.asset][WARNING] - Asset path assets/shelf_metal.glb does not exist!
+[2026-04-15 19:22:51,454][dsynth.assets.asset][WARNING] - Asset path assets/square_light_led_panel.glb does not exist!
+[2026-04-15 19:22:51,455][dsynth.assets.asset][WARNING] - Asset path assets/showcase.glb does not exist!
+[2026-04-15 19:22:51,457][dsynth.assets.asset][WARNING] - Asset path assets/store_mini_shelf_two_sided.glb does not exist!
+[2026-04-15 19:22:51,458][dsynth.assets.asset][WARNING] - Asset path assets/pile_of_pallets.glb does not exist!
+[2026-04-15 19:22:51,458][dsynth.assets.asset][WARNING] - Asset path assets/pallets_and_boxes.glb does not exist!
+[2026-04-15 19:22:51,464][dsynth.assets.asset][WARNING] - Asset path assets/smallShoppingCart2.glb does not exist!
+[2026-04-15 19:22:52,610][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-15 19:22:52,610][dsynth.scene_gen.scene_generator][ERROR] - Failed to generate ds_small_scene_0_c9072891_0! Unexpected error: string is not a file: assets/shelf_woodenglb.glb
+[2026-04-15 19:22:53,669][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/baby.glb does not exist!
+[2026-04-15 19:22:53,670][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cerealsForSS.glb does not exist!
+[2026-04-15 19:22:53,671][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cerealescornflakescora.glb does not exist!
+[2026-04-15 19:22:53,671][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cornFlakesRetroEditionSmall.glb does not exist!
+[2026-04-15 19:22:53,672][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nestleFitnessChocolateCerealBox.glb does not exist!
+[2026-04-15 19:22:53,674][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk.glb does not exist!
+[2026-04-15 19:22:53,675][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milkHandle.glb does not exist!
+[2026-04-15 19:22:53,676][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milkCarton.glb does not exist!
+[2026-04-15 19:22:53,685][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cocaColaCan.glb does not exist!
+[2026-04-15 19:22:53,685][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi.glb does not exist!
+[2026-04-15 19:22:53,686][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fanta.glb does not exist!
+[2026-04-15 19:22:53,687][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/mountainDew.glb does not exist!
+[2026-04-15 19:22:53,687][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/chaosCola2l.glb does not exist!
+[2026-04-15 19:22:53,688][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cocaColaNoSugar1p5l.glb does not exist!
+[2026-04-15 19:22:53,689][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sprite2p25l.glb does not exist!
+[2026-04-15 19:22:53,690][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fantaNaranja1p35l.glb does not exist!
+[2026-04-15 19:22:53,690][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffeePackaging.glb does not exist!
+[2026-04-15 19:22:53,691][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffeePaperBag.glb does not exist!
+[2026-04-15 19:22:53,692][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffeePackaging1.glb does not exist!
+[2026-04-15 19:22:53,693][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffeeCapsulesDolceGusto.glb does not exist!
+[2026-04-15 19:22:53,693][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nescafesimple.glb does not exist!
+[2026-04-15 19:22:53,694][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pgTipsTeaBox.glb does not exist!
+[2026-04-15 19:22:53,695][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sirWinstonTea.glb does not exist!
+[2026-04-15 19:22:53,705][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_fish-freepoly.org_rotated.glb does not exist!
+[2026-04-15 19:22:53,706][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_fish_2-freepoly.org_rotated.glb does not exist!
+[2026-04-15 19:22:53,706][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tuna_can.glb does not exist!
+[2026-04-15 19:22:53,707][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/vintage_canned_corn_1.glb does not exist!
+[2026-04-15 19:22:53,708][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_bean_rotated.glb does not exist!
+[2026-04-15 19:22:53,709][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/food_can_rotated.glb does not exist!
+[2026-04-15 19:22:53,710][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_food_rotated.glb does not exist!
+[2026-04-15 19:22:53,710][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/food_can_415g_rotated.glb does not exist!
+[2026-04-15 19:22:53,711][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/beef_can_rotated.glb does not exist!
+[2026-04-15 19:22:53,712][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb does not exist!
+[2026-04-15 19:22:53,713][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canarian_cafe-_jar_of_olives_rotated.glb does not exist!
+[2026-04-15 19:22:53,714][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pickled_cucumbers_rotated.glb does not exist!
+[2026-04-15 19:22:53,714][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/beans_rotated.glb does not exist!
+[2026-04-15 19:22:53,715][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/a_can_of_beans_rotated.glb does not exist!
+[2026-04-15 19:22:53,716][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/green_beans_rotated.glb does not exist!
+[2026-04-15 19:22:53,717][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bean_tin_rotated.glb does not exist!
+[2026-04-15 19:22:53,717][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/can_of_sweet_corn.glb does not exist!
+[2026-04-15 19:22:53,725][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_coffee_-_lighting_test.glb does not exist!
+[2026-04-15 19:22:53,726][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/extreme_wonda.glb does not exist!
+[2026-04-15 19:22:53,727][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/detwilers_salted_caramel__coffee_grounds_bag_rotated.glb does not exist!
+[2026-04-15 19:22:53,727][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/spice_tea-_black_tea_collada.glb does not exist!
+[2026-04-15 19:22:53,728][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffee_pack_rotated.glb does not exist!
+[2026-04-15 19:22:53,729][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jacobsmilka.glb does not exist!
+[2026-04-15 19:22:53,730][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/vintage_dutch_tin_of_chocolate_powder_rotated.glb does not exist!
+[2026-04-15 19:22:53,731][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffee_packaging_2.glb does not exist!
+[2026-04-15 19:22:53,731][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffee_paper_bag_3d_scan_1.glb does not exist!
+[2026-04-15 19:22:53,732][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffee_capsules_pack_dolce_gusto_espresso_1.glb does not exist!
+[2026-04-15 19:22:53,733][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nescafesimple_1_rotated.glb does not exist!
+[2026-04-15 19:22:53,734][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pg_tips_tea_box_1_rotated.glb does not exist!
+[2026-04-15 19:22:53,734][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sir_winston_tea_1_rotated.glb does not exist!
+[2026-04-15 19:22:53,747][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/heart_in_a_jar.glb does not exist!
+[2026-04-15 19:22:53,748][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/vintage_marmalade_jar_rotated.glb does not exist!
+[2026-04-15 19:22:53,748][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jam_jam_rotated.glb does not exist!
+[2026-04-15 19:22:53,749][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nutella_rotated.glb does not exist!
+[2026-04-15 19:22:53,750][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nutella_2_rotated.glb does not exist!
+[2026-04-15 19:22:53,750][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/casual_jar_of_raspberry_jam_rotated.glb does not exist!
+[2026-04-15 19:22:53,751][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jam_2k_3_rotated.glb does not exist!
+[2026-04-15 19:22:53,752][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jam_2k_4_rotated.glb does not exist!
+[2026-04-15 19:22:53,753][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fruit_gum_rotated.glb does not exist!
+[2026-04-15 19:22:53,753][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/chewing_gum_love_is_rotated.glb does not exist!
+[2026-04-15 19:22:53,754][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/box_oreo_rotated.glb does not exist!
+[2026-04-15 19:22:53,755][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/choco_pie_rotated.glb does not exist!
+[2026-04-15 19:22:53,756][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tanuki_drops_candy__japanese_hard_candy.glb does not exist!
+[2026-04-15 19:22:53,756][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/mint_candy_box_rotated.glb does not exist!
+[2026-04-15 19:22:53,757][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wonka_runts_box_rotated.glb does not exist!
+[2026-04-15 19:22:53,758][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sakuma_drops_candy.glb does not exist!
+[2026-04-15 19:22:53,759][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tic_tac_rotated.glb does not exist!
+[2026-04-15 19:22:53,759][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/honey_bear_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:53,760][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/honey_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:53,761][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/peanut_butter_1_rotated.glb does not exist!
+[2026-04-15 19:22:53,762][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/peanut_butter_rotated.glb does not exist!
+[2026-04-15 19:22:53,771][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/campbells_can_rotated.glb does not exist!
+[2026-04-15 19:22:53,772][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/buckethead_chicken_noodles_rotated.glb does not exist!
+[2026-04-15 19:22:53,773][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/can_soup_rotated.glb does not exist!
+[2026-04-15 19:22:53,774][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/creamy_chicken_soup_can_rotated.glb does not exist!
+[2026-04-15 19:22:53,774][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/campbells_chicken_noodle_soup_rotated.glb does not exist!
+[2026-04-15 19:22:53,775][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/f43bb07e13bd4422bb7d4cbe6a213957_rotated.glb does not exist!
+[2026-04-15 19:22:53,776][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/royco_quick_soup_rotated.glb does not exist!
+[2026-04-15 19:22:53,777][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/b71c925d07134c2b869ffd778bbb0616_rotated.glb does not exist!
+[2026-04-15 19:22:53,778][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nissin_cup_noodles_-_seafood_flavour.glb does not exist!
+[2026-04-15 19:22:53,778][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/noodle_cup_rotated.glb does not exist!
+[2026-04-15 19:22:53,779][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jin-ramen_cup_noodle_rotated.glb does not exist!
+[2026-04-15 19:22:53,780][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ramen.glb does not exist!
+[2026-04-15 19:22:53,781][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/carbonara_buldack_cup_rotated.glb does not exist!
+[2026-04-15 19:22:53,781][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/maruchan_con_camaron_rotated.glb does not exist!
+[2026-04-15 19:22:53,782][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/scan_instant_noodles-freepoly.org_1_rotated.glb does not exist!
+[2026-04-15 19:22:53,783][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nissin_cup_noodles_-_chicken_flavour_rotated.glb does not exist!
+[2026-04-15 19:22:53,792][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/generic_beverage_can_rotated.glb does not exist!
+[2026-04-15 19:22:53,793][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/samuel_beer_rotated.glb does not exist!
+[2026-04-15 19:22:53,794][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/kani_beer.glb does not exist!
+[2026-04-15 19:22:53,795][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/heibeken_beer.glb does not exist!
+[2026-04-15 19:22:53,795][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bud_light_rotated.glb does not exist!
+[2026-04-15 19:22:53,796][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/beer_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:53,797][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/duff_can_rotated.glb does not exist!
+[2026-04-15 19:22:53,798][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/beer_bottle_1_rotated.glb does not exist!
+[2026-04-15 19:22:53,798][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/asahi_beer_can_rotated.glb does not exist!
+[2026-04-15 19:22:53,799][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/beer_rotated.glb does not exist!
+[2026-04-15 19:22:53,800][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/asahi_beer_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:53,801][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/corona_extra_355ml_bottle_japan_rotated.glb does not exist!
+[2026-04-15 19:22:53,801][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/japanese_beer_rotated.glb does not exist!
+[2026-04-15 19:22:53,802][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottle_beer_nadir_rotated.glb does not exist!
+[2026-04-15 19:22:53,803][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/guinness_beer_can_rotated.glb does not exist!
+[2026-04-15 19:22:53,804][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/6955f9c074ee4969b131c746e26be16f_rotated.glb does not exist!
+[2026-04-15 19:22:53,811][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/rice_a_roni_long_grain_rice_box.glb does not exist!
+[2026-04-15 19:22:53,811][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_sample.glb does not exist!
+[2026-04-15 19:22:53,812][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta.glb does not exist!
+[2026-04-15 19:22:53,813][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_1.glb does not exist!
+[2026-04-15 19:22:53,813][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_2_rotated.glb does not exist!
+[2026-04-15 19:22:53,814][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_elbow_macaroni.glb does not exist!
+[2026-04-15 19:22:53,815][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_3_rotated.glb does not exist!
+[2026-04-15 19:22:53,816][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_benea_rotated.glb does not exist!
+[2026-04-15 19:22:53,816][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/banza_pasta_higher_res_rotated.glb does not exist!
+[2026-04-15 19:22:53,817][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_benea_propuesta_rotated.glb does not exist!
+[2026-04-15 19:22:53,818][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/day_205_dinner_rotated.glb does not exist!
+[2026-04-15 19:22:53,826][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/olive_oil_rotated.glb does not exist!
+[2026-04-15 19:22:53,827][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/calve_mayonaise.glb does not exist!
+[2026-04-15 19:22:53,828][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ketchup_rotated.glb does not exist!
+[2026-04-15 19:22:53,829][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ketchup_aridll_rotated.glb does not exist!
+[2026-04-15 19:22:53,829][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/carbonara_jar_rotated.glb does not exist!
+[2026-04-15 19:22:53,830][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/350_jar_rotated.glb does not exist!
+[2026-04-15 19:22:53,831][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/glass_bottle_3d_scan_rotated.glb does not exist!
+[2026-04-15 19:22:53,832][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tomato_paste_tin.glb does not exist!
+[2026-04-15 19:22:53,832][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tabasco_sauce_rotated.glb does not exist!
+[2026-04-15 19:22:53,833][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hellmanns_hot_sauce_rotated.glb does not exist!
+[2026-04-15 19:22:53,834][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sweet_baby_rays_bbq_sauce_rotated.glb does not exist!
+[2026-04-15 19:22:53,835][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/soy_sauce_1_rotated.glb does not exist!
+[2026-04-15 19:22:53,835][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hot_sauce_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:53,836][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/3d_sauce_bottle_-_optimized_and_ready_for_use_rotated.glb does not exist!
+[2026-04-15 19:22:53,844][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/plastic_yogurt_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:53,844][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yogurt_rotated.glb does not exist!
+[2026-04-15 19:22:53,845][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/chobani_yogurt_no_base.glb does not exist!
+[2026-04-15 19:22:53,846][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yogurt_aridll.glb does not exist!
+[2026-04-15 19:22:53,847][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/drinking_yogurt_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:53,847][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yogurt_natural_de_arandano_dulce_gaby_individual_rotated.glb does not exist!
+[2026-04-15 19:22:53,848][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/lacchi_rotated.glb does not exist!
+[2026-04-15 19:22:53,849][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/teos__yogurt__bottle_0225151825_texture22222_rotated.glb does not exist!
+[2026-04-15 19:22:53,850][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yoguruppe_rotated.glb does not exist!
+[2026-04-15 19:22:53,850][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yogurth_fresa_rotated.glb does not exist!
+[2026-04-15 19:22:53,851][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yoghurt_rotated.glb does not exist!
+[2026-04-15 19:22:53,852][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/official_bosetti__actimel_collab_rotated.glb does not exist!
+[2026-04-15 19:22:53,877][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/toothpaste_box_no_base_rotated.glb does not exist!
+[2026-04-15 19:22:53,878][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/mouthwash_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:53,879][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/head__shoulder_shampoo_tube.glb does not exist!
+[2026-04-15 19:22:53,879][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shampoo_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:53,880][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/head__shoulder_shampoo_rotated.glb does not exist!
+[2026-04-15 19:22:53,881][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/native_moisturizing_shampoo___coconut__vanilla_rotated.glb does not exist!
+[2026-04-15 19:22:53,882][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coconut_shampoo_with_moisturizing_oils.glb does not exist!
+[2026-04-15 19:22:53,883][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/il_gele_shampoo_rotated.glb does not exist!
+[2026-04-15 19:22:53,883][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shampoo-dora-y-sus-amigos_rotated.glb does not exist!
+[2026-04-15 19:22:53,884][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_man_shampoo.glb does not exist!
+[2026-04-15 19:22:53,885][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/savanah_shampoo_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:53,886][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shampoo_grandes_heroes_rotated.glb does not exist!
+[2026-04-15 19:22:53,886][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/old_spice_deodorant_rotated.glb does not exist!
+[2026-04-15 19:22:53,887][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shampoo_2_rotated.glb does not exist!
+[2026-04-15 19:22:53,888][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/elmers_glue_shampoo_rotated.glb does not exist!
+[2026-04-15 19:22:53,889][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shampoo1_rotated.glb does not exist!
+[2026-04-15 19:22:53,889][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/maimara_botella_producto_de_belleza_rotated.glb does not exist!
+[2026-04-15 19:22:53,890][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/old_spice_deodorant_1_rotated.glb does not exist!
+[2026-04-15 19:22:53,891][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/axe_rotated.glb does not exist!
+[2026-04-15 19:22:53,892][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/old_spice_rotated.glb does not exist!
+[2026-04-15 19:22:53,892][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/old_spice_deodorant_lowpoly_rotated.glb does not exist!
+[2026-04-15 19:22:53,893][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/oldspice_deodorant_stick_rotated.glb does not exist!
+[2026-04-15 19:22:53,894][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/axe_deodorant_rotated.glb does not exist!
+[2026-04-15 19:22:53,895][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/deodrant_rotated.glb does not exist!
+[2026-04-15 19:22:53,896][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hand_sanitiser_spray_rotated.glb does not exist!
+[2026-04-15 19:22:53,896][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/propoleo_spray_rotated.glb does not exist!
+[2026-04-15 19:22:53,897][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/spray_crema_nivea_50_rotated.glb does not exist!
+[2026-04-15 19:22:53,898][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tododia_spray_datiles_y_canela_rotated.glb does not exist!
+[2026-04-15 19:22:53,899][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/goop_tin_rotated.glb does not exist!
+[2026-04-15 19:22:53,900][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cosmetics__skin_care_product_-_free_rotated.glb does not exist!
+[2026-04-15 19:22:53,900][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/face_eyes_moisturizer_cream_rotated.glb does not exist!
+[2026-04-15 19:22:53,901][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/neutrogena_cream.glb does not exist!
+[2026-04-15 19:22:53,902][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_-_refreshing_day_cream_-_by_smakologg_rotated.glb does not exist!
+[2026-04-15 19:22:53,903][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hand_cream_rotated.glb does not exist!
+[2026-04-15 19:22:53,903][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/barbasol_shaving_cream_can_rotated.glb does not exist!
+[2026-04-15 19:22:53,904][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/face_eye_moisturizer_cream_rotated.glb does not exist!
+[2026-04-15 19:22:53,905][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_cream_bottle_model_rotated.glb does not exist!
+[2026-04-15 19:22:53,906][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottle_of_soap.glb does not exist!
+[2026-04-15 19:22:53,906][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_body_lotion_rotated.glb does not exist!
+[2026-04-15 19:22:53,907][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_aftershave_rotated.glb does not exist!
+[2026-04-15 19:22:53,908][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_handcreme.glb does not exist!
+[2026-04-15 19:22:53,909][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_zonnebrand_rotated.glb does not exist!
+[2026-04-15 19:22:53,910][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb does not exist!
+[2026-04-15 19:22:53,910][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shea_butter_jar_rotated.glb does not exist!
+[2026-04-15 19:22:53,919][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/crackers_box_rotated.glb does not exist!
+[2026-04-15 19:22:53,920][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/snack.glb does not exist!
+[2026-04-15 19:22:53,921][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/barnums_animal_crackers_-_scanned_w_metashape_rotated.glb does not exist!
+[2026-04-15 19:22:53,922][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coconut_flavour_pocky.glb does not exist!
+[2026-04-15 19:22:53,922][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/macha_green_tea_pocky.glb does not exist!
+[2026-04-15 19:22:53,923][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/snacksinabox.glb does not exist!
+[2026-04-15 19:22:53,924][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/boite_biscuits_en_metal_cookies_box_rotated.glb does not exist!
+[2026-04-15 19:22:53,924][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cookies_cora_rotated.glb does not exist!
+[2026-04-15 19:22:53,925][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cookie_-_galleta__-_shin_chan_rotated.glb does not exist!
+[2026-04-15 19:22:53,926][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hershey_cookie_korean_vr_rotated.glb does not exist!
+[2026-04-15 19:22:53,927][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb does not exist!
+[2026-04-15 19:22:53,928][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fudgey_rounds_rotated.glb does not exist!
+[2026-04-15 19:22:53,929][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/box_of_sugar_biscuits_delicia_rotated.glb does not exist!
+[2026-04-15 19:22:53,929][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/biscuit_sponge_cake_rotated.glb does not exist!
+[2026-04-15 19:22:53,930][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/banania_boite_en_tole.glb does not exist!
+[2026-04-15 19:22:53,932][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/chicken_fried_rice_rotated.glb does not exist!
+[2026-04-15 19:22:53,933][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pizza_box_ristorante_prosciutto_funghi_rotated.glb does not exist!
+[2026-04-15 19:22:53,941][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_box_rice_krispies_label_low_poly_style.glb does not exist!
+[2026-04-15 19:22:53,942][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/boite_metal_avec_fermeture_kelloggs_rotated.glb does not exist!
+[2026-04-15 19:22:53,943][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/dark_chocolate_cereal_box_rotated.glb does not exist!
+[2026-04-15 19:22:53,944][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_box_rotated.glb does not exist!
+[2026-04-15 19:22:53,945][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cerealescornflakescora_1_rotated.glb does not exist!
+[2026-04-15 19:22:53,945][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/corn_flakes_retro_edition_1_rotated.glb does not exist!
+[2026-04-15 19:22:53,946][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nestle_fitness_chocolate_cereal_box_rotated.glb does not exist!
+[2026-04-15 19:22:53,947][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_rotated.glb does not exist!
+[2026-04-15 19:22:53,948][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_box_1.glb does not exist!
+[2026-04-15 19:22:53,948][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/caja_cereal_nesk.glb does not exist!
+[2026-04-15 19:22:53,949][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_cocoa_critters.glb does not exist!
+[2026-04-15 19:22:53,950][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_box_test_rotated.glb does not exist!
+[2026-04-15 19:22:53,951][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_-_honey_star.glb does not exist!
+[2026-04-15 19:22:53,951][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/spider-man_across_the_spiderverse_cereal_box_rotated.glb does not exist!
+[2026-04-15 19:22:53,961][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_carton.glb does not exist!
+[2026-04-15 19:22:53,962][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_1_rotated.glb does not exist!
+[2026-04-15 19:22:53,963][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_carton_1.glb does not exist!
+[2026-04-15 19:22:53,964][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/super_awesome_milk_carton.glb does not exist!
+[2026-04-15 19:22:53,964][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_packaging_rotated.glb does not exist!
+[2026-04-15 19:22:53,965][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bom_ba_milk_rotated.glb does not exist!
+[2026-04-15 19:22:53,966][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/brazilian_milk_bottle.glb does not exist!
+[2026-04-15 19:22:53,967][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/oat_milk_oatly_rotated.glb does not exist!
+[2026-04-15 19:22:53,967][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_test_rotated.glb does not exist!
+[2026-04-15 19:22:53,968][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_carton_2_rotated.glb does not exist!
+[2026-04-15 19:22:53,969][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_of_human_kindness_rotated.glb does not exist!
+[2026-04-15 19:22:53,970][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/vita_chocolate_milk_rotated.glb does not exist!
+[2026-04-15 19:22:53,970][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_box_french_rotated.glb does not exist!
+[2026-04-15 19:22:53,971][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/dos_pinos_-_leche_descremada_0_rotated.glb does not exist!
+[2026-04-15 19:22:53,972][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/43b88b2c6fa6462aa4c9d2d3c5e062a0_rotated.glb does not exist!
+[2026-04-15 19:22:53,973][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_2_rotated.glb does not exist!
+[2026-04-15 19:22:53,973][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/acidophilic_milk_rotated.glb does not exist!
+[2026-04-15 19:22:53,982][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/perwoll_detergent_3d_model.glb does not exist!
+[2026-04-15 19:22:53,983][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tide_detergent_bottle_3d_model_fanmade.glb does not exist!
+[2026-04-15 19:22:53,984][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottle_of_detergent.glb does not exist!
+[2026-04-15 19:22:53,985][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/dish_detergent.glb does not exist!
+[2026-04-15 19:22:53,985][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/parquet_detergent_with_almond_oil_1220ml.glb does not exist!
+[2026-04-15 19:22:53,986][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ace.glb does not exist!
+[2026-04-15 19:22:53,987][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/vanish_remover.glb does not exist!
+[2026-04-15 19:22:53,988][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/carpet_cleaner_1200ml.glb does not exist!
+[2026-04-15 19:22:53,988][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cleaning_spray_rotated.glb does not exist!
+[2026-04-15 19:22:53,989][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hair_spray_rotated.glb does not exist!
+[2026-04-15 19:22:53,990][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cc0_-_spray_cleaner_siffie.glb does not exist!
+[2026-04-15 19:22:53,991][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/room_spray_rotated.glb does not exist!
+[2026-04-15 19:22:53,991][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/kitchen_spray_rotated.glb does not exist!
+[2026-04-15 19:22:53,992][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/spray_bottle_raw_rotated.glb does not exist!
+[2026-04-15 19:22:53,993][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/scan_3d_mau_chai_vim_rotated.glb does not exist!
+[2026-04-15 19:22:54,000][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bag_of_bread_flour.glb does not exist!
+[2026-04-15 19:22:54,001][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/salt_caster_-_cooking.glb does not exist!
+[2026-04-15 19:22:54,001][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/salt_rotated.glb does not exist!
+[2026-04-15 19:22:54,002][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cc0_-_salt_package_rotated.glb does not exist!
+[2026-04-15 19:22:54,003][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cooking_salt_aridll.glb does not exist!
+[2026-04-15 19:22:54,003][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/table_salt_aridll.glb does not exist!
+[2026-04-15 19:22:54,004][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tesco_table_salt_photogrammetry_rotated.glb does not exist!
+[2026-04-15 19:22:54,005][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/frying_oil_jug_rotated.glb does not exist!
+[2026-04-15 19:22:54,006][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/package_of_oats_havre_gryn_rotated.glb does not exist!
+[2026-04-15 19:22:54,006][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/stock_powder_tin_rotated.glb does not exist!
+[2026-04-15 19:22:54,007][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/butter_tub_aridll.glb does not exist!
+[2026-04-15 19:22:54,024][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca-_cola_zero_sugar_byte_no_base_rotated.glb does not exist!
+[2026-04-15 19:22:54,025][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/topo_chico_mineral_water_rotated.glb does not exist!
+[2026-04-15 19:22:54,026][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/prime_-_tropical_punch_rotated.glb does not exist!
+[2026-04-15 19:22:54,026][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/prime_-_lemon_lime_rotated.glb does not exist!
+[2026-04-15 19:22:54,027][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orange_juice_1_rotated.glb does not exist!
+[2026-04-15 19:22:54,028][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca-cola_can_rotated.glb does not exist!
+[2026-04-15 19:22:54,029][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi_coke_can__pepsi__kola_kutusu_2_rotated.glb does not exist!
+[2026-04-15 19:22:54,029][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fanta_can_1_rotated.glb does not exist!
+[2026-04-15 19:22:54,030][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/soda_can_1.glb does not exist!
+[2026-04-15 19:22:54,031][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/chaos_cola_2_liter_rotated.glb does not exist!
+[2026-04-15 19:22:54,032][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca-cola_no_sugar_1.5l_rotated.glb does not exist!
+[2026-04-15 19:22:54,032][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sprite_2.25l_rotated.glb does not exist!
+[2026-04-15 19:22:54,033][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fanta_naranja_2l_rotated.glb does not exist!
+[2026-04-15 19:22:54,034][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca_600_sin_azucar_rotated.glb does not exist!
+[2026-04-15 19:22:54,035][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca_cola_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:54,035][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coke_light_rotated.glb does not exist!
+[2026-04-15 19:22:54,036][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/diet_coke_can_color_3d_scan_rotated.glb does not exist!
+[2026-04-15 19:22:54,037][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fallout_4_nuka_cola_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:54,038][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coke_zero_rotated.glb does not exist!
+[2026-04-15 19:22:54,038][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca-coka_can_rotated.glb does not exist!
+[2026-04-15 19:22:54,039][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/old_coca_cola_can_rotated.glb does not exist!
+[2026-04-15 19:22:54,040][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi_max_lime_bottle_0.5_l_rotated.glb does not exist!
+[2026-04-15 19:22:54,041][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi_can_rotated.glb does not exist!
+[2026-04-15 19:22:54,042][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/soda_can_2_rotated.glb does not exist!
+[2026-04-15 19:22:54,042][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi_max_coke_can__pepsi_max_kola_kutusu_rotated.glb does not exist!
+[2026-04-15 19:22:54,043][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi_max_can_rotated.glb does not exist!
+[2026-04-15 19:22:54,044][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/soda_can_3_rotated.glb does not exist!
+[2026-04-15 19:22:54,045][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/grape_fanta_can_rotated.glb does not exist!
+[2026-04-15 19:22:54,045][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sprite_bottle_custom_rotated.glb does not exist!
+[2026-04-15 19:22:54,048][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cc0_-_potato_chips_tube_2_rotated.glb does not exist!
+[2026-04-15 19:22:54,049][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pringles_cheddar_cheese_rotated.glb does not exist!
+[2026-04-15 19:22:54,050][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cans_pringles_rotated.glb does not exist!
+[2026-04-15 19:22:54,050][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pringles.glb does not exist!
+[2026-04-15 19:22:54,060][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/gfuel__spiderman_edition__gameready__energy_rotated.glb does not exist!
+[2026-04-15 19:22:54,061][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/redbull_1_rotated.glb does not exist!
+[2026-04-15 19:22:54,061][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/monster_energy_drink_rotated.glb does not exist!
+[2026-04-15 19:22:54,062][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/energy_drink_game_ready_model_rotated.glb does not exist!
+[2026-04-15 19:22:54,063][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/lit_energy_-_energy_drink_by_mikhail_litvin_rotated.glb does not exist!
+[2026-04-15 19:22:54,064][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/redbull__green_energy_drink_can_rotated.glb does not exist!
+[2026-04-15 19:22:54,064][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/energy_drink_can_free_model_rotated.glb does not exist!
+[2026-04-15 19:22:54,065][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/monster_zero_ultra_rotated.glb does not exist!
+[2026-04-15 19:22:54,066][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_energy_drink_art-soul_rotated.glb does not exist!
+[2026-04-15 19:22:54,067][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/monster_ultra_white_rotated.glb does not exist!
+[2026-04-15 19:22:54,067][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/guoba_chili_energy_drink_rotated.glb does not exist!
+[2026-04-15 19:22:54,068][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/kendu_energy_drink_can_rotated.glb does not exist!
+[2026-04-15 19:22:54,069][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/monster_energy_pipeline_punch_355ml_jpn_rotated.glb does not exist!
+[2026-04-15 19:22:54,070][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shock_energy_drink.glb does not exist!
+[2026-04-15 19:22:54,070][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/non_stop_energy_rotated.glb does not exist!
+[2026-04-15 19:22:54,094][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/revo_original_rotated.glb does not exist!
+[2026-04-15 19:22:54,095][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/baileys_tiramisu_rotated.glb does not exist!
+[2026-04-15 19:22:54,095][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/absolut_vodka_1l_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:54,096][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/rose_liquor_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:54,097][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/turron_rotated.glb does not exist!
+[2026-04-15 19:22:54,098][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/liquor_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:54,098][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jagermeister_0.7l_bottle_japan_rotated.glb does not exist!
+[2026-04-15 19:22:54,099][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/malaespina_mezcal_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:54,100][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/volcan_de_mi_tierra_x.a_reposado_rotated.glb does not exist!
+[2026-04-15 19:22:54,101][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/botella_de_tequila_no_base_rotated.glb does not exist!
+[2026-04-15 19:22:54,101][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottlea_rotated.glb does not exist!
+[2026-04-15 19:22:54,102][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pirate_rum_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:54,103][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/staceys_rum_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:54,104][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottle_of_brazilian_rum_-_j._haberfeld_factory_rotated.glb does not exist!
+[2026-04-15 19:22:54,104][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/rum_bottle.glb does not exist!
+[2026-04-15 19:22:54,105][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/le_coq_-_cognac_extract.glb does not exist!
+[2026-04-15 19:22:54,106][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/topvalu_bestprice_whisky_rotated.glb does not exist!
+[2026-04-15 19:22:54,107][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ginger_gin_rotated.glb does not exist!
+[2026-04-15 19:22:54,108][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bombay_sapphire_rotated.glb does not exist!
+[2026-04-15 19:22:54,108][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/whiskey_jb_rotated.glb does not exist!
+[2026-04-15 19:22:54,109][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jameson_whiskey_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:54,110][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hennessy_very_special_cognac_rotated.glb does not exist!
+[2026-04-15 19:22:54,111][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ballantines.glb does not exist!
+[2026-04-15 19:22:54,111][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/whisky_white_horse_rotated.glb does not exist!
+[2026-04-15 19:22:54,112][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/low-poly_japanese_whisky_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:54,113][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/gameready_wine_bottle.glb does not exist!
+[2026-04-15 19:22:54,114][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Baileys_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:54,114][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Becherovka_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:54,115][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Chivas_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:54,116][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Cointreau_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:54,117][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Crema_di_Limoncino_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:54,117][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Curacao_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:54,118][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Havana_Club_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:54,119][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Jack_Daniel's_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:54,119][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Kahlua_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:54,120][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Malibu_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:54,121][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Martel_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:54,122][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Olmeca_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:54,122][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Pernod_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:54,123][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Ramazzotti_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:54,124][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Sortilege_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:54,136][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_1.glb does not exist!
+[2026-04-15 19:22:54,137][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/classic_wine_bottle_with_label_rotated.glb does not exist!
+[2026-04-15 19:22:54,138][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_2.glb does not exist!
+[2026-04-15 19:22:54,139][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/3d_wine_bottle_model_rotated.glb does not exist!
+[2026-04-15 19:22:54,139][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/red_spirit_wine.glb does not exist!
+[2026-04-15 19:22:54,140][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_3_rotated.glb does not exist!
+[2026-04-15 19:22:54,141][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_4.glb does not exist!
+[2026-04-15 19:22:54,142][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottle_of_wine_rotated.glb does not exist!
+[2026-04-15 19:22:54,142][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/low_poly_wine_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:54,143][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_5_rotated.glb does not exist!
+[2026-04-15 19:22:54,144][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_6_rotated.glb does not exist!
+[2026-04-15 19:22:54,144][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_7.glb does not exist!
+[2026-04-15 19:22:54,145][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_8_rotated.glb does not exist!
+[2026-04-15 19:22:54,146][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_9_rotated.glb does not exist!
+[2026-04-15 19:22:54,147][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shiraz_wine_no_base_rotated.glb does not exist!
+[2026-04-15 19:22:54,147][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_10_rotated.glb does not exist!
+[2026-04-15 19:22:54,148][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bouteille_de_vinbottle_of_wine_rotated.glb does not exist!
+[2026-04-15 19:22:54,149][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/modern_wine_bottle.glb does not exist!
+[2026-04-15 19:22:54,150][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_203_rotated.glb does not exist!
+[2026-04-15 19:22:54,150][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_3d_model_for_archviz__decoration_rotated.glb does not exist!
+[2026-04-15 19:22:54,151][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_11_rotated.glb does not exist!
+[2026-04-15 19:22:54,164][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/thick_vegetable_charge_juice_rotated.glb does not exist!
+[2026-04-15 19:22:54,165][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/the_vegetable_life_100_green_smoothie_rotated.glb does not exist!
+[2026-04-15 19:22:54,166][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juice_rotated.glb does not exist!
+[2026-04-15 19:22:54,167][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juice_2_rotated.glb does not exist!
+[2026-04-15 19:22:54,167][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orange_juice_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:54,168][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cepita_peach_juice_bottle.glb does not exist!
+[2026-04-15 19:22:54,169][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orange_juice_rotated.glb does not exist!
+[2026-04-15 19:22:54,170][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/gameready_lowpoly_juice_bottle_free_download_rotated.glb does not exist!
+[2026-04-15 19:22:54,170][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orange_juice__02.12.21.glb does not exist!
+[2026-04-15 19:22:54,171][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juice_box_rotated.glb does not exist!
+[2026-04-15 19:22:54,172][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/grape_juice_rotated.glb does not exist!
+[2026-04-15 19:22:54,173][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/apple_juice_rotated.glb does not exist!
+[2026-04-15 19:22:54,174][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juice_pack_3d_scan.glb does not exist!
+[2026-04-15 19:22:54,174][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juicebox00.glb does not exist!
+[2026-04-15 19:22:54,175][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/dos_pinos_-_jugo_verde_detox_rotated.glb does not exist!
+[2026-04-15 19:22:54,176][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/the_perfect_juice_rotated.glb does not exist!
+[2026-04-15 19:22:54,177][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/royal_goyave_rose_bio_1l_rotated.glb does not exist!
+[2026-04-15 19:22:54,177][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/grape_juice_1.glb does not exist!
+[2026-04-15 19:22:54,178][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juice_box_1_rotated.glb does not exist!
+[2026-04-15 19:22:54,179][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orange_juice_200_ml_rotated.glb does not exist!
+[2026-04-15 19:22:54,180][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yasai_seikatsu_100_berry_salad_juice_rotated.glb does not exist!
+[2026-04-15 19:22:54,180][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/3d_juice_box_rotated.glb does not exist!
+[2026-04-15 19:22:54,181][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orangejuicebox.glb does not exist!
+[2026-04-15 19:22:54,192][dsynth.assets.asset][WARNING] - Asset path assets/shelf_woodenglb.glb does not exist!
+[2026-04-15 19:22:54,192][dsynth.assets.asset][WARNING] - Asset path assets/shelf_woodenglb_low_res.glb does not exist!
+[2026-04-15 19:22:54,193][dsynth.assets.asset][WARNING] - Asset path assets/shelf_metal.glb does not exist!
+[2026-04-15 19:22:54,194][dsynth.assets.asset][WARNING] - Asset path assets/square_light_led_panel.glb does not exist!
+[2026-04-15 19:22:54,196][dsynth.assets.asset][WARNING] - Asset path assets/showcase.glb does not exist!
+[2026-04-15 19:22:54,198][dsynth.assets.asset][WARNING] - Asset path assets/store_mini_shelf_two_sided.glb does not exist!
+[2026-04-15 19:22:54,198][dsynth.assets.asset][WARNING] - Asset path assets/pile_of_pallets.glb does not exist!
+[2026-04-15 19:22:54,199][dsynth.assets.asset][WARNING] - Asset path assets/pallets_and_boxes.glb does not exist!
+[2026-04-15 19:22:54,204][dsynth.assets.asset][WARNING] - Asset path assets/smallShoppingCart2.glb does not exist!
+[2026-04-15 19:22:55,197][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-15 19:22:55,197][dsynth.scene_gen.scene_generator][ERROR] - Failed to generate ds_small_scene_0_c9072891_1! Unexpected error: string is not a file: assets/shelf_woodenglb.glb
+[2026-04-15 19:22:56,037][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/baby.glb does not exist!
+[2026-04-15 19:22:56,038][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cerealsForSS.glb does not exist!
+[2026-04-15 19:22:56,039][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cerealescornflakescora.glb does not exist!
+[2026-04-15 19:22:56,040][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cornFlakesRetroEditionSmall.glb does not exist!
+[2026-04-15 19:22:56,041][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nestleFitnessChocolateCerealBox.glb does not exist!
+[2026-04-15 19:22:56,043][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk.glb does not exist!
+[2026-04-15 19:22:56,044][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milkHandle.glb does not exist!
+[2026-04-15 19:22:56,044][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milkCarton.glb does not exist!
+[2026-04-15 19:22:56,053][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cocaColaCan.glb does not exist!
+[2026-04-15 19:22:56,054][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi.glb does not exist!
+[2026-04-15 19:22:56,054][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fanta.glb does not exist!
+[2026-04-15 19:22:56,055][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/mountainDew.glb does not exist!
+[2026-04-15 19:22:56,056][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/chaosCola2l.glb does not exist!
+[2026-04-15 19:22:56,057][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cocaColaNoSugar1p5l.glb does not exist!
+[2026-04-15 19:22:56,057][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sprite2p25l.glb does not exist!
+[2026-04-15 19:22:56,058][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fantaNaranja1p35l.glb does not exist!
+[2026-04-15 19:22:56,059][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffeePackaging.glb does not exist!
+[2026-04-15 19:22:56,059][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffeePaperBag.glb does not exist!
+[2026-04-15 19:22:56,060][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffeePackaging1.glb does not exist!
+[2026-04-15 19:22:56,061][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffeeCapsulesDolceGusto.glb does not exist!
+[2026-04-15 19:22:56,062][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nescafesimple.glb does not exist!
+[2026-04-15 19:22:56,062][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pgTipsTeaBox.glb does not exist!
+[2026-04-15 19:22:56,063][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sirWinstonTea.glb does not exist!
+[2026-04-15 19:22:56,073][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_fish-freepoly.org_rotated.glb does not exist!
+[2026-04-15 19:22:56,074][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_fish_2-freepoly.org_rotated.glb does not exist!
+[2026-04-15 19:22:56,075][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tuna_can.glb does not exist!
+[2026-04-15 19:22:56,075][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/vintage_canned_corn_1.glb does not exist!
+[2026-04-15 19:22:56,076][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_bean_rotated.glb does not exist!
+[2026-04-15 19:22:56,077][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/food_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,078][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_food_rotated.glb does not exist!
+[2026-04-15 19:22:56,078][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/food_can_415g_rotated.glb does not exist!
+[2026-04-15 19:22:56,079][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/beef_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,080][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb does not exist!
+[2026-04-15 19:22:56,081][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canarian_cafe-_jar_of_olives_rotated.glb does not exist!
+[2026-04-15 19:22:56,081][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pickled_cucumbers_rotated.glb does not exist!
+[2026-04-15 19:22:56,082][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/beans_rotated.glb does not exist!
+[2026-04-15 19:22:56,083][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/a_can_of_beans_rotated.glb does not exist!
+[2026-04-15 19:22:56,084][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/green_beans_rotated.glb does not exist!
+[2026-04-15 19:22:56,084][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bean_tin_rotated.glb does not exist!
+[2026-04-15 19:22:56,085][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/can_of_sweet_corn.glb does not exist!
+[2026-04-15 19:22:56,093][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_coffee_-_lighting_test.glb does not exist!
+[2026-04-15 19:22:56,094][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/extreme_wonda.glb does not exist!
+[2026-04-15 19:22:56,095][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/detwilers_salted_caramel__coffee_grounds_bag_rotated.glb does not exist!
+[2026-04-15 19:22:56,095][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/spice_tea-_black_tea_collada.glb does not exist!
+[2026-04-15 19:22:56,096][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffee_pack_rotated.glb does not exist!
+[2026-04-15 19:22:56,097][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jacobsmilka.glb does not exist!
+[2026-04-15 19:22:56,097][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/vintage_dutch_tin_of_chocolate_powder_rotated.glb does not exist!
+[2026-04-15 19:22:56,098][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffee_packaging_2.glb does not exist!
+[2026-04-15 19:22:56,099][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffee_paper_bag_3d_scan_1.glb does not exist!
+[2026-04-15 19:22:56,100][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coffee_capsules_pack_dolce_gusto_espresso_1.glb does not exist!
+[2026-04-15 19:22:56,101][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nescafesimple_1_rotated.glb does not exist!
+[2026-04-15 19:22:56,101][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pg_tips_tea_box_1_rotated.glb does not exist!
+[2026-04-15 19:22:56,102][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sir_winston_tea_1_rotated.glb does not exist!
+[2026-04-15 19:22:56,114][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/heart_in_a_jar.glb does not exist!
+[2026-04-15 19:22:56,115][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/vintage_marmalade_jar_rotated.glb does not exist!
+[2026-04-15 19:22:56,116][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jam_jam_rotated.glb does not exist!
+[2026-04-15 19:22:56,117][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nutella_rotated.glb does not exist!
+[2026-04-15 19:22:56,117][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nutella_2_rotated.glb does not exist!
+[2026-04-15 19:22:56,118][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/casual_jar_of_raspberry_jam_rotated.glb does not exist!
+[2026-04-15 19:22:56,119][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jam_2k_3_rotated.glb does not exist!
+[2026-04-15 19:22:56,120][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jam_2k_4_rotated.glb does not exist!
+[2026-04-15 19:22:56,120][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fruit_gum_rotated.glb does not exist!
+[2026-04-15 19:22:56,121][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/chewing_gum_love_is_rotated.glb does not exist!
+[2026-04-15 19:22:56,122][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/box_oreo_rotated.glb does not exist!
+[2026-04-15 19:22:56,122][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/choco_pie_rotated.glb does not exist!
+[2026-04-15 19:22:56,123][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tanuki_drops_candy__japanese_hard_candy.glb does not exist!
+[2026-04-15 19:22:56,124][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/mint_candy_box_rotated.glb does not exist!
+[2026-04-15 19:22:56,125][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wonka_runts_box_rotated.glb does not exist!
+[2026-04-15 19:22:56,125][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sakuma_drops_candy.glb does not exist!
+[2026-04-15 19:22:56,126][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tic_tac_rotated.glb does not exist!
+[2026-04-15 19:22:56,127][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/honey_bear_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,128][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/honey_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,128][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/peanut_butter_1_rotated.glb does not exist!
+[2026-04-15 19:22:56,129][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/peanut_butter_rotated.glb does not exist!
+[2026-04-15 19:22:56,139][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/campbells_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,140][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/buckethead_chicken_noodles_rotated.glb does not exist!
+[2026-04-15 19:22:56,141][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/can_soup_rotated.glb does not exist!
+[2026-04-15 19:22:56,141][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/creamy_chicken_soup_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,142][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/campbells_chicken_noodle_soup_rotated.glb does not exist!
+[2026-04-15 19:22:56,143][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/f43bb07e13bd4422bb7d4cbe6a213957_rotated.glb does not exist!
+[2026-04-15 19:22:56,144][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/royco_quick_soup_rotated.glb does not exist!
+[2026-04-15 19:22:56,144][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/b71c925d07134c2b869ffd778bbb0616_rotated.glb does not exist!
+[2026-04-15 19:22:56,145][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nissin_cup_noodles_-_seafood_flavour.glb does not exist!
+[2026-04-15 19:22:56,146][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/noodle_cup_rotated.glb does not exist!
+[2026-04-15 19:22:56,147][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jin-ramen_cup_noodle_rotated.glb does not exist!
+[2026-04-15 19:22:56,147][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ramen.glb does not exist!
+[2026-04-15 19:22:56,148][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/carbonara_buldack_cup_rotated.glb does not exist!
+[2026-04-15 19:22:56,149][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/maruchan_con_camaron_rotated.glb does not exist!
+[2026-04-15 19:22:56,150][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/scan_instant_noodles-freepoly.org_1_rotated.glb does not exist!
+[2026-04-15 19:22:56,151][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nissin_cup_noodles_-_chicken_flavour_rotated.glb does not exist!
+[2026-04-15 19:22:56,160][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/generic_beverage_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,161][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/samuel_beer_rotated.glb does not exist!
+[2026-04-15 19:22:56,162][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/kani_beer.glb does not exist!
+[2026-04-15 19:22:56,162][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/heibeken_beer.glb does not exist!
+[2026-04-15 19:22:56,163][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bud_light_rotated.glb does not exist!
+[2026-04-15 19:22:56,164][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/beer_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,165][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/duff_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,166][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/beer_bottle_1_rotated.glb does not exist!
+[2026-04-15 19:22:56,166][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/asahi_beer_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,167][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/beer_rotated.glb does not exist!
+[2026-04-15 19:22:56,168][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/asahi_beer_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,169][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/corona_extra_355ml_bottle_japan_rotated.glb does not exist!
+[2026-04-15 19:22:56,169][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/japanese_beer_rotated.glb does not exist!
+[2026-04-15 19:22:56,170][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottle_beer_nadir_rotated.glb does not exist!
+[2026-04-15 19:22:56,171][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/guinness_beer_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,172][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/6955f9c074ee4969b131c746e26be16f_rotated.glb does not exist!
+[2026-04-15 19:22:56,178][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/rice_a_roni_long_grain_rice_box.glb does not exist!
+[2026-04-15 19:22:56,179][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_sample.glb does not exist!
+[2026-04-15 19:22:56,180][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta.glb does not exist!
+[2026-04-15 19:22:56,180][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_1.glb does not exist!
+[2026-04-15 19:22:56,181][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_2_rotated.glb does not exist!
+[2026-04-15 19:22:56,182][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_elbow_macaroni.glb does not exist!
+[2026-04-15 19:22:56,183][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_3_rotated.glb does not exist!
+[2026-04-15 19:22:56,183][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_benea_rotated.glb does not exist!
+[2026-04-15 19:22:56,184][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/banza_pasta_higher_res_rotated.glb does not exist!
+[2026-04-15 19:22:56,185][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pasta_benea_propuesta_rotated.glb does not exist!
+[2026-04-15 19:22:56,186][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/day_205_dinner_rotated.glb does not exist!
+[2026-04-15 19:22:56,194][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/olive_oil_rotated.glb does not exist!
+[2026-04-15 19:22:56,195][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/calve_mayonaise.glb does not exist!
+[2026-04-15 19:22:56,195][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ketchup_rotated.glb does not exist!
+[2026-04-15 19:22:56,196][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ketchup_aridll_rotated.glb does not exist!
+[2026-04-15 19:22:56,197][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/carbonara_jar_rotated.glb does not exist!
+[2026-04-15 19:22:56,198][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/350_jar_rotated.glb does not exist!
+[2026-04-15 19:22:56,199][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/glass_bottle_3d_scan_rotated.glb does not exist!
+[2026-04-15 19:22:56,199][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tomato_paste_tin.glb does not exist!
+[2026-04-15 19:22:56,200][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tabasco_sauce_rotated.glb does not exist!
+[2026-04-15 19:22:56,201][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hellmanns_hot_sauce_rotated.glb does not exist!
+[2026-04-15 19:22:56,202][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sweet_baby_rays_bbq_sauce_rotated.glb does not exist!
+[2026-04-15 19:22:56,202][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/soy_sauce_1_rotated.glb does not exist!
+[2026-04-15 19:22:56,203][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hot_sauce_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,204][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/3d_sauce_bottle_-_optimized_and_ready_for_use_rotated.glb does not exist!
+[2026-04-15 19:22:56,215][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/plastic_yogurt_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,216][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yogurt_rotated.glb does not exist!
+[2026-04-15 19:22:56,217][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/chobani_yogurt_no_base.glb does not exist!
+[2026-04-15 19:22:56,218][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yogurt_aridll.glb does not exist!
+[2026-04-15 19:22:56,218][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/drinking_yogurt_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,219][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yogurt_natural_de_arandano_dulce_gaby_individual_rotated.glb does not exist!
+[2026-04-15 19:22:56,220][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/lacchi_rotated.glb does not exist!
+[2026-04-15 19:22:56,221][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/teos__yogurt__bottle_0225151825_texture22222_rotated.glb does not exist!
+[2026-04-15 19:22:56,222][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yoguruppe_rotated.glb does not exist!
+[2026-04-15 19:22:56,222][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yogurth_fresa_rotated.glb does not exist!
+[2026-04-15 19:22:56,223][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yoghurt_rotated.glb does not exist!
+[2026-04-15 19:22:56,224][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/official_bosetti__actimel_collab_rotated.glb does not exist!
+[2026-04-15 19:22:56,249][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/toothpaste_box_no_base_rotated.glb does not exist!
+[2026-04-15 19:22:56,250][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/mouthwash_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,251][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/head__shoulder_shampoo_tube.glb does not exist!
+[2026-04-15 19:22:56,252][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shampoo_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,252][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/head__shoulder_shampoo_rotated.glb does not exist!
+[2026-04-15 19:22:56,253][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/native_moisturizing_shampoo___coconut__vanilla_rotated.glb does not exist!
+[2026-04-15 19:22:56,254][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coconut_shampoo_with_moisturizing_oils.glb does not exist!
+[2026-04-15 19:22:56,255][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/il_gele_shampoo_rotated.glb does not exist!
+[2026-04-15 19:22:56,256][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shampoo-dora-y-sus-amigos_rotated.glb does not exist!
+[2026-04-15 19:22:56,256][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_man_shampoo.glb does not exist!
+[2026-04-15 19:22:56,257][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/savanah_shampoo_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,258][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shampoo_grandes_heroes_rotated.glb does not exist!
+[2026-04-15 19:22:56,259][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/old_spice_deodorant_rotated.glb does not exist!
+[2026-04-15 19:22:56,259][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shampoo_2_rotated.glb does not exist!
+[2026-04-15 19:22:56,260][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/elmers_glue_shampoo_rotated.glb does not exist!
+[2026-04-15 19:22:56,261][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shampoo1_rotated.glb does not exist!
+[2026-04-15 19:22:56,262][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/maimara_botella_producto_de_belleza_rotated.glb does not exist!
+[2026-04-15 19:22:56,262][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/old_spice_deodorant_1_rotated.glb does not exist!
+[2026-04-15 19:22:56,263][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/axe_rotated.glb does not exist!
+[2026-04-15 19:22:56,264][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/old_spice_rotated.glb does not exist!
+[2026-04-15 19:22:56,265][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/old_spice_deodorant_lowpoly_rotated.glb does not exist!
+[2026-04-15 19:22:56,267][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/oldspice_deodorant_stick_rotated.glb does not exist!
+[2026-04-15 19:22:56,267][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/axe_deodorant_rotated.glb does not exist!
+[2026-04-15 19:22:56,268][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/deodrant_rotated.glb does not exist!
+[2026-04-15 19:22:56,269][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hand_sanitiser_spray_rotated.glb does not exist!
+[2026-04-15 19:22:56,270][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/propoleo_spray_rotated.glb does not exist!
+[2026-04-15 19:22:56,270][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/spray_crema_nivea_50_rotated.glb does not exist!
+[2026-04-15 19:22:56,271][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tododia_spray_datiles_y_canela_rotated.glb does not exist!
+[2026-04-15 19:22:56,272][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/goop_tin_rotated.glb does not exist!
+[2026-04-15 19:22:56,273][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cosmetics__skin_care_product_-_free_rotated.glb does not exist!
+[2026-04-15 19:22:56,273][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/face_eyes_moisturizer_cream_rotated.glb does not exist!
+[2026-04-15 19:22:56,274][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/neutrogena_cream.glb does not exist!
+[2026-04-15 19:22:56,275][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_-_refreshing_day_cream_-_by_smakologg_rotated.glb does not exist!
+[2026-04-15 19:22:56,276][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hand_cream_rotated.glb does not exist!
+[2026-04-15 19:22:56,276][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/barbasol_shaving_cream_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,277][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/face_eye_moisturizer_cream_rotated.glb does not exist!
+[2026-04-15 19:22:56,278][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_cream_bottle_model_rotated.glb does not exist!
+[2026-04-15 19:22:56,279][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottle_of_soap.glb does not exist!
+[2026-04-15 19:22:56,280][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_body_lotion_rotated.glb does not exist!
+[2026-04-15 19:22:56,280][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_aftershave_rotated.glb does not exist!
+[2026-04-15 19:22:56,281][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_handcreme.glb does not exist!
+[2026-04-15 19:22:56,282][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_zonnebrand_rotated.glb does not exist!
+[2026-04-15 19:22:56,283][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb does not exist!
+[2026-04-15 19:22:56,283][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shea_butter_jar_rotated.glb does not exist!
+[2026-04-15 19:22:56,293][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/crackers_box_rotated.glb does not exist!
+[2026-04-15 19:22:56,293][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/snack.glb does not exist!
+[2026-04-15 19:22:56,294][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/barnums_animal_crackers_-_scanned_w_metashape_rotated.glb does not exist!
+[2026-04-15 19:22:56,295][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coconut_flavour_pocky.glb does not exist!
+[2026-04-15 19:22:56,296][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/macha_green_tea_pocky.glb does not exist!
+[2026-04-15 19:22:56,296][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/snacksinabox.glb does not exist!
+[2026-04-15 19:22:56,297][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/boite_biscuits_en_metal_cookies_box_rotated.glb does not exist!
+[2026-04-15 19:22:56,298][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cookies_cora_rotated.glb does not exist!
+[2026-04-15 19:22:56,299][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cookie_-_galleta__-_shin_chan_rotated.glb does not exist!
+[2026-04-15 19:22:56,299][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hershey_cookie_korean_vr_rotated.glb does not exist!
+[2026-04-15 19:22:56,300][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb does not exist!
+[2026-04-15 19:22:56,301][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fudgey_rounds_rotated.glb does not exist!
+[2026-04-15 19:22:56,302][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/box_of_sugar_biscuits_delicia_rotated.glb does not exist!
+[2026-04-15 19:22:56,303][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/biscuit_sponge_cake_rotated.glb does not exist!
+[2026-04-15 19:22:56,303][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/banania_boite_en_tole.glb does not exist!
+[2026-04-15 19:22:56,305][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/chicken_fried_rice_rotated.glb does not exist!
+[2026-04-15 19:22:56,306][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pizza_box_ristorante_prosciutto_funghi_rotated.glb does not exist!
+[2026-04-15 19:22:56,315][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_box_rice_krispies_label_low_poly_style.glb does not exist!
+[2026-04-15 19:22:56,316][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/boite_metal_avec_fermeture_kelloggs_rotated.glb does not exist!
+[2026-04-15 19:22:56,316][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/dark_chocolate_cereal_box_rotated.glb does not exist!
+[2026-04-15 19:22:56,317][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_box_rotated.glb does not exist!
+[2026-04-15 19:22:56,318][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cerealescornflakescora_1_rotated.glb does not exist!
+[2026-04-15 19:22:56,319][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/corn_flakes_retro_edition_1_rotated.glb does not exist!
+[2026-04-15 19:22:56,320][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/nestle_fitness_chocolate_cereal_box_rotated.glb does not exist!
+[2026-04-15 19:22:56,320][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_rotated.glb does not exist!
+[2026-04-15 19:22:56,321][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_box_1.glb does not exist!
+[2026-04-15 19:22:56,322][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/caja_cereal_nesk.glb does not exist!
+[2026-04-15 19:22:56,323][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_cocoa_critters.glb does not exist!
+[2026-04-15 19:22:56,323][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_box_test_rotated.glb does not exist!
+[2026-04-15 19:22:56,324][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cereal_-_honey_star.glb does not exist!
+[2026-04-15 19:22:56,325][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/spider-man_across_the_spiderverse_cereal_box_rotated.glb does not exist!
+[2026-04-15 19:22:56,335][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_carton.glb does not exist!
+[2026-04-15 19:22:56,336][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_1_rotated.glb does not exist!
+[2026-04-15 19:22:56,337][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_carton_1.glb does not exist!
+[2026-04-15 19:22:56,338][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/super_awesome_milk_carton.glb does not exist!
+[2026-04-15 19:22:56,338][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_packaging_rotated.glb does not exist!
+[2026-04-15 19:22:56,339][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bom_ba_milk_rotated.glb does not exist!
+[2026-04-15 19:22:56,340][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/brazilian_milk_bottle.glb does not exist!
+[2026-04-15 19:22:56,341][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/oat_milk_oatly_rotated.glb does not exist!
+[2026-04-15 19:22:56,341][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_test_rotated.glb does not exist!
+[2026-04-15 19:22:56,342][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_carton_2_rotated.glb does not exist!
+[2026-04-15 19:22:56,343][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_of_human_kindness_rotated.glb does not exist!
+[2026-04-15 19:22:56,344][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/vita_chocolate_milk_rotated.glb does not exist!
+[2026-04-15 19:22:56,344][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_box_french_rotated.glb does not exist!
+[2026-04-15 19:22:56,345][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/dos_pinos_-_leche_descremada_0_rotated.glb does not exist!
+[2026-04-15 19:22:56,346][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/43b88b2c6fa6462aa4c9d2d3c5e062a0_rotated.glb does not exist!
+[2026-04-15 19:22:56,347][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/milk_2_rotated.glb does not exist!
+[2026-04-15 19:22:56,347][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/acidophilic_milk_rotated.glb does not exist!
+[2026-04-15 19:22:56,357][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/perwoll_detergent_3d_model.glb does not exist!
+[2026-04-15 19:22:56,357][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tide_detergent_bottle_3d_model_fanmade.glb does not exist!
+[2026-04-15 19:22:56,358][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottle_of_detergent.glb does not exist!
+[2026-04-15 19:22:56,359][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/dish_detergent.glb does not exist!
+[2026-04-15 19:22:56,360][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/parquet_detergent_with_almond_oil_1220ml.glb does not exist!
+[2026-04-15 19:22:56,360][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ace.glb does not exist!
+[2026-04-15 19:22:56,361][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/vanish_remover.glb does not exist!
+[2026-04-15 19:22:56,362][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/carpet_cleaner_1200ml.glb does not exist!
+[2026-04-15 19:22:56,362][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cleaning_spray_rotated.glb does not exist!
+[2026-04-15 19:22:56,363][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hair_spray_rotated.glb does not exist!
+[2026-04-15 19:22:56,364][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cc0_-_spray_cleaner_siffie.glb does not exist!
+[2026-04-15 19:22:56,365][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/room_spray_rotated.glb does not exist!
+[2026-04-15 19:22:56,366][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/kitchen_spray_rotated.glb does not exist!
+[2026-04-15 19:22:56,366][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/spray_bottle_raw_rotated.glb does not exist!
+[2026-04-15 19:22:56,367][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/scan_3d_mau_chai_vim_rotated.glb does not exist!
+[2026-04-15 19:22:56,374][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bag_of_bread_flour.glb does not exist!
+[2026-04-15 19:22:56,375][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/salt_caster_-_cooking.glb does not exist!
+[2026-04-15 19:22:56,376][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/salt_rotated.glb does not exist!
+[2026-04-15 19:22:56,377][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cc0_-_salt_package_rotated.glb does not exist!
+[2026-04-15 19:22:56,377][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cooking_salt_aridll.glb does not exist!
+[2026-04-15 19:22:56,378][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/table_salt_aridll.glb does not exist!
+[2026-04-15 19:22:56,379][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/tesco_table_salt_photogrammetry_rotated.glb does not exist!
+[2026-04-15 19:22:56,380][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/frying_oil_jug_rotated.glb does not exist!
+[2026-04-15 19:22:56,380][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/package_of_oats_havre_gryn_rotated.glb does not exist!
+[2026-04-15 19:22:56,381][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/stock_powder_tin_rotated.glb does not exist!
+[2026-04-15 19:22:56,382][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/butter_tub_aridll.glb does not exist!
+[2026-04-15 19:22:56,399][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca-_cola_zero_sugar_byte_no_base_rotated.glb does not exist!
+[2026-04-15 19:22:56,400][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/topo_chico_mineral_water_rotated.glb does not exist!
+[2026-04-15 19:22:56,400][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/prime_-_tropical_punch_rotated.glb does not exist!
+[2026-04-15 19:22:56,401][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/prime_-_lemon_lime_rotated.glb does not exist!
+[2026-04-15 19:22:56,402][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orange_juice_1_rotated.glb does not exist!
+[2026-04-15 19:22:56,403][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca-cola_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,403][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi_coke_can__pepsi__kola_kutusu_2_rotated.glb does not exist!
+[2026-04-15 19:22:56,404][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fanta_can_1_rotated.glb does not exist!
+[2026-04-15 19:22:56,405][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/soda_can_1.glb does not exist!
+[2026-04-15 19:22:56,406][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/chaos_cola_2_liter_rotated.glb does not exist!
+[2026-04-15 19:22:56,406][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca-cola_no_sugar_1.5l_rotated.glb does not exist!
+[2026-04-15 19:22:56,407][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sprite_2.25l_rotated.glb does not exist!
+[2026-04-15 19:22:56,408][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fanta_naranja_2l_rotated.glb does not exist!
+[2026-04-15 19:22:56,409][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca_600_sin_azucar_rotated.glb does not exist!
+[2026-04-15 19:22:56,409][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca_cola_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,410][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coke_light_rotated.glb does not exist!
+[2026-04-15 19:22:56,411][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/diet_coke_can_color_3d_scan_rotated.glb does not exist!
+[2026-04-15 19:22:56,412][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/fallout_4_nuka_cola_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,412][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coke_zero_rotated.glb does not exist!
+[2026-04-15 19:22:56,413][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/coca-coka_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,414][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/old_coca_cola_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,415][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi_max_lime_bottle_0.5_l_rotated.glb does not exist!
+[2026-04-15 19:22:56,415][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,416][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/soda_can_2_rotated.glb does not exist!
+[2026-04-15 19:22:56,417][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi_max_coke_can__pepsi_max_kola_kutusu_rotated.glb does not exist!
+[2026-04-15 19:22:56,418][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pepsi_max_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,419][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/soda_can_3_rotated.glb does not exist!
+[2026-04-15 19:22:56,419][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/grape_fanta_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,420][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/sprite_bottle_custom_rotated.glb does not exist!
+[2026-04-15 19:22:56,423][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cc0_-_potato_chips_tube_2_rotated.glb does not exist!
+[2026-04-15 19:22:56,424][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pringles_cheddar_cheese_rotated.glb does not exist!
+[2026-04-15 19:22:56,425][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cans_pringles_rotated.glb does not exist!
+[2026-04-15 19:22:56,425][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pringles.glb does not exist!
+[2026-04-15 19:22:56,435][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/gfuel__spiderman_edition__gameready__energy_rotated.glb does not exist!
+[2026-04-15 19:22:56,436][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/redbull_1_rotated.glb does not exist!
+[2026-04-15 19:22:56,436][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/monster_energy_drink_rotated.glb does not exist!
+[2026-04-15 19:22:56,437][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/energy_drink_game_ready_model_rotated.glb does not exist!
+[2026-04-15 19:22:56,438][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/lit_energy_-_energy_drink_by_mikhail_litvin_rotated.glb does not exist!
+[2026-04-15 19:22:56,439][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/redbull__green_energy_drink_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,440][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/energy_drink_can_free_model_rotated.glb does not exist!
+[2026-04-15 19:22:56,440][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/monster_zero_ultra_rotated.glb does not exist!
+[2026-04-15 19:22:56,441][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/canned_energy_drink_art-soul_rotated.glb does not exist!
+[2026-04-15 19:22:56,442][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/monster_ultra_white_rotated.glb does not exist!
+[2026-04-15 19:22:56,443][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/guoba_chili_energy_drink_rotated.glb does not exist!
+[2026-04-15 19:22:56,443][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/kendu_energy_drink_can_rotated.glb does not exist!
+[2026-04-15 19:22:56,444][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/monster_energy_pipeline_punch_355ml_jpn_rotated.glb does not exist!
+[2026-04-15 19:22:56,445][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shock_energy_drink.glb does not exist!
+[2026-04-15 19:22:56,446][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/non_stop_energy_rotated.glb does not exist!
+[2026-04-15 19:22:56,470][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/revo_original_rotated.glb does not exist!
+[2026-04-15 19:22:56,470][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/baileys_tiramisu_rotated.glb does not exist!
+[2026-04-15 19:22:56,471][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/absolut_vodka_1l_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,472][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/rose_liquor_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,473][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/turron_rotated.glb does not exist!
+[2026-04-15 19:22:56,473][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/liquor_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,474][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jagermeister_0.7l_bottle_japan_rotated.glb does not exist!
+[2026-04-15 19:22:56,475][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/malaespina_mezcal_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,476][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/volcan_de_mi_tierra_x.a_reposado_rotated.glb does not exist!
+[2026-04-15 19:22:56,476][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/botella_de_tequila_no_base_rotated.glb does not exist!
+[2026-04-15 19:22:56,477][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottlea_rotated.glb does not exist!
+[2026-04-15 19:22:56,478][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/pirate_rum_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,479][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/staceys_rum_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,479][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottle_of_brazilian_rum_-_j._haberfeld_factory_rotated.glb does not exist!
+[2026-04-15 19:22:56,480][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/rum_bottle.glb does not exist!
+[2026-04-15 19:22:56,481][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/le_coq_-_cognac_extract.glb does not exist!
+[2026-04-15 19:22:56,482][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/topvalu_bestprice_whisky_rotated.glb does not exist!
+[2026-04-15 19:22:56,483][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ginger_gin_rotated.glb does not exist!
+[2026-04-15 19:22:56,483][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bombay_sapphire_rotated.glb does not exist!
+[2026-04-15 19:22:56,484][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/whiskey_jb_rotated.glb does not exist!
+[2026-04-15 19:22:56,485][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/jameson_whiskey_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,486][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/hennessy_very_special_cognac_rotated.glb does not exist!
+[2026-04-15 19:22:56,486][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/ballantines.glb does not exist!
+[2026-04-15 19:22:56,487][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/whisky_white_horse_rotated.glb does not exist!
+[2026-04-15 19:22:56,488][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/low-poly_japanese_whisky_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,489][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/gameready_wine_bottle.glb does not exist!
+[2026-04-15 19:22:56,489][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Baileys_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:56,490][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Becherovka_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:56,491][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Chivas_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:56,492][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Cointreau_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:56,492][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Crema_di_Limoncino_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:56,493][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Curacao_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:56,494][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Havana_Club_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:56,495][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Jack_Daniel's_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:56,495][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Kahlua_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:56,496][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Malibu_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:56,497][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Martel_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:56,498][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Olmeca_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:56,498][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Pernod_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:56,499][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Ramazzotti_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:56,500][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/Sortilege_Atlas_0_rotated.glb does not exist!
+[2026-04-15 19:22:56,514][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_1.glb does not exist!
+[2026-04-15 19:22:56,514][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/classic_wine_bottle_with_label_rotated.glb does not exist!
+[2026-04-15 19:22:56,515][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_2.glb does not exist!
+[2026-04-15 19:22:56,516][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/3d_wine_bottle_model_rotated.glb does not exist!
+[2026-04-15 19:22:56,517][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/red_spirit_wine.glb does not exist!
+[2026-04-15 19:22:56,517][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_3_rotated.glb does not exist!
+[2026-04-15 19:22:56,518][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_4.glb does not exist!
+[2026-04-15 19:22:56,519][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bottle_of_wine_rotated.glb does not exist!
+[2026-04-15 19:22:56,520][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/low_poly_wine_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,521][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_5_rotated.glb does not exist!
+[2026-04-15 19:22:56,521][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_6_rotated.glb does not exist!
+[2026-04-15 19:22:56,522][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_7.glb does not exist!
+[2026-04-15 19:22:56,523][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_8_rotated.glb does not exist!
+[2026-04-15 19:22:56,524][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_9_rotated.glb does not exist!
+[2026-04-15 19:22:56,524][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/shiraz_wine_no_base_rotated.glb does not exist!
+[2026-04-15 19:22:56,525][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_10_rotated.glb does not exist!
+[2026-04-15 19:22:56,526][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/bouteille_de_vinbottle_of_wine_rotated.glb does not exist!
+[2026-04-15 19:22:56,527][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/modern_wine_bottle.glb does not exist!
+[2026-04-15 19:22:56,527][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_203_rotated.glb does not exist!
+[2026-04-15 19:22:56,528][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_3d_model_for_archviz__decoration_rotated.glb does not exist!
+[2026-04-15 19:22:56,529][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/wine_bottle_11_rotated.glb does not exist!
+[2026-04-15 19:22:56,543][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/thick_vegetable_charge_juice_rotated.glb does not exist!
+[2026-04-15 19:22:56,544][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/the_vegetable_life_100_green_smoothie_rotated.glb does not exist!
+[2026-04-15 19:22:56,545][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juice_rotated.glb does not exist!
+[2026-04-15 19:22:56,545][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juice_2_rotated.glb does not exist!
+[2026-04-15 19:22:56,546][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orange_juice_bottle_rotated.glb does not exist!
+[2026-04-15 19:22:56,547][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/cepita_peach_juice_bottle.glb does not exist!
+[2026-04-15 19:22:56,548][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orange_juice_rotated.glb does not exist!
+[2026-04-15 19:22:56,548][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/gameready_lowpoly_juice_bottle_free_download_rotated.glb does not exist!
+[2026-04-15 19:22:56,549][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orange_juice__02.12.21.glb does not exist!
+[2026-04-15 19:22:56,550][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juice_box_rotated.glb does not exist!
+[2026-04-15 19:22:56,551][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/grape_juice_rotated.glb does not exist!
+[2026-04-15 19:22:56,552][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/apple_juice_rotated.glb does not exist!
+[2026-04-15 19:22:56,552][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juice_pack_3d_scan.glb does not exist!
+[2026-04-15 19:22:56,553][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juicebox00.glb does not exist!
+[2026-04-15 19:22:56,554][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/dos_pinos_-_jugo_verde_detox_rotated.glb does not exist!
+[2026-04-15 19:22:56,555][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/the_perfect_juice_rotated.glb does not exist!
+[2026-04-15 19:22:56,555][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/royal_goyave_rose_bio_1l_rotated.glb does not exist!
+[2026-04-15 19:22:56,556][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/grape_juice_1.glb does not exist!
+[2026-04-15 19:22:56,557][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/juice_box_1_rotated.glb does not exist!
+[2026-04-15 19:22:56,558][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orange_juice_200_ml_rotated.glb does not exist!
+[2026-04-15 19:22:56,558][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/yasai_seikatsu_100_berry_salad_juice_rotated.glb does not exist!
+[2026-04-15 19:22:56,559][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/3d_juice_box_rotated.glb does not exist!
+[2026-04-15 19:22:56,560][dsynth.assets.asset][WARNING] - Asset path assets/preprocessed/orangejuicebox.glb does not exist!
+[2026-04-15 19:22:56,571][dsynth.assets.asset][WARNING] - Asset path assets/shelf_woodenglb.glb does not exist!
+[2026-04-15 19:22:56,572][dsynth.assets.asset][WARNING] - Asset path assets/shelf_woodenglb_low_res.glb does not exist!
+[2026-04-15 19:22:56,573][dsynth.assets.asset][WARNING] - Asset path assets/shelf_metal.glb does not exist!
+[2026-04-15 19:22:56,574][dsynth.assets.asset][WARNING] - Asset path assets/square_light_led_panel.glb does not exist!
+[2026-04-15 19:22:56,576][dsynth.assets.asset][WARNING] - Asset path assets/showcase.glb does not exist!
+[2026-04-15 19:22:56,578][dsynth.assets.asset][WARNING] - Asset path assets/store_mini_shelf_two_sided.glb does not exist!
+[2026-04-15 19:22:56,578][dsynth.assets.asset][WARNING] - Asset path assets/pile_of_pallets.glb does not exist!
+[2026-04-15 19:22:56,579][dsynth.assets.asset][WARNING] - Asset path assets/pallets_and_boxes.glb does not exist!
+[2026-04-15 19:22:56,585][dsynth.assets.asset][WARNING] - Asset path assets/smallShoppingCart2.glb does not exist!
+[2026-04-15 19:25:41,124][__main__][INFO] - Write results to: generated_envs/ds_small_scene_0
+[2026-04-15 19:25:43,754][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-15 19:25:43,776][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-15 19:25:43,874][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-15 19:26:00,925][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-15 19:26:01,144][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-15 19:26:01,547][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-15 19:26:04,622][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-15 19:26:13,443][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-15 19:26:45,167][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-15 19:26:46,418][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-15 19:26:47,078][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-15 19:26:47,809][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-15 19:26:48,226][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-15 19:26:52,527][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-15 19:27:47,741][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-15 19:27:47,764][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-15 19:27:47,858][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-15 19:27:51,253][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-15 19:27:51,366][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-15 19:28:23,139][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-15 19:28:23,789][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-15 19:28:24,970][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-15 19:28:51,242][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-15 19:28:51,937][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-15 19:28:55,364][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-15 19:28:55,748][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-15 19:28:56,464][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-15 19:28:59,383][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-15 19:29:39,986][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-15 19:29:40,013][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-15 19:29:40,097][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-15 19:29:43,905][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-15 19:29:44,014][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-15 19:29:52,745][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-15 19:29:55,988][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-15 19:29:56,323][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-15 19:29:56,745][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-15 19:30:00,407][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-15 19:30:01,188][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-15 19:30:01,823][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-15 19:30:03,037][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-15 19:30:35,871][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-15 19:31:35,813][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-15 19:31:35,841][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-15 19:31:35,926][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-15 19:31:43,392][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-15 19:31:43,516][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-15 19:31:47,302][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-15 19:31:48,116][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-15 19:31:48,515][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-15 19:31:49,241][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-15 19:32:14,872][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-15 19:32:18,300][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-15 19:32:27,410][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-15 19:32:28,110][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-15 19:32:29,589][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-15 19:33:31,015][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-15 19:33:31,038][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-15 19:33:31,130][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-15 19:33:36,363][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-15 19:33:36,481][scene_synthesizer][INFO] - Loading asset assets/preprocessed/lunch_canned_luncheon_meat_rotated.glb
+[2026-04-15 19:34:04,097][scene_synthesizer][INFO] - Loading asset assets/preprocessed/a_can_of_beans_rotated.glb
+[2026-04-15 19:34:04,844][scene_synthesizer][INFO] - Loading asset assets/preprocessed/boite_biscuiits_oreo__oreo_cookies_box_rotated.glb
+[2026-04-15 19:34:08,358][scene_synthesizer][INFO] - Loading asset assets/preprocessed/banania_boite_en_tole.glb
+[2026-04-15 19:34:09,116][scene_synthesizer][INFO] - Loading asset assets/preprocessed/macha_green_tea_pocky.glb
+[2026-04-15 19:34:09,526][scene_synthesizer][INFO] - Loading asset assets/preprocessed/vanish_remover.glb
+[2026-04-15 19:34:19,771][scene_synthesizer][INFO] - Loading asset assets/preprocessed/duff_can_rotated.glb
+[2026-04-15 19:34:22,859][scene_synthesizer][INFO] - Loading asset assets/preprocessed/dish_detergent.glb
+[2026-04-15 19:34:23,521][scene_synthesizer][INFO] - Loading asset assets/preprocessed/nivea_-_c_milk_oleo_de_amendoas_rotated.glb
+[2026-04-15 19:34:55,650][scene_synthesizer][INFO] - Loading asset assets/preprocessed/monster_energy_drink_rotated.glb
+[2026-04-15 19:35:24,236][__main__][INFO] - Done
+[2026-04-17 16:51:19,755][__main__][INFO] - Write results to: generated_envs/ds_small_scene_1
+[2026-04-17 16:51:22,448][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-17 16:51:22,475][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-17 16:51:22,569][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-17 16:51:26,068][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-17 16:51:26,188][scene_synthesizer][INFO] - Loading asset assets/preprocessed/b71c925d07134c2b869ffd778bbb0616_rotated.glb
+[2026-04-17 16:51:26,462][scene_synthesizer][INFO] - Loading asset assets/preprocessed/ace.glb
+[2026-04-17 16:51:30,076][scene_synthesizer][INFO] - Loading asset assets/preprocessed/bottlea_rotated.glb
+[2026-04-17 16:51:31,626][scene_synthesizer][INFO] - Loading asset assets/preprocessed/botella_de_tequila_no_base_rotated.glb
+[2026-04-17 16:52:13,069][scene_synthesizer][INFO] - Loading asset assets/preprocessed/axe_deodorant_rotated.glb
+[2026-04-17 16:52:16,108][scene_synthesizer][INFO] - Loading asset assets/preprocessed/baileys_tiramisu_rotated.glb
+[2026-04-17 16:52:37,231][scene_synthesizer][INFO] - Loading asset assets/preprocessed/kitchen_spray_rotated.glb
+[2026-04-17 16:52:58,174][scene_synthesizer][INFO] - Loading asset assets/preprocessed/jin-ramen_cup_noodle_rotated.glb
+[2026-04-17 16:53:00,078][scene_synthesizer][INFO] - Loading asset assets/preprocessed/bag_of_bread_flour.glb
+[2026-04-17 16:53:16,489][scene_synthesizer][INFO] - Loading asset assets/preprocessed/biscuit_sponge_cake_rotated.glb
+[2026-04-17 16:53:57,520][__main__][INFO] - Done
+[2026-04-17 17:18:17,959][__main__][INFO] - Write results to: generated_envs/ds_small_scene_1
+[2026-04-17 17:18:20,520][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-17 17:18:20,542][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-17 17:18:20,636][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-17 17:18:23,922][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-17 17:18:24,038][scene_synthesizer][INFO] - Loading asset assets/preprocessed/hand_cream_rotated.glb
+[2026-04-17 17:18:24,630][scene_synthesizer][INFO] - Loading asset assets/preprocessed/biscuit_sponge_cake_rotated.glb
+[2026-04-17 17:18:25,809][scene_synthesizer][INFO] - Loading asset assets/preprocessed/bag_of_bread_flour.glb
+[2026-04-17 17:18:34,189][scene_synthesizer][INFO] - Loading asset assets/preprocessed/b71c925d07134c2b869ffd778bbb0616_rotated.glb
+[2026-04-17 17:18:34,338][scene_synthesizer][INFO] - Loading asset assets/preprocessed/kitchen_spray_rotated.glb
+[2026-04-17 17:18:45,427][scene_synthesizer][INFO] - Loading asset assets/preprocessed/ace.glb
+[2026-04-17 17:18:47,218][scene_synthesizer][INFO] - Loading asset assets/preprocessed/bottlea_rotated.glb
+[2026-04-17 17:18:47,965][scene_synthesizer][INFO] - Loading asset assets/preprocessed/botella_de_tequila_no_base_rotated.glb
+[2026-04-17 17:19:11,049][scene_synthesizer][INFO] - Loading asset assets/preprocessed/parquet_detergent_with_almond_oil_1220ml.glb
+[2026-04-17 17:19:29,785][scene_synthesizer][INFO] - Loading asset assets/preprocessed/jin-ramen_cup_noodle_rotated.glb
+[2026-04-17 17:19:30,866][scene_synthesizer][INFO] - Loading asset assets/preprocessed/axe_deodorant_rotated.glb
+[2026-04-17 17:19:32,448][scene_synthesizer][INFO] - Loading asset assets/preprocessed/baileys_tiramisu_rotated.glb
+[2026-04-17 17:20:11,569][__main__][INFO] - Done
+[2026-04-17 17:45:45,776][__main__][INFO] - Write results to: generated_envs/ds_small_scene_1
+[2026-04-17 17:45:48,354][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-17 17:45:48,376][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-17 17:45:48,470][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-17 17:45:51,781][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-17 17:45:51,897][scene_synthesizer][INFO] - Loading asset assets/preprocessed/savanah_shampoo_bottle_rotated.glb
+[2026-04-17 17:46:26,053][scene_synthesizer][INFO] - Loading asset assets/preprocessed/mouthwash_bottle_rotated.glb
+[2026-04-17 17:46:28,216][scene_synthesizer][INFO] - Loading asset assets/preprocessed/oldspice_deodorant_stick_rotated.glb
+[2026-04-17 17:46:55,005][scene_synthesizer][INFO] - Loading asset assets/preprocessed/perwoll_detergent_3d_model.glb
+[2026-04-17 17:46:55,950][scene_synthesizer][INFO] - Loading asset assets/preprocessed/olive_oil_rotated.glb
+[2026-04-17 17:46:58,180][scene_synthesizer][INFO] - Loading asset assets/preprocessed/spray_crema_nivea_50_rotated.glb
+[2026-04-17 17:46:58,721][scene_synthesizer][INFO] - Loading asset assets/preprocessed/topvalu_bestprice_whisky_rotated.glb
+[2026-04-17 17:47:00,004][scene_synthesizer][INFO] - Loading asset assets/preprocessed/the_perfect_juice_rotated.glb
+[2026-04-17 17:47:05,388][scene_synthesizer][INFO] - Loading asset assets/preprocessed/pepsi_max_can_rotated.glb
+[2026-04-17 17:47:06,829][scene_synthesizer][INFO] - Loading asset assets/preprocessed/wonka_runts_box_rotated.glb
+[2026-04-17 17:47:07,146][scene_synthesizer][INFO] - Loading asset assets/preprocessed/volcan_de_mi_tierra_x.a_reposado_rotated.glb
+[2026-04-17 17:47:18,431][scene_synthesizer][INFO] - Loading asset assets/preprocessed/salt_rotated.glb
+[2026-04-17 17:47:55,133][__main__][INFO] - Done
+[2026-04-17 17:48:43,972][__main__][INFO] - Write results to: generated_envs/ds_small_scene_1
+[2026-04-17 17:48:46,585][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-17 17:48:46,608][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-17 17:48:46,703][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-17 17:48:50,002][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-17 17:48:50,118][scene_synthesizer][INFO] - Loading asset assets/preprocessed/hand_cream_rotated.glb
+[2026-04-17 17:48:50,708][scene_synthesizer][INFO] - Loading asset assets/preprocessed/biscuit_sponge_cake_rotated.glb
+[2026-04-17 17:48:51,880][scene_synthesizer][INFO] - Loading asset assets/preprocessed/bag_of_bread_flour.glb
+[2026-04-17 17:49:00,278][scene_synthesizer][INFO] - Loading asset assets/preprocessed/b71c925d07134c2b869ffd778bbb0616_rotated.glb
+[2026-04-17 17:49:00,425][scene_synthesizer][INFO] - Loading asset assets/preprocessed/kitchen_spray_rotated.glb
+[2026-04-17 17:49:11,516][scene_synthesizer][INFO] - Loading asset assets/preprocessed/ace.glb
+[2026-04-17 17:49:13,313][scene_synthesizer][INFO] - Loading asset assets/preprocessed/bottlea_rotated.glb
+[2026-04-17 17:49:14,376][scene_synthesizer][INFO] - Loading asset assets/preprocessed/botella_de_tequila_no_base_rotated.glb
+[2026-04-17 17:49:38,191][scene_synthesizer][INFO] - Loading asset assets/preprocessed/parquet_detergent_with_almond_oil_1220ml.glb
+[2026-04-17 17:49:57,004][scene_synthesizer][INFO] - Loading asset assets/preprocessed/jin-ramen_cup_noodle_rotated.glb
+[2026-04-17 17:49:58,057][scene_synthesizer][INFO] - Loading asset assets/preprocessed/axe_deodorant_rotated.glb
+[2026-04-17 17:49:59,648][scene_synthesizer][INFO] - Loading asset assets/preprocessed/baileys_tiramisu_rotated.glb
+[2026-04-17 17:50:37,917][__main__][INFO] - Done
+[2026-04-17 17:50:55,049][__main__][INFO] - Write results to: generated_envs/ds_small_scene_2
+[2026-04-17 17:50:57,713][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-17 17:50:57,737][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-17 17:50:57,831][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-17 17:51:01,146][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-17 17:51:01,263][scene_synthesizer][INFO] - Loading asset assets/preprocessed/savanah_shampoo_bottle_rotated.glb
+[2026-04-17 17:51:35,965][scene_synthesizer][INFO] - Loading asset assets/preprocessed/mouthwash_bottle_rotated.glb
+[2026-04-17 17:51:38,448][scene_synthesizer][INFO] - Loading asset assets/preprocessed/oldspice_deodorant_stick_rotated.glb
+[2026-04-17 17:52:06,348][scene_synthesizer][INFO] - Loading asset assets/preprocessed/perwoll_detergent_3d_model.glb
+[2026-04-17 17:52:07,301][scene_synthesizer][INFO] - Loading asset assets/preprocessed/olive_oil_rotated.glb
+[2026-04-17 17:52:09,596][scene_synthesizer][INFO] - Loading asset assets/preprocessed/spray_crema_nivea_50_rotated.glb
+[2026-04-17 17:52:10,255][scene_synthesizer][INFO] - Loading asset assets/preprocessed/topvalu_bestprice_whisky_rotated.glb
+[2026-04-17 17:52:11,675][scene_synthesizer][INFO] - Loading asset assets/preprocessed/the_perfect_juice_rotated.glb
+[2026-04-17 17:52:17,405][scene_synthesizer][INFO] - Loading asset assets/preprocessed/pepsi_max_can_rotated.glb
+[2026-04-17 17:52:19,178][scene_synthesizer][INFO] - Loading asset assets/preprocessed/wonka_runts_box_rotated.glb
+[2026-04-17 17:52:19,549][scene_synthesizer][INFO] - Loading asset assets/preprocessed/volcan_de_mi_tierra_x.a_reposado_rotated.glb
+[2026-04-17 17:52:31,694][scene_synthesizer][INFO] - Loading asset assets/preprocessed/salt_rotated.glb
+[2026-04-17 17:53:11,113][__main__][INFO] - Done
+[2026-04-17 17:56:48,225][__main__][INFO] - Write results to: generated_envs/ds_small_scene_1
+[2026-04-17 17:56:50,828][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-17 17:56:50,850][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-17 17:56:50,944][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-17 17:56:54,245][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-17 17:56:54,361][scene_synthesizer][INFO] - Loading asset assets/preprocessed/hand_cream_rotated.glb
+[2026-04-17 17:56:54,972][scene_synthesizer][INFO] - Loading asset assets/preprocessed/biscuit_sponge_cake_rotated.glb
+[2026-04-17 17:56:56,163][scene_synthesizer][INFO] - Loading asset assets/preprocessed/bag_of_bread_flour.glb
+[2026-04-17 17:57:04,512][scene_synthesizer][INFO] - Loading asset assets/preprocessed/b71c925d07134c2b869ffd778bbb0616_rotated.glb
+[2026-04-17 17:57:04,663][scene_synthesizer][INFO] - Loading asset assets/preprocessed/kitchen_spray_rotated.glb
+[2026-04-17 17:57:15,764][scene_synthesizer][INFO] - Loading asset assets/preprocessed/ace.glb
+[2026-04-17 17:57:17,637][scene_synthesizer][INFO] - Loading asset assets/preprocessed/bottlea_rotated.glb
+[2026-04-17 17:57:18,393][scene_synthesizer][INFO] - Loading asset assets/preprocessed/botella_de_tequila_no_base_rotated.glb
+[2026-04-17 17:57:52,921][__main__][INFO] - Write results to: generated_envs/ds_small_scene_1
+[2026-04-17 17:57:55,563][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-17 17:57:55,587][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-17 17:57:55,680][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-17 17:57:59,051][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-17 17:57:59,170][scene_synthesizer][INFO] - Loading asset assets/preprocessed/hand_cream_rotated.glb
+[2026-04-17 17:57:59,816][scene_synthesizer][INFO] - Loading asset assets/preprocessed/biscuit_sponge_cake_rotated.glb
+[2026-04-17 17:58:01,000][scene_synthesizer][INFO] - Loading asset assets/preprocessed/bag_of_bread_flour.glb
+[2026-04-17 17:58:09,730][scene_synthesizer][INFO] - Loading asset assets/preprocessed/b71c925d07134c2b869ffd778bbb0616_rotated.glb
+[2026-04-17 17:58:09,878][scene_synthesizer][INFO] - Loading asset assets/preprocessed/kitchen_spray_rotated.glb
+[2026-04-17 17:58:21,123][scene_synthesizer][INFO] - Loading asset assets/preprocessed/ace.glb
+[2026-04-17 17:58:23,013][scene_synthesizer][INFO] - Loading asset assets/preprocessed/bottlea_rotated.glb
+[2026-04-17 17:58:23,805][scene_synthesizer][INFO] - Loading asset assets/preprocessed/botella_de_tequila_no_base_rotated.glb
+[2026-04-17 17:58:47,608][scene_synthesizer][INFO] - Loading asset assets/preprocessed/parquet_detergent_with_almond_oil_1220ml.glb
+[2026-04-17 17:59:06,778][scene_synthesizer][INFO] - Loading asset assets/preprocessed/jin-ramen_cup_noodle_rotated.glb
+[2026-04-17 17:59:07,906][scene_synthesizer][INFO] - Loading asset assets/preprocessed/axe_deodorant_rotated.glb
+[2026-04-17 17:59:09,580][scene_synthesizer][INFO] - Loading asset assets/preprocessed/baileys_tiramisu_rotated.glb
+[2026-04-17 17:59:48,903][__main__][INFO] - Done
+[2026-04-17 18:00:08,393][__main__][INFO] - Write results to: generated_envs/ds_small_scene_2
+[2026-04-17 18:00:10,996][scene_synthesizer][INFO] - Loading asset assets/shelf_woodenglb.glb
+[2026-04-17 18:00:11,019][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-17 18:00:11,112][scene_synthesizer][INFO] - Loading asset assets/store_mini_shelf_two_sided.glb
+[2026-04-17 18:00:14,399][scene_synthesizer][INFO] - Loading asset assets/shelf_metal.glb
+[2026-04-17 18:00:14,514][scene_synthesizer][INFO] - Loading asset assets/preprocessed/savanah_shampoo_bottle_rotated.glb
+[2026-04-17 18:00:48,771][scene_synthesizer][INFO] - Loading asset assets/preprocessed/mouthwash_bottle_rotated.glb
+[2026-04-17 18:00:51,361][scene_synthesizer][INFO] - Loading asset assets/preprocessed/oldspice_deodorant_stick_rotated.glb
+[2026-04-17 18:01:19,079][scene_synthesizer][INFO] - Loading asset assets/preprocessed/perwoll_detergent_3d_model.glb
+[2026-04-17 18:01:20,088][scene_synthesizer][INFO] - Loading asset assets/preprocessed/olive_oil_rotated.glb
+[2026-04-17 18:01:22,440][scene_synthesizer][INFO] - Loading asset assets/preprocessed/spray_crema_nivea_50_rotated.glb
+[2026-04-17 18:01:23,117][scene_synthesizer][INFO] - Loading asset assets/preprocessed/topvalu_bestprice_whisky_rotated.glb
+[2026-04-17 18:01:24,448][scene_synthesizer][INFO] - Loading asset assets/preprocessed/the_perfect_juice_rotated.glb
+[2026-04-17 18:01:29,813][scene_synthesizer][INFO] - Loading asset assets/preprocessed/pepsi_max_can_rotated.glb
+[2026-04-17 18:01:31,278][scene_synthesizer][INFO] - Loading asset assets/preprocessed/wonka_runts_box_rotated.glb
+[2026-04-17 18:01:31,601][scene_synthesizer][INFO] - Loading asset assets/preprocessed/volcan_de_mi_tierra_x.a_reposado_rotated.glb
+[2026-04-17 18:01:43,265][scene_synthesizer][INFO] - Loading asset assets/preprocessed/salt_rotated.glb
+[2026-04-17 18:02:21,149][__main__][INFO] - Done

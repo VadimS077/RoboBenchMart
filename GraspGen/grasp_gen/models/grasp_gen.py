@@ -96,6 +96,9 @@ class GraspGen(nn.Module):
         logger.info(
             f"Loading generator checkpoint from {grasp_generator_ckpt_filepath}"
         )
+        print("WTF", grasp_generator_ckpt_filepath)
+        import os.path
+        print("WTF2", os.path.isfile(grasp_generator_ckpt_filepath))
         ckpt = torch.load(grasp_generator_ckpt_filepath, map_location="cpu")
         self.grasp_generator.load_state_dict(ckpt["model"])
 

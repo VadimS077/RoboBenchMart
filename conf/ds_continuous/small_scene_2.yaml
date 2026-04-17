@@ -7,44 +7,46 @@ rewrite: true
 size_x: 12
 size_y: 10
 num_scenes: 1
-num_workers: 4
+num_workers: 1
 layout_gen_type: PROCEDURAL_TENSOR_FIELD
 randomize_layout: true
 randomize_arrangements: true
 output_dir: generated_envs/${ds_continuous.name}
 
-random_seed: 42
+random_seed: 142
 
 
 active_shelvings_list:
   - name: 'mixed_shelf'
     shuffle_items_on_board: True
+    shuffle_boards: True
     filling_type: BOARDWISE_COLUMNS
-    x_gap: 0.05
+    x_gap: 0.1
     y_gap: 0.05
-    rotation_lower: 0.12
-    rotation_upper: 0.12
+    noise_std_x: 0.001
+    noise_std_y: 0.001
+    rotation_lower: -0.2
+    rotation_upper: 0.2
     shelf_asset: fixtures.shelf_metal
     board_product_numcol:
       0:
-        food.DRINKS_SODA.FantaSaborNaranja2L: 3
-        food.CRACKERS_COOKIES.PockyMatcha: 3
-        food.HOUSEHOLD.AjaxDishSoap: 2 
-      1:
-        food.CANNED.HeinzBeansInARichTomatoSauce: 4
-        food.CANNED.SlamLuncheonMeat: 4
-        
-        food.CRACKERS_COOKIES.OreoLemonCremeSandwichCookies: 3
+        food.COOKING.JapaneseSalt: 2
+        food.STRONG_ALCO.VolcanDeMiTierraTequila: 2
+        food.SWEET.WonkaRuntsCandies: 2
+      1: 
+        food.HYGIENE.NiveaSunProtegeFp50: 2
+        food.HOUSEHOLD.PerwollDetergent: 2
+        food.SAUCES.MarikenAndMartinOliveOil: 2
       2:
-        food.HOUSEHOLD.VanishStainRemover: 4
-        
-        food.DRINKS_SODA.FantaSaborNaranja2L: 3
-        food.CANNED.HeinzBeansInARichTomatoSauce: 4
+        food.HYGIENE.OldspiceNightpantherDeodorant: 2
+        food.HYGIENE.HebMouthRinse: 2
+        food.HYGIENE.SavannahHandWash: 2
       3:
-        food.CRACKERS_COOKIES.BananiaCookies: 5
-        food.ENERGY_DRINKS.MonsterEnergyDrink: 3 
-        food.HYGIENE.NiveaBodyMilk: 3
+        food.JUICE.AmitaPeachJuice: 2
+        food.STRONG_ALCO.TopvaluWhisky: 2
+        food.DRINKS_SODA.PepsiMaxNoSugar0.33L: 2
         
+       
 
 scene_fixtures_list: 
   - fixtures.freezer_nestle

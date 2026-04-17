@@ -3,7 +3,6 @@ __pycache__
 assets*/
 !conf/assets
 !dsynth/assets
-generated_envs
 .ipynb_checkpoints
 .hydra
 outputs
