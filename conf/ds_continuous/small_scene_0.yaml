@@ -13,7 +13,7 @@ randomize_layout: true
 randomize_arrangements: true
 output_dir: generated_envs/${ds_continuous.name}
 
-random_seed: 42
+random_seed: 142
 
 
 active_shelvings_list:
@@ -25,8 +25,8 @@ active_shelvings_list:
     y_gap: 0.05
     noise_std_x: 0.001
     noise_std_y: 0.001
-    rotation_lower: -0.1
-    rotation_upper: 0.1
+    rotation_lower: -0.25
+    rotation_upper: 0.25
     shelf_asset: fixtures.shelf_metal
     board_product_numcol:
       0:

@@ -478,7 +478,7 @@ class MyRecordEpisode(gym.Wrapper):
                     self._trajectory_buffer.state,
                     common.to_numpy(common.batch(state_dict)),
                 )
-            del obs['pointcloud']
+            #del obs['pointcloud']
             if 'pointcloud' in self._trajectory_buffer.observation:
                 del self._trajectory_buffer.observation['pointcloud']
             self._trajectory_buffer.observation = common.append_dict_array(
@@ -607,6 +607,14 @@ class MyRecordEpisode(gym.Wrapper):
                                 compression_opts=5,
                             )
                         elif key == "seg":
+                            group.create_dataset(
+                                key,
+                                data=data[start_ptr:end_ptr, env_idx],
+                                dtype=data.dtype,
+                                compression="gzip",
+                                compression_opts=5,
+                            )
+                        elif key == "segmentation" or key == "target_mask":
                             group.create_dataset(
                                 key,
                                 data=data[start_ptr:end_ptr, env_idx],

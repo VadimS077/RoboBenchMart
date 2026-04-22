@@ -1,25 +1,24 @@
 #!/usr/bin/env python3
 """
-Бенчмарк success-rate motion planning: с GraspGen-ZMQ и без (dummy OBB solver).
+Бенчмарк success-rate motion planning: GraspGen-ZMQ и dummy OBB.
 
-По умолчанию (--random-target-per-episode): после каждого reset(reconfigure=True)
-читает актуальный products_df сцены (как и scene_items.csv на диске), случайно
-выбирает один из --products и экземпляр на полке (предпочтительно передний ряд),
-затем запускает оба пайплайна на одной и той же раскладке.
+После каждого reset(reconfigure=True) читается products_df сцены; случайно
+выбираются продукт и экземпляр (предпочтительно передний ряд).
 
-  1) GraspGen-ZMQ: pointcloud → ZMQ infer_scene → MP → basket
-  2) Dummy OBB:    тот же MP-пайплайн, поза хвата по OBB
+Если включены оба режима, сначала фаза GraspGen на одном env (только
+reset между эпизодами), затем dummy на отдельном env по тому же списку
+(seed, product, target): два симулятора не пересекаются, при этом реже
+создаётся Vulkan/RenderSystem (меньше шанс vk::enumeratePhysicalDevices).
 
-С флагом --legacy-per-product-loop сохраняется старый режим: отдельный env на
-каждый продукт и выбор цели из scene_items.csv до запуска (устаревает при
-нескольких под-сценах в конфиге).
+  1) GraspGen: pointcloud → ZMQ infer_scene → MP → basket
+  2) Dummy:    тот же MP-пайплайн, поза хвата по OBB
 
 Пример:
-  python scripts/benchmark_graspgen.py \
-      --scenes-root generated_envs \
-      --products Oreo Monster Vanish \
-      --num-traj 5 \
-      --host localhost --port 5556 \
+  python scripts/benchmark_graspgen.py \\
+      --scenes-root generated_envs \\
+      --products Oreo Monster Vanish \\
+      --num-traj 5 \\
+      --host localhost --port 5556 \\
       --vis
 """
 
@@ -29,7 +28,6 @@ import argparse
 import json
 import os
 import sys
-import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
@@ -41,9 +39,7 @@ import sapien
 from tqdm import tqdm
 from transforms3d.quaternions import mat2quat
 
-from mani_skill.utils.wrappers.record import RecordEpisode
 from recorder import MyRecordEpisode
-# from mani_skill.utils.wrappers.record import RecordEpisodegraspgen
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
@@ -117,20 +113,47 @@ def _episode_success_by_basket_proximity(env, product_actor, radius: float) -> T
     return dist <= radius, dist
 
 
-def pick_front_row_instances(scene_dir: Path, product_slug: str) -> List[str]:
+def _scope_env_to_target_actor(env, target_actor_name: str) -> bool:
+    """Scope env.evaluate() (and info["success"] on every step) to target_actor_name.
+
+    Requires `PickToBasketContActorEvalEnv` (or any subclass that implements
+    `set_target_actor`). Returns True on success. If the env doesn't support
+    it, we fall back silently (evaluate() will keep using its default random
+    per-scene target).
     """
-    Из scene_items.csv -> список actor_name, где asset_name содержит slug
-    и последний элемент имени (row_idxs) == 0.
+    env_u = env.unwrapped
+    if not hasattr(env_u, "set_target_actor"):
+        print("[Eval] env has no set_target_actor(). Use PickToBasketContActorEvalEnv.")
+        return False
+    try:
+        ok = bool(env_u.set_target_actor(target_actor_name))
+        if not ok:
+            print(f"[Eval] set_target_actor({target_actor_name!r}) failed: actor not found")
+        return ok
+    except Exception as e:
+        print(f"[Eval] set_target_actor({target_actor_name!r}) raised: {e}")
+        return False
+
+
+def _episode_success_from_env_evaluate(env) -> bool:
+    """Read the native env.evaluate()["success"] for scene 0.
+
+    Assumes the caller has already scoped the target actor via
+    :func:`_scope_env_to_target_actor` if needed.
     """
-    csv_path = scene_dir / "scene_items.csv"
-    if not csv_path.is_file():
-        return []
-    df = pd.read_csv(csv_path)
-    slug = PRODUCT_SLUG_MAP.get(product_slug.lower(), product_slug)
-    mask = df["actor_name"].str.contains(slug, na=False)
-    candidates = df[mask]["actor_name"].tolist()
-    front = [a for a in candidates if a.rsplit(":", 1)[-1] == "0"]
-    return front if front else candidates
+    env_u = env.unwrapped
+    try:
+        out = env_u.evaluate()
+    except Exception as e:
+        print(f"[Eval] env.evaluate() failed: {e}")
+        return False
+    if not isinstance(out, dict):
+        return False
+    success = out.get("success", False)
+    if hasattr(success, "cpu"):
+        success = success.cpu().numpy()
+    success = np.asarray(success).reshape(-1)
+    return bool(success[0]) if success.size > 0 else False
 
 
 def front_row_instances_from_products_df(df: pd.DataFrame, product_slug: str) -> List[str]:
@@ -155,26 +178,6 @@ def front_row_instances_from_products_df(df: pd.DataFrame, product_slug: str) ->
     return sub["actor_name"].tolist()
 
 
-def sample_random_product_and_target(
-    env_u, rng: np.random.Generator, product_slugs: List[str]
-) -> Optional[Tuple[str, str]]:
-    """
-    Равномерно по всем парам (slug из product_slugs, actor_name).
-    Возвращает (product_slug, actor_name) или None, если в сцене нет ни одного кандидата.
-    """
-    df = getattr(env_u, "products_df", None)
-    if df is None or len(df) == 0:
-        return None
-    pool: List[Tuple[str, str]] = []
-    for ps in product_slugs:
-        for an in front_row_instances_from_products_df(df, ps):
-            pool.append((ps, an))
-    if not pool:
-        return None
-    i = int(rng.integers(len(pool)))
-    return pool[i]
-
-
 def product_to_targets_from_products_df(env_u, product_slugs: List[str]) -> Dict[str, List[str]]:
     """
     Для текущей (уже reset) сцены вернуть доступные actor_name по каждому продукту.
@@ -192,6 +195,39 @@ def _all_product_quotas_done(quotas: Dict[str, int]) -> bool:
     return all(v <= 0 for v in quotas.values())
 
 
+@dataclass(frozen=True)
+class BenchTrial:
+    """Один эпизод бенчмарка: общий seed reset и целевой actor для GraspGen и dummy."""
+
+    seed_idx: int
+    product_slug: str
+    target_actor: str
+
+
+def _selectable_with_quota(
+    remaining: Dict[str, int],
+    cand: Dict[str, List[str]],
+    products: List[str],
+) -> List[str]:
+    return [p for p in products if remaining[p] > 0 and len(cand.get(p, [])) > 0]
+
+
+def _create_eval_env(
+    args: argparse.Namespace,
+    scene_dir: Path,
+    sensor_configs: dict,
+    record_dir: str,
+    traj_name: str,
+    record: bool,
+    save_video: bool,
+    video_fps: int,
+) -> gym.Env:
+    env = _make_env(args, scene_dir, sensor_configs, env_id=args.env_id)
+    if record:
+        env = _wrap_record(env, record_dir, traj_name, save_video, video_fps)
+    return env
+
+
 def _resolve_selected_id(env, name_arg: str) -> Optional[int]:
     seg_map = getattr(env.unwrapped, "segmentation_id_map", None)
     if seg_map is None:
@@ -206,17 +242,19 @@ def _resolve_selected_id(env, name_arg: str) -> Optional[int]:
 
 
 def capture_pointcloud(env, target_actor_name: str) -> Tuple[np.ndarray, np.ndarray]:
+    """Force-capture a fused pointcloud from env cameras and return
+    (object_xyz, scene_xyz). Works regardless of the env's obs_mode — uses
+    ``PickToBasketContActorEvalEnv.capture_pointcloud()`` under the hood.
     """
-    Из уже построенного env: obs_mode=pointcloud, вернуть (object_xyz, scene_xyz).
-    """
-    obs, _ = env.reset(seed=0, options={"reconfigure": False})
-    env_pc = env.unwrapped
-    obs_mode = getattr(env_pc, "_obs_mode", None) or "none"
-    if obs_mode != "pointcloud":
-        raise RuntimeError(f"env obs_mode={obs_mode!r}, need 'pointcloud' for GraspGen capture")
-
-    xyz = obs["pointcloud"]["xyzw"][0, ..., :3].cpu().numpy()
-    seg_raw = obs["pointcloud"]["segmentation"][0].cpu().numpy()
+    env_u = env.unwrapped
+    if not hasattr(env_u, "capture_pointcloud"):
+        raise RuntimeError(
+            "env does not expose capture_pointcloud(); "
+            "use PickToBasketContActorEvalEnv (or a subclass)."
+        )
+    pcd = env_u.capture_pointcloud(rgb=False)
+    xyz = pcd["xyzw"][0, ..., :3].cpu().numpy()
+    seg_raw = pcd["segmentation"][0].cpu().numpy()
     selected_id = _resolve_selected_id(env, target_actor_name)
     if selected_id is not None and seg_raw is not None:
         mask = (seg_raw == selected_id).reshape(-1)
@@ -325,9 +363,9 @@ def solve_graspgen(
     basket_success_radius: float = 0.25,
     approach_axis: str = "z",
     grasp_rot_deg: float = -90.0,
-    grasp_forward_offset: float = 0.2,
+    grasp_forward_offset: float = 0.18,
     post_grasp_backoff: float = 0.3,
-    base_standoff: float = 1.1,
+    base_standoff: float = 1.18,
     skip_reset: bool = False,
     initial_obs: Optional[Any] = None,
 ) -> Tuple[bool, float]:
@@ -335,27 +373,39 @@ def solve_graspgen(
     GraspGen pipeline: capture PC -> ZMQ infer_scene -> plan_grasps_from_json-style loop -> basket.
     Returns (success, dist_to_basket).
 
-    Если skip_reset=True, reset не вызывается: нужен уже выполненный reset(reconfigure)
-    и initial_obs с pointcloud (как после такого reset).
+    The env can be configured with *any* ``obs_mode`` (e.g.
+    ``rgb+depth+segmentation``): the fused pointcloud for GraspGen is rebuilt
+    on the fly via ``env.unwrapped.capture_pointcloud()``. That way the
+    recorded .h5 contains image-based observations (rgb/depth/segmentation/
+    target_mask) suitable for LeRobot / RLDS, while GraspGen still gets a
+    proper point cloud for inference.
+
+    Если skip_reset=True, reset не вызывается: нужен уже выполненный reset(reconfigure).
+    ``initial_obs`` больше не требуется для этого режима, так как pointcloud
+    снимается отдельно.
     """
-    if skip_reset:
-        if initial_obs is None:
-            raise ValueError("solve_graspgen(..., skip_reset=True) требует initial_obs")
-        obs = initial_obs
-    else:
-        obs, _ = env.reset(seed=seed, options={"reconfigure": True})
+    if not skip_reset:
+        env.reset(seed=seed, options={"reconfigure": True})
     env_u = env.unwrapped
     products = getattr(env_u, "actors", {}).get("products", {})
     if target_actor_name not in products:
         print(f"[GraspGen] target {target_actor_name!r} not found in products")
         return False, float("inf")
 
+    # Scope env.evaluate() to this actor so that info["success"] on every step
+    # (and therefore the `success` dataset in recorded .h5 / .json) is correct.
+    _scope_env_to_target_actor(env, target_actor_name)
+
     target_actor = products[target_actor_name]
     target_center = _to_numpy(target_actor.pose.sp.p).reshape(3)
 
-    # --- Capture pointcloud via segmentation ---
-    xyz_all = obs["pointcloud"]["xyzw"][0, ..., :3].cpu().numpy().astype(np.float32)
-    seg_raw = obs["pointcloud"]["segmentation"][0].cpu().numpy()
+    # --- Capture pointcloud from cameras (independent of obs_mode) ---
+    if not hasattr(env_u, "capture_pointcloud"):
+        print("[GraspGen] env has no capture_pointcloud(); use PickToBasketContActorEvalEnv.")
+        return False, float("inf")
+    pcd = env_u.capture_pointcloud(rgb=False)
+    xyz_all = pcd["xyzw"][0, ..., :3].cpu().numpy().astype(np.float32)
+    seg_raw = pcd["segmentation"][0].cpu().numpy()
     selected_id = _resolve_selected_id(env, target_actor_name)
     if selected_id is not None and seg_raw is not None:
         mask = (seg_raw == selected_id).reshape(-1)
@@ -390,7 +440,8 @@ def solve_graspgen(
             num_grasps=200,
             approach_direction=approach_dir,
             robot_position=robot_pos,
-            approach_cos_threshold=0.3,
+            approach_cos_threshold=0.5,
+            remove_outliers=False
         )
     except Exception as e:
         print(f"[GraspGen] ZMQ error: {e}")
@@ -459,7 +510,7 @@ def solve_graspgen(
             lift_p = np.asarray(tcp_pose.p, dtype=np.float64).copy()
             lift_p[2] = float(target_center[2])
             lift_pose = sapien.Pose(p=lift_p.tolist(), q=np.asarray(tcp_pose.q, dtype=np.float64).tolist())
-            lift_pose = lift_pose * sapien.Pose(p=[0.1, 0.0, 0.0])
+            lift_pose = lift_pose * sapien.Pose(p=[0.15, 0.0, 0.0])
             planner.static_manipulation(lift_pose, n_init_qpos=80, disable_lift_joint=False)
         
             planner.planner.update_from_simulation()
@@ -528,10 +579,12 @@ def solve_graspgen(
         planner.planner.update_from_simulation()
         planner.idle_steps(t=10)
 
-        ok, dist = _episode_success_by_basket_proximity(env, target_actor, basket_success_radius)
+        ok = _episode_success_from_env_evaluate(env)
+        _, dist = _episode_success_by_basket_proximity(env, target_actor, basket_success_radius)
         return ok, dist
 
-    ok, dist = _episode_success_by_basket_proximity(env, target_actor, basket_success_radius)
+    ok = _episode_success_from_env_evaluate(env)
+    _, dist = _episode_success_by_basket_proximity(env, target_actor, basket_success_radius)
     return ok, dist
 
 
@@ -560,6 +613,8 @@ def solve_dummy(
     if target_actor_name not in products:
         print(f"[Dummy] target {target_actor_name!r} not found in products")
         return False, float("inf")
+
+    _scope_env_to_target_actor(env, target_actor_name)
 
     FINGER_LENGTH = 0.03
     target_actor = products[target_actor_name]
@@ -725,7 +780,8 @@ def solve_dummy(
     planner.planner.update_from_simulation()
     planner.idle_steps(t=10)
 
-    ok, dist = _episode_success_by_basket_proximity(env, target_actor, basket_success_radius)
+    ok = _episode_success_from_env_evaluate(env)
+    _, dist = _episode_success_by_basket_proximity(env, target_actor, basket_success_radius)
     return ok, dist
 
 
@@ -733,11 +789,15 @@ def _make_env(
     args,
     scene_dir,
     sensor_configs,
-    obs_mode: str = "pointcloud",
+    obs_mode: str = "rgb+depth+segmentation",
     *,
-    env_id: str = "PickToBasketContEnv",
+    env_id: str = "PickToBasketContActorEvalEnv",
 ):
-    """Создать gym env. env_id по умолчанию — базовый PickToBasketContEnv (любой товар в сцене)."""
+    """Создать gym env. По умолчанию — env с actor-scoped evaluate и
+    камерным obs_mode, чтобы recorder писал rgb/depth/segmentation/target_mask
+    в .h5 (готовый вход под LeRobot / RLDS). Pointcloud для GraspGen
+    собирается отдельно через ``env.unwrapped.capture_pointcloud(...)``.
+    """
     return gym.make(
         env_id,
         robot_uids=args.robot_uids,
@@ -747,8 +807,8 @@ def _make_env(
         obs_mode=obs_mode,
         render_mode="rgb_array",# if args.vis else "rgb_array",
         enable_shadow=True,
-        viewer_camera_configs=dict(shader_pack=args.shader, width=320, height=240),
-        human_render_camera_configs=dict(shader_pack=args.shader, width=320, height=240),
+        viewer_camera_configs=dict(shader_pack=args.shader),
+        human_render_camera_configs=dict(shader_pack=args.shader),
         sensor_configs=sensor_configs,
         parallel_in_single_scene=False,
         sim_backend="auto",
@@ -761,9 +821,7 @@ def parse_args():
     p.add_argument("--products", nargs="+", default=["oreo", "monster", "vanish"])
     p.add_argument("--num-traj", type=int, default=5,
                    help="Число эпизодов на (сцену, продукт) для обоих режимов")
-    p.add_argument("--legacy-per-product-loop", action="store_true",
-                   help="Старый режим: отдельный env на каждый продукт, цели из scene_items.csv до reset")
-    p.add_argument("--env-id", type=str, default="DarkstoreContinuousBaseEnv")
+    p.add_argument("--env-id", type=str, default="PickToBasketContActorEvalEnv")
     p.add_argument("--robot-uids", type=str, default="ds_fetch_basket")
     p.add_argument("--host", type=str, default="localhost")
     p.add_argument("--port", type=int, default=5556)
@@ -783,7 +841,7 @@ def parse_args():
 
 
 def _wrap_record(env, record_dir: str, traj_name: str, save_video: bool, video_fps: int):
-    """Wrap env with RecordEpisode for trajectory/video saving."""
+    """Оборачивает env в MyRecordEpisode для записи траекторий и видео."""
     # env.sensor_configs = dict(width=124, height=124, shader_pack="minimal")
     # env.human_render_camera_configs = dict(width=124, height=124, shader_pack="minimal")
     # env.viewer_camera_configs = dict(width=124, height=124, shader_pack="minimal")
@@ -806,6 +864,259 @@ def _flush_episode(env, success: bool, *, save_video: bool, only_success: bool):
     env.flush_trajectory(save=save)
     if save_video:
         env.flush_video(save=save)
+
+
+def _close_env_safely(env) -> None:
+    if env is None:
+        return
+    try:
+        env.close()
+    except Exception as e:
+        print(f"[Env] close() warning: {e}")
+
+
+def _run_scene_benchmark(
+    args: argparse.Namespace,
+    scene_dir: Path,
+    sensor_configs: dict,
+    graspgen_client: Optional[GraspGenClient],
+    record: bool,
+) -> Dict[str, Any]:
+    """Один проход по сцене: фаза GraspGen (если включена), затем dummy по тем же trial или только dummy."""
+    scene_name = scene_dir.name
+    record_dir = str(scene_dir / "demos" / "benchmark")
+    products = list(args.products)
+    episodes_target = int(args.num_traj) * len(products)
+    max_attempts = max(episodes_target * 20, 100)
+
+    gg_enabled = (not args.skip_graspgen) and (graspgen_client is not None)
+    dm_enabled = not args.skip_dummy
+
+    if gg_enabled and dm_enabled:
+        total_bar = 2 * episodes_target
+    elif gg_enabled or dm_enabled:
+        total_bar = episodes_target
+    else:
+        total_bar = 0
+
+    pbar = tqdm(total=total_bar, desc=f"[Bench] {scene_name}")
+
+    trials: List[BenchTrial] = []
+    overall_gg: List[bool] = []
+    by_prod_gg: Dict[str, List[bool]] = {p: [] for p in products}
+    overall_dm: List[bool] = []
+    by_prod_dm: Dict[str, List[bool]] = {p: [] for p in products}
+
+    # ---------- Фаза 1: GraspGen — один env на фазу, между эпизодами только reset ----------
+    if gg_enabled:
+        remaining = {p: int(args.num_traj) for p in products}
+        attempts = 0
+        env_gg = None
+        try:
+            env_gg = _create_eval_env(
+                args,
+                scene_dir,
+                sensor_configs,
+                record_dir,
+                "graspgen_random",
+                record,
+                args.save_video,
+                args.video_fps,
+            )
+            while not _all_product_quotas_done(remaining) and attempts < max_attempts:
+                seed_idx = attempts
+                attempts += 1
+                rng_ep = np.random.default_rng(int(seed_idx))
+                obs, _ = env_gg.reset(seed=seed_idx, options={"reconfigure": True})
+                cand = product_to_targets_from_products_df(env_gg.unwrapped, products)
+                selectable = _selectable_with_quota(remaining, cand, products)
+                if not selectable:
+                    if record:
+                        _flush_episode(
+                            env_gg,
+                            False,
+                            save_video=args.save_video,
+                            only_success=args.only_count_success,
+                        )
+                    pbar.update(1)
+                    continue
+                product_slug = selectable[int(rng_ep.integers(len(selectable)))]
+                gg_targets = cand[product_slug]
+                target_actor = gg_targets[int(rng_ep.integers(len(gg_targets)))]
+                print(
+                    f"\n--- [GraspGen] seed={seed_idx} product={product_slug} target={target_actor} ---"
+                )
+                try:
+                    ok_gg, dist_gg = solve_graspgen(
+                        env_gg,
+                        target_actor,
+                        graspgen_client,
+                        seed=seed_idx,
+                        debug=args.debug,
+                        vis=args.vis,
+                        max_grasps=args.max_grasps,
+                        basket_success_radius=args.basket_success_radius,
+                        skip_reset=True,
+                        initial_obs=obs,
+                    )
+                except Exception as e:
+                    print(f"[GraspGen] Exception: {e}")
+                    ok_gg, dist_gg = False, float("inf")
+                trials.append(BenchTrial(seed_idx, product_slug, target_actor))
+                overall_gg.append(ok_gg)
+                by_prod_gg[product_slug].append(ok_gg)
+                remaining[product_slug] -= 1
+                print(f"  GraspGen: success={ok_gg}, dist={dist_gg:.4f}, left={remaining[product_slug]}")
+                if record:
+                    _flush_episode(
+                        env_gg,
+                        ok_gg,
+                        save_video=args.save_video,
+                        only_success=args.only_count_success,
+                    )
+                pbar.update(1)
+        finally:
+            _close_env_safely(env_gg)
+        if attempts >= max_attempts and not _all_product_quotas_done(remaining):
+            print(
+                f"[{scene_name}] GraspGen: достигнут предел попыток ({max_attempts}); "
+                "квоты не закрыты."
+            )
+
+    # ---------- Фаза 2: Dummy — отдельный env на фазу, между эпизодами только reset ----------
+    if dm_enabled:
+        env_dm = None
+        try:
+            env_dm = _create_eval_env(
+                args,
+                scene_dir,
+                sensor_configs,
+                record_dir,
+                "dummy_random",
+                record,
+                args.save_video,
+                args.video_fps,
+            )
+            if trials:
+                for i, trial in enumerate(trials, start=1):
+                    _, _ = env_dm.reset(seed=trial.seed_idx, options={"reconfigure": True})
+                    print(
+                        f"\n--- [Dummy] seed={trial.seed_idx} product={trial.product_slug} "
+                        f"target={trial.target_actor} ---"
+                    )
+                    try:
+                        ok_dm, dist_dm = solve_dummy(
+                            env_dm,
+                            trial.target_actor,
+                            debug=args.debug,
+                            seed=trial.seed_idx,
+                            vis=args.vis,
+                            basket_success_radius=args.basket_success_radius,
+                            skip_reset=True,
+                        )
+                    except Exception as e:
+                        print(f"[Dummy] Exception: {e}")
+                        ok_dm, dist_dm = False, float("inf")
+                    overall_dm.append(ok_dm)
+                    by_prod_dm[trial.product_slug].append(ok_dm)
+                    print(
+                        f"  Dummy: success={ok_dm}, dist={dist_dm:.4f}, replay {i}/{len(trials)}"
+                    )
+                    if record:
+                        _flush_episode(
+                            env_dm,
+                            ok_dm,
+                            save_video=args.save_video,
+                            only_success=args.only_count_success,
+                        )
+                    pbar.update(1)
+            else:
+                remaining = {p: int(args.num_traj) for p in products}
+                attempts = 0
+                while not _all_product_quotas_done(remaining) and attempts < max_attempts:
+                    seed_idx = attempts
+                    attempts += 1
+                    rng_ep = np.random.default_rng(int(seed_idx))
+                    _, _ = env_dm.reset(seed=seed_idx, options={"reconfigure": True})
+                    cand = product_to_targets_from_products_df(env_dm.unwrapped, products)
+                    selectable = _selectable_with_quota(remaining, cand, products)
+                    if not selectable:
+                        if record:
+                            _flush_episode(
+                                env_dm,
+                                False,
+                                save_video=args.save_video,
+                                only_success=args.only_count_success,
+                            )
+                        pbar.update(1)
+                        continue
+                    product_slug = selectable[int(rng_ep.integers(len(selectable)))]
+                    dm_targets = cand[product_slug]
+                    target_actor = dm_targets[int(rng_ep.integers(len(dm_targets)))]
+                    print(
+                        f"\n--- [Dummy] seed={seed_idx} product={product_slug} "
+                        f"target={target_actor} ---"
+                    )
+                    try:
+                        ok_dm, dist_dm = solve_dummy(
+                            env_dm,
+                            target_actor,
+                            debug=args.debug,
+                            seed=seed_idx,
+                            vis=args.vis,
+                            basket_success_radius=args.basket_success_radius,
+                            skip_reset=True,
+                        )
+                    except Exception as e:
+                        print(f"[Dummy] Exception: {e}")
+                        ok_dm, dist_dm = False, float("inf")
+                    overall_dm.append(ok_dm)
+                    by_prod_dm[product_slug].append(ok_dm)
+                    remaining[product_slug] -= 1
+                    print(
+                        f"  Dummy: success={ok_dm}, dist={dist_dm:.4f}, left={remaining[product_slug]}"
+                    )
+                    if record:
+                        _flush_episode(
+                            env_dm,
+                            ok_dm,
+                            save_video=args.save_video,
+                            only_success=args.only_count_success,
+                        )
+                    pbar.update(1)
+                if attempts >= max_attempts and not _all_product_quotas_done(remaining):
+                    print(
+                        f"[{scene_name}] Dummy: достигнут предел попыток ({max_attempts}); "
+                        "квоты не закрыты."
+                    )
+        finally:
+            _close_env_safely(env_dm)
+
+    pbar.close()
+
+    n_gg = len(overall_gg)
+    n_dm = len(overall_dm)
+    by_product_out: Dict[str, Any] = {}
+    for p in products:
+        ng = len(by_prod_gg[p])
+        nd = len(by_prod_dm[p])
+        by_product_out[p] = {
+            "with": float(np.mean(by_prod_gg[p])) if ng else float("nan"),
+            "without": float(np.mean(by_prod_dm[p])) if nd else float("nan"),
+            "n_episodes_graspgen": ng,
+            "n_episodes_dummy": nd,
+            "n_episodes": max(ng, nd),
+        }
+
+    return {
+        "mode": "random_after_reset",
+        "overall": {
+            "with": float(np.mean(overall_gg)) if n_gg else float("nan"),
+            "without": float(np.mean(overall_dm)) if n_dm else float("nan"),
+            "n_episodes": max(n_gg, n_dm),
+        },
+        "by_product": by_product_out,
+    }
 
 
 def _print_results_summary(results: Dict[str, Any]) -> None:
@@ -843,21 +1154,6 @@ def _print_results_summary(results: Dict[str, Any]) -> None:
                     f"{(f'{ggp:.3f}' if not np.isnan(ggp) else 'N/A'):>12} "
                     f"{(f'{dmp:.3f}' if not np.isnan(dmp) else 'N/A'):>12} {n_p:>6}"
                 )
-        else:
-            for prod, rates in payload.items():
-                if not isinstance(rates, dict):
-                    continue
-                gg = rates.get("with", float("nan"))
-                dm = rates.get("without", float("nan"))
-                if rates.get("skipped"):
-                    continue
-                gg_str = f"{gg:.3f}" if not np.isnan(gg) else "N/A"
-                dm_str = f"{dm:.3f}" if not np.isnan(dm) else "N/A"
-                print(f"{scene_name:<25} {prod:<14} {gg_str:>12} {dm_str:>12} {'':>6}")
-                if not np.isnan(gg):
-                    all_gg.append(gg)
-                if not np.isnan(dm):
-                    all_dm.append(dm)
 
     print("-" * len(header))
     avg_gg = f"{np.mean(all_gg):.3f}" if all_gg else "N/A"
@@ -878,10 +1174,10 @@ def main():
     print(f"Scenes: {[d.name for d in scene_dirs]}")
     print(f"Product pool: {args.products}")
     print(f"Episodes per product per scene: {args.num_traj}")
-    if args.legacy_per_product_loop:
-        print("Mode: legacy (per-product env + scene_items.csv before reset)")
-    else:
-        print("Mode: random product & instance after each reset(reconfigure) from products_df")
+    print(
+        "Режим: сначала все эпизоды GraspGen (если включён), затем dummy по тем же trial; "
+        "каждый эпизод — отдельный env и сразу close()."
+    )
 
     record = args.save_video or args.save_traj
 
@@ -890,321 +1186,20 @@ def main():
         graspgen_client = GraspGenClient(host=args.host, port=args.port)
         print(f"GraspGen server: {graspgen_client.server_metadata}")
 
-    sensor_configs = dict(width=1024, height=1024, shader_pack="minimal")
+    sensor_configs = dict(width=256, height=256, shader_pack="minimal")
     results: Dict[str, Any] = {}
 
-    if not args.legacy_per_product_loop:
-        # ---------- Баланс по продуктам: num_traj на каждый продукт ----------
-        for scene_dir in scene_dirs:
-            scene_name = scene_dir.name
-            record_dir = str(scene_dir / "demos" / "benchmark")
-
-            by_prod_gg: Dict[str, List[bool]] = {p: [] for p in args.products}
-            by_prod_dm: Dict[str, List[bool]] = {p: [] for p in args.products}
-            overall_gg: List[bool] = []
-            overall_dm: List[bool] = []
-            remaining_gg: Dict[str, int] = {p: int(args.num_traj) for p in args.products}
-            remaining_dm: Dict[str, int] = {p: int(args.num_traj) for p in args.products}
-
-            env_gg = None
-            if not args.skip_graspgen and graspgen_client is not None:
-                env_gg = _make_env(args, scene_dir, sensor_configs, obs_mode="pointcloud", env_id="PickToBasketContEnv")
-                if record:
-                    env_gg = _wrap_record(
-                        env_gg, record_dir, traj_name="graspgen_random",
-                        save_video=args.save_video, video_fps=args.video_fps,
-                    )
-
-            env_dm = None
-            if not args.skip_dummy:
-                env_dm = _make_env(args, scene_dir, sensor_configs, obs_mode="pointcloud", env_id="PickToBasketContEnv")
-                if record:
-                    env_dm = _wrap_record(
-                        env_dm, record_dir, traj_name="dummy_random",
-                        save_video=args.save_video, video_fps=args.video_fps,
-                    )
-
-            episodes_target = int(args.num_traj) * len(args.products)
-            pbar = tqdm(total=episodes_target, desc=f"[Bench] {scene_name}")
-            max_attempts = max(episodes_target * 20, 100)
-            attempts = 0
-
-            while attempts < max_attempts:
-                gg_done = env_gg is None or _all_product_quotas_done(remaining_gg)
-                dm_done = env_dm is None or _all_product_quotas_done(remaining_dm)
-                if gg_done and dm_done:
-                    break
-                gg_active = env_gg is not None and not gg_done
-                dm_active = env_dm is not None and not dm_done
-
-                seed_idx = attempts
-                attempts += 1
-                rng_ep = np.random.default_rng(int(seed_idx))
-
-                obs_gg = None
-                obs_dm = None
-                cand_gg: Dict[str, List[str]] = {p: [] for p in args.products}
-                cand_dm: Dict[str, List[str]] = {p: [] for p in args.products}
-
-                if gg_active:
-                    obs_gg, _ = env_gg.reset(seed=seed_idx, options={"reconfigure": True})
-                    cand_gg = product_to_targets_from_products_df(env_gg.unwrapped, args.products)
-                if dm_active:
-                    obs_dm, _ = env_dm.reset(seed=seed_idx, options={"reconfigure": True})
-                    cand_dm = product_to_targets_from_products_df(env_dm.unwrapped, args.products)
-
-                selectable_products: List[str] = []
-                for p in args.products:
-                    ok = True
-                    if gg_active and remaining_gg[p] > 0 and len(cand_gg.get(p, [])) == 0:
-                        ok = False
-                    if dm_active and remaining_dm[p] > 0 and len(cand_dm.get(p, [])) == 0:
-                        ok = False
-                    if gg_active and remaining_gg[p] <= 0 and not dm_active:
-                        ok = False
-                    if dm_active and remaining_dm[p] <= 0 and not gg_active:
-                        ok = False
-                    if gg_active and dm_active and (remaining_gg[p] <= 0 or remaining_dm[p] <= 0):
-                        ok = False
-                    if ok:
-                        selectable_products.append(p)
-
-                if not selectable_products:
-                    if record:
-                        if gg_active and obs_gg is not None:
-                            _flush_episode(
-                                env_gg, False,
-                                save_video=args.save_video,
-                                only_success=args.only_count_success,
-                            )
-                        if dm_active and obs_dm is not None:
-                            _flush_episode(
-                                env_dm, False,
-                                save_video=args.save_video,
-                                only_success=args.only_count_success,
-                            )
-                    continue
-
-                product_slug = selectable_products[int(rng_ep.integers(len(selectable_products)))]
-
-                if gg_active and remaining_gg[product_slug] > 0:
-                    gg_targets = cand_gg[product_slug]
-                    target_actor_gg = gg_targets[int(rng_ep.integers(len(gg_targets)))]
-                    print(f"\n--- [GraspGen] seed={seed_idx} product={product_slug} target={target_actor_gg} ---")
-                    try:
-                        ok_gg, dist_gg = solve_graspgen(
-                            env_gg,
-                            target_actor_gg,
-                            graspgen_client,
-                            seed=seed_idx,
-                            debug=args.debug,
-                            vis=args.vis,
-                            max_grasps=args.max_grasps,
-                            basket_success_radius=args.basket_success_radius,
-                            skip_reset=True,
-                            initial_obs=obs_gg,
-                        )
-                    except Exception as e:
-                        print(f"[GraspGen] Exception: {e}")
-                        ok_gg, dist_gg = False, float("inf")
-                    overall_gg.append(ok_gg)
-                    by_prod_gg[product_slug].append(ok_gg)
-                    remaining_gg[product_slug] -= 1
-                    print(f"  GraspGen: success={ok_gg}, dist={dist_gg:.4f}, left={remaining_gg[product_slug]}")
-                    if record:
-                        _flush_episode(
-                            env_gg, ok_gg,
-                            save_video=args.save_video,
-                            only_success=args.only_count_success,
-                        )
-
-                if dm_active and remaining_dm[product_slug] > 0:
-                    dm_targets = cand_dm[product_slug]
-                    target_actor_dm = dm_targets[int(rng_ep.integers(len(dm_targets)))]
-                    print(f"\n--- [Dummy]    seed={seed_idx} product={product_slug} target={target_actor_dm} ---")
-                    try:
-                        ok_dm, dist_dm = solve_dummy(
-                            env_dm,
-                            target_actor_dm,
-                            debug=args.debug,
-                            seed=seed_idx,
-                            vis=args.vis,
-                            basket_success_radius=args.basket_success_radius,
-                            skip_reset=True,
-                        )
-                    except Exception as e:
-                        print(f"[Dummy] Exception: {e}")
-                        ok_dm, dist_dm = False, float("inf")
-                    overall_dm.append(ok_dm)
-                    by_prod_dm[product_slug].append(ok_dm)
-                    remaining_dm[product_slug] -= 1
-                    print(f"  Dummy:    success={ok_dm}, dist={dist_dm:.4f}, left={remaining_dm[product_slug]}")
-                    if record:
-                        _flush_episode(
-                            env_dm, ok_dm,
-                            save_video=args.save_video,
-                            only_success=args.only_count_success,
-                        )
-
-                pbar.update(1)
-                pbar.set_postfix(
-                    gg=f"{np.mean(overall_gg):.2f}" if overall_gg else "—",
-                    dm=f"{np.mean(overall_dm):.2f}" if overall_dm else "—",
-                )
-
-            pbar.close()
-            if attempts >= max_attempts:
-                print(f"[{scene_name}] Достигнут предел попыток ({max_attempts}); не все квоты закрыты.")
-
-            if env_gg is not None:
-                env_gg.close()
-            if env_dm is not None:
-                env_dm.close()
-
-            n_gg = len(overall_gg)
-            n_dm = len(overall_dm)
-            by_product_out: Dict[str, Any] = {}
-            for p in args.products:
-                ng = len(by_prod_gg[p])
-                nd = len(by_prod_dm[p])
-                by_product_out[p] = {
-                    "with": float(np.mean(by_prod_gg[p])) if ng else float("nan"),
-                    "without": float(np.mean(by_prod_dm[p])) if nd else float("nan"),
-                    "n_episodes_graspgen": ng,
-                    "n_episodes_dummy": nd,
-                    "n_episodes": max(ng, nd),
-                }
-
-            results[scene_name] = {
-                "mode": "random_after_reset",
-                "overall": {
-                    "with": float(np.mean(overall_gg)) if n_gg else float("nan"),
-                    "without": float(np.mean(overall_dm)) if n_dm else float("nan"),
-                    "n_episodes": max(n_gg, n_dm),
-                },
-                "by_product": by_product_out,
-            }
-            print(
-                f"\n  [{scene_name}] overall GraspGen SR="
-                f"{results[scene_name]['overall']['with']:.3f}  Dummy SR="
-                f"{results[scene_name]['overall']['without']:.3f}  (n={max(n_gg, n_dm)})"
-            )
-
-    else:
-        # ---------- Legacy: цикл по продуктам + CSV на диске ----------
-        for scene_dir in scene_dirs:
-            scene_name = scene_dir.name
-            results[scene_name] = {}
-
-            for product_slug in args.products:
-                front_instances = pick_front_row_instances(scene_dir, product_slug)
-                if not front_instances:
-                    print(f"  [{scene_name}] No front-row instances for '{product_slug}', skipping")
-                    results[scene_name][product_slug] = {"with": 0.0, "without": 0.0, "skipped": True}
-                    continue
-
-                print(f"\n{'='*70}")
-                print(f"  Scene={scene_name}  Product={product_slug}  FrontRow={len(front_instances)} instances")
-                print(f"{'='*70}")
-
-                targets_per_seed = []
-                for seed_idx in range(args.num_traj):
-                    rng = np.random.default_rng(seed_idx)
-                    targets_per_seed.append(rng.choice(front_instances))
-
-                graspgen_successes: List[bool] = []
-                dummy_successes: List[bool] = []
-                record_dir = str(scene_dir / "demos" / "benchmark")
-                env_id = f"PickToBasketCont{product_slug.capitalize()}Env"
-
-                if not args.skip_graspgen and graspgen_client is not None:
-                    env_gg = _make_env(args, scene_dir, sensor_configs, obs_mode="pointcloud", env_id=env_id)
-                    if record:
-                        env_gg = _wrap_record(
-                            env_gg, record_dir,
-                            traj_name=f"graspgen_{product_slug}",
-                            save_video=args.save_video,
-                            video_fps=args.video_fps,
-                        )
-
-                    pbar_gg = tqdm(range(args.num_traj), desc=f"[GraspGen] {scene_name}/{product_slug}")
-                    for seed_idx in pbar_gg:
-                        target_instance = targets_per_seed[seed_idx]
-                        print(f"\n--- [GraspGen] seed={seed_idx}, target={target_instance} ---")
-
-                        try:
-                            ok_gg, dist_gg = solve_graspgen(
-                                env_gg,
-                                target_instance,
-                                graspgen_client,
-                                seed=seed_idx,
-                                debug=args.debug,
-                                vis=args.vis,
-                                max_grasps=args.max_grasps,
-                                basket_success_radius=args.basket_success_radius,
-                            )
-                        except Exception as e:
-                            print(f"[GraspGen] Exception: {e}")
-                            ok_gg, dist_gg = False, float("inf")
-
-                        graspgen_successes.append(ok_gg)
-                        print(f"  GraspGen: success={ok_gg}, dist={dist_gg:.4f}")
-
-                        if record:
-                            _flush_episode(
-                                env_gg, ok_gg,
-                                save_video=args.save_video,
-                                only_success=args.only_count_success,
-                            )
-                        pbar_gg.set_postfix(sr=f"{np.mean(graspgen_successes):.3f}")
-
-                    env_gg.close()
-
-                if not args.skip_dummy:
-                    env_dm = _make_env(args, scene_dir, sensor_configs, obs_mode="pointcloud", env_id=env_id)
-                    if record:
-                        env_dm = _wrap_record(
-                            env_dm, record_dir,
-                            traj_name=f"dummy_{product_slug}",
-                            save_video=args.save_video,
-                            video_fps=args.video_fps,
-                        )
-
-                    pbar_dm = tqdm(range(args.num_traj), desc=f"[Dummy]    {scene_name}/{product_slug}")
-                    for seed_idx in pbar_dm:
-                        target_instance = targets_per_seed[seed_idx]
-                        print(f"\n--- [Dummy] seed={seed_idx}, target={target_instance} ---")
-
-                        try:
-                            ok_dm, dist_dm = solve_dummy(
-                                env_dm,
-                                target_instance,
-                                debug=args.debug,
-                                seed=seed_idx,
-                                vis=args.vis,
-                                basket_success_radius=args.basket_success_radius,
-                            )
-                        except Exception as e:
-                            print(f"[Dummy] Exception: {e}")
-                            ok_dm, dist_dm = False, float("inf")
-
-                        dummy_successes.append(ok_dm)
-                        print(f"  Dummy:    success={ok_dm}, dist={dist_dm:.4f}")
-
-                        if record:
-                            _flush_episode(
-                                env_dm, ok_dm,
-                                save_video=args.save_video,
-                                only_success=args.only_count_success,
-                            )
-                        pbar_dm.set_postfix(sr=f"{np.mean(dummy_successes):.3f}")
-
-                    env_dm.close()
-
-                rate_gg = float(np.mean(graspgen_successes)) if graspgen_successes else float("nan")
-                rate_dm = float(np.mean(dummy_successes)) if dummy_successes else float("nan")
-                results[scene_name][product_slug] = {"with": rate_gg, "without": rate_dm}
-                print(f"\n  [{scene_name}/{product_slug}] GraspGen SR={rate_gg:.3f}  Dummy SR={rate_dm:.3f}")
+    for scene_dir in scene_dirs:
+        scene_name = scene_dir.name
+        results[scene_name] = _run_scene_benchmark(
+            args, scene_dir, sensor_configs, graspgen_client, record
+        )
+        ov = results[scene_name]["overall"]
+        n_ep = int(ov["n_episodes"])
+        print(
+            f"\n  [{scene_name}] overall GraspGen SR={ov['with']:.3f}  "
+            f"Dummy SR={ov['without']:.3f}  (n={n_ep})"
+        )
 
     if graspgen_client is not None:
         graspgen_client.close()

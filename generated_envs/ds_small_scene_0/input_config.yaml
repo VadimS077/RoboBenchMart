@@ -38,8 +38,8 @@ ds_continuous:
     start_point_y: -1.0
     noise_std_x: 0.001
     noise_std_y: 0.001
-    rotation_lower: -0.1
-    rotation_upper: 0.1
+    rotation_lower: -0.25
+    rotation_upper: 0.25
     shelf_asset: fixtures.shelf_metal
     shelf_type: SHELF
   active_wall_shelvings_list: []
@@ -70,7 +70,7 @@ ds_continuous:
   layout_gen_type: PROCEDURAL_TENSOR_FIELD
   randomize_layout: true
   randomize_arrangements: true
-  random_seed: 42
+  random_seed: 142
   max_tries: 20
   tf_blending_decay: 12.0
   inactive_wall_shelvings_occupancy_width: 0.4

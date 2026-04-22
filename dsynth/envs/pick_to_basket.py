@@ -539,6 +539,342 @@ class PickToBasketContEnv(DarkstoreContinuousBaseEnv):
                 )
             # self.target_volume.set_pose(target_pose)
 
+
+@register_env('PickToBasketContActorEvalEnv', max_episode_steps=200000)
+class PickToBasketContActorEvalEnv(PickToBasketContEnv):
+    """
+    PickToBasket continuous env where the evaluation target can be overridden
+    to a specific actor (per scene) at runtime.
+
+    Default behavior (no override) matches :class:`PickToBasketContEnv`: on
+    every reset/reconfigure, :meth:`setup_target_objects` samples a random
+    product per scene. Call :meth:`set_target_actor` AFTER reset to re-scope
+    the env's native ``evaluate()`` (and therefore per-step ``info["success"]``
+    and the ``success`` field recorded in .h5 / .json) to a specific actor
+    that you actually intend to grasp.
+
+    Usage::
+
+        obs, _ = env.reset(seed=seed, options={"reconfigure": True})
+        env.unwrapped.set_target_actor("food.CANNED.SlamLuncheonMeat:0:0:0:0")
+        # ...run policy; env.step() will now report success against that actor
+    """
+
+    # --- Dedicated high-res camera used only for GraspGen point cloud capture.
+    # It is intentionally separate from the robot's standard cameras so the
+    # user can safely downscale obs/sensor cameras (e.g. 256x256) to get
+    # smaller .h5 / video files, without breaking GraspGen (which needs
+    # ~1024x1024 point clouds to work well).
+    GRASPGEN_PC_CAM_UID: str = "graspgen_pc_camera"
+    GRASPGEN_PC_RES: int = 1024
+
+    @property
+    def _default_sensor_configs(self):
+        base = list(super()._default_sensor_configs or [])
+        mount = None
+        try:
+            mount = self.agent.robot.links_map["head_camera_link"]
+        except Exception:
+            mount = None
+        # Pose cloned from DSFetch.left_base_camera_link so the frustum covers
+        # the same shelf/target region, just at high resolution.
+        pose = Pose.create_from_pq(
+            [-0.5, 0.5, 0], euler2quat(0, 0.3, -0.2)
+        )
+        pc_cam = CameraConfig(
+            uid=self.GRASPGEN_PC_CAM_UID,
+            pose=pose,
+            width=self.GRASPGEN_PC_RES,
+            height=self.GRASPGEN_PC_RES,
+            fov=1.5,
+            near=0.01,
+            far=100,
+            mount=mount,
+            shader_pack="minimal",
+        )
+        return base + [pc_cam]
+
+    def _setup_sensors(self, options):
+        """Ensure the GraspGen PC camera keeps high-res regardless of the
+        user-supplied ``sensor_configs`` override in ``gym.make``.
+
+        A *flat* ``sensor_configs=dict(width=256, height=256, ...)`` normally
+        applies to every camera. Here we inject a per-camera override for
+        :attr:`GRASPGEN_PC_CAM_UID` that restores the full resolution *after*
+        the global override is applied (per-camera entries are applied last by
+        ManiSkill).
+        """
+        uid = self.GRASPGEN_PC_CAM_UID
+        custom = self._custom_sensor_configs
+        if isinstance(custom, dict):
+            patched = dict(custom)
+            cam_spec = dict(patched.get(uid) or {})
+            cam_spec.setdefault("width", self.GRASPGEN_PC_RES)
+            cam_spec.setdefault("height", self.GRASPGEN_PC_RES)
+            patched[uid] = cam_spec
+            self._custom_sensor_configs = patched
+        super()._setup_sensors(options)
+
+    def _get_obs_sensor_data(self, apply_texture_transforms: bool = True) -> dict:
+        """Same as :meth:`BaseEnv._get_obs_sensor_data` but skips the
+        dedicated high-res GraspGen PC camera, so it is not rendered/read
+        during normal ``step()`` (which would defeat the point of using
+        low-res obs cameras)."""
+        from mani_skill.sensors.camera import Camera
+
+        uid = self.GRASPGEN_PC_CAM_UID
+        for obj in self._hidden_objects:
+            obj.hide_visual()
+        self.scene.update_render(
+            update_sensors=True, update_human_render_cameras=False
+        )
+        for name, sensor in self._sensors.items():
+            if name == uid:
+                continue
+            sensor.capture()
+        sensor_obs: dict = {}
+        for name, sensor in self.scene.sensors.items():
+            if name == uid:
+                continue
+            if not isinstance(sensor, Camera):
+                continue
+            if self.obs_mode in ("state", "state_dict"):
+                sensor_obs[name] = sensor.get_obs(
+                    position=False,
+                    segmentation=False,
+                    apply_texture_transforms=apply_texture_transforms,
+                )
+            else:
+                sensor_obs[name] = sensor.get_obs(
+                    rgb=self.obs_mode_struct.visual.rgb,
+                    depth=self.obs_mode_struct.visual.depth,
+                    position=self.obs_mode_struct.visual.position,
+                    segmentation=self.obs_mode_struct.visual.segmentation,
+                    normal=self.obs_mode_struct.visual.normal,
+                    albedo=self.obs_mode_struct.visual.albedo,
+                    apply_texture_transforms=apply_texture_transforms,
+                )
+        if self.backend.render_device.is_cuda():
+            torch.cuda.synchronize()
+        return sensor_obs
+
+    def get_sensor_params(self) -> dict:
+        """Strip GraspGen PC camera params from the standard observation.
+        They are still accessible internally for :meth:`capture_pointcloud`.
+        """
+        params = super().get_sensor_params()
+        if isinstance(params, dict):
+            params.pop(self.GRASPGEN_PC_CAM_UID, None)
+        return params
+
+    def set_target_actor(
+        self,
+        actor_name: str,
+        scene_idx: int = 0,
+    ) -> bool:
+        """Scope :meth:`evaluate` to a specific actor for the given scene.
+
+        Rebuilds ``self.target_products_df`` (row(s) for ``scene_idx``) and
+        ``self.target_product_names`` to point at ``actor_name``. Other scenes'
+        targets are preserved. The override is implicitly wiped on the next
+        ``reset(reconfigure=True)`` because :meth:`setup_target_objects`
+        reinitializes both fields from scratch.
+
+        Returns:
+            True if ``actor_name`` was found in ``products_df`` for ``scene_idx``
+            and the override was applied; False otherwise.
+        """
+        products_df = getattr(self, "products_df", None)
+        if products_df is None or len(products_df) == 0:
+            return False
+        if "actor_name" not in products_df.columns or "scene_idx" not in products_df.columns:
+            return False
+
+        actor_row = products_df[
+            (products_df["scene_idx"] == int(scene_idx))
+            & (products_df["actor_name"] == str(actor_name))
+        ]
+        if actor_row.empty:
+            return False
+
+        current = getattr(self, "target_products_df", None)
+        if current is not None and len(current) > 0:
+            keep = current[current["scene_idx"] != int(scene_idx)]
+            self.target_products_df = pd.concat(
+                [keep, actor_row], ignore_index=True
+            )
+        else:
+            self.target_products_df = actor_row.reset_index(drop=True)
+
+        if self.target_product_names is None:
+            self.target_product_names = {}
+        if "product_name" in actor_row.columns:
+            self.target_product_names[int(scene_idx)] = str(
+                actor_row.iloc[0]["product_name"]
+            )
+
+        return True
+
+    def get_target_segmentation_ids(self) -> dict:
+        """Return ``{scene_idx: per_scene_id}`` for the current target actor(s).
+
+        ``per_scene_id`` is the integer that ManiSkill writes into the
+        ``segmentation`` texture for the target actor's entity, so a
+        target-only binary mask can be obtained as
+        ``(segmentation == per_scene_id).astype(uint8)``.
+        """
+        out: dict = {}
+        target_df = getattr(self, "target_products_df", None)
+        if target_df is None or len(target_df) == 0:
+            return out
+        products = getattr(self, "actors", {}).get("products", {})
+        if not products:
+            return out
+        for _, row in target_df.iterrows():
+            actor_name = row.get("actor_name")
+            try:
+                scene_idx = int(row.get("scene_idx", 0))
+            except Exception:
+                continue
+            actor = products.get(actor_name)
+            if actor is None:
+                continue
+            try:
+                out[scene_idx] = int(actor._objs[0].per_scene_id)
+            except Exception:
+                continue
+        return out
+
+    @staticmethod
+    def _compute_target_mask(seg, target_seg_ids: dict):
+        """Build a per-scene binary target mask matching the layout of ``seg``.
+
+        ``seg`` is the segmentation tensor as produced by ManiSkill cameras /
+        pointcloud (shape ``[B, ..., 1]``, integer dtype). We return a tensor
+        of the same shape and ``torch.uint8``, where element is ``1`` iff the
+        segmentation id equals the target actor's ``per_scene_id`` for that
+        scene (batch) index.
+
+        Scenes not present in ``target_seg_ids`` (or out of range) receive an
+        all-zero mask.
+        """
+        mask = torch.zeros_like(seg, dtype=torch.uint8)
+        if seg.ndim == 0:
+            return mask
+        batch = seg.shape[0]
+        for scene_idx, sid in target_seg_ids.items():
+            if 0 <= int(scene_idx) < batch:
+                mask[int(scene_idx)] = (seg[int(scene_idx)] == int(sid)).to(torch.uint8)
+        return mask
+
+    def get_obs(self, info=None, unflattened: bool = False):
+        """Add ``target_mask`` next to ``segmentation`` in the observation.
+
+        - For camera-based obs modes (``rgb+depth+segmentation`` etc.): every
+          camera in ``obs["sensor_data"]`` that carries a ``segmentation`` key
+          will also get a ``target_mask`` key with shape ``[B, H, W, 1]`` and
+          dtype ``torch.uint8``.
+        - For ``pointcloud`` obs mode: if ``obs["pointcloud"]["segmentation"]``
+          exists, a matching flat ``target_mask`` of shape ``[B, N, 1]`` will
+          be added.
+
+        If the segmentation texture is not requested in ``obs_mode`` (e.g.
+        plain ``rgb+depth``), nothing is added and behavior is unchanged.
+        """
+        obs = super().get_obs(info=info, unflattened=unflattened)
+        if not isinstance(obs, dict):
+            return obs
+        target_seg_ids = self.get_target_segmentation_ids()
+        if not target_seg_ids:
+            return obs
+
+        sensor_data = obs.get("sensor_data")
+        if isinstance(sensor_data, dict):
+            for cam_data in sensor_data.values():
+                if not isinstance(cam_data, dict):
+                    continue
+                seg = cam_data.get("segmentation")
+                if seg is None:
+                    continue
+                cam_data["target_mask"] = self._compute_target_mask(seg, target_seg_ids)
+
+        pcd = obs.get("pointcloud")
+        if isinstance(pcd, dict):
+            seg = pcd.get("segmentation")
+            if seg is not None:
+                pcd["target_mask"] = self._compute_target_mask(seg, target_seg_ids)
+
+        return obs
+
+    def capture_pointcloud(self, rgb: bool = True) -> dict:
+        """Force-capture a fused pointcloud from the dedicated high-res
+        GraspGen camera (``GRASPGEN_PC_CAM_UID``), independent of ``obs_mode``.
+
+        This lets you run the env in a low-res camera-based ``obs_mode``
+        (so the recorder writes compact rgb/depth/segmentation/target_mask
+        into .h5 for LeRobot/RLDS training) while still feeding GraspGen a
+        proper ~1024x1024 fused point cloud on demand.
+
+        Returns:
+            A dict with the same layout that ``obs_mode="pointcloud"`` would
+            produce under ``obs["pointcloud"]``:
+
+                - ``xyzw``:         ``[B, N, 4]`` ``torch.float32`` (world frame,
+                  ``w == 0`` for invalid / far points, else ``1``).
+                - ``rgb``:          ``[B, N, 3]`` ``torch.uint8`` (only if
+                  ``rgb=True``).
+                - ``segmentation``: ``[B, N, 1]`` ``torch.int16``.
+                - ``target_mask``:  ``[B, N, 1]`` ``torch.uint8`` — present only
+                  when a target actor is known (i.e. after
+                  :meth:`set_target_actor` or the default sampling).
+        """
+        from mani_skill.sensors.camera import Camera
+        from mani_skill.envs.utils.observations.observations import (
+            sensor_data_to_pointcloud,
+        )
+
+        uid = self.GRASPGEN_PC_CAM_UID
+        pc_sensor = self._sensors.get(uid)
+        if pc_sensor is None or not isinstance(pc_sensor, Camera):
+            raise RuntimeError(
+                f"capture_pointcloud(): dedicated camera {uid!r} is not "
+                f"registered. Available sensors: {list(self._sensors)}"
+            )
+
+        for obj in self._hidden_objects:
+            obj.hide_visual()
+        self.scene.update_render(
+            update_sensors=True, update_human_render_cameras=False
+        )
+        pc_sensor.capture()
+
+        sensor_obs = {
+            uid: pc_sensor.get_obs(
+                rgb=bool(rgb),
+                depth=False,
+                position=True,
+                segmentation=True,
+                apply_texture_transforms=True,
+            )
+        }
+        if self.backend.render_device.is_cuda():
+            torch.cuda.synchronize()
+
+        fake_obs = dict(
+            sensor_data=sensor_obs,
+            sensor_param={uid: pc_sensor.get_params()},
+        )
+        fake_obs = sensor_data_to_pointcloud(fake_obs, {uid: pc_sensor})
+        pcd = fake_obs["pointcloud"]
+
+        target_seg_ids = self.get_target_segmentation_ids()
+        if target_seg_ids and "segmentation" in pcd:
+            pcd["target_mask"] = self._compute_target_mask(
+                pcd["segmentation"], target_seg_ids
+            )
+        return pcd
+
+
 PICK_TO_BASKET_DOC_STRING="""
 **Task Description:**
 Approach the shelf and pick up any item with the name '{product_name}', placing it into the basket attached to the Fetch robot.

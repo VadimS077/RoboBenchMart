@@ -11,3 +11,4 @@ outputs
 *.h5
 *.jpg
 *.csv
+forge/
