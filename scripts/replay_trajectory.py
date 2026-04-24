@@ -11,6 +11,7 @@ import copy
 import multiprocessing as mp
 import os
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Annotated, Optional
 
 import gymnasium as gym
@@ -27,8 +28,8 @@ from mani_skill.trajectory.merge_trajectory import merge_trajectories
 from mani_skill.trajectory.utils.actions import conversion as action_conversion
 from mani_skill.utils import common, io_utils, wrappers
 from mani_skill.utils.logging_utils import logger
-from mani_skill.utils.wrappers.record import RecordEpisode
-
+#from mani_skill.utils.wrappers.record import RecordEpisode
+from recorder import MyRecordEpisode
 import sys
 sys.path.append('.')
 from dsynth.envs import *
@@ -87,12 +88,53 @@ class Args:
     num_envs: Annotated[int, tyro.conf.arg(aliases=["-n"])] = 1
     """Number of environments to run to replay trajectories. With CPU backends typically this is parallelized via python multiprocessing.
     For parallelized simulation backends like physx_gpu, this is parallelized within a single python process by leveraging the GPU."""
+    env_id: Optional[str] = None
+    """Override env id from trajectory metadata. Useful for custom dsynth envs."""
+    config_dir_path: Optional[str] = None
+    """Override env config directory path. If omitted, script tries to infer from trajectory path."""
+    robot_uids: Optional[str] = None
+    """Override robot_uids from trajectory metadata."""
 
 
 @dataclass
 class ReplayResult:
     num_replays: int
     successful_replays: int
+
+
+def _infer_config_dir_from_traj_path(traj_path: str) -> Optional[str]:
+    """Infer dsynth scene config directory from demos/benchmark trajectory path."""
+    traj_parent = Path(traj_path).resolve().parent
+    # .../<scene_dir>/demos/benchmark/<traj>.h5 -> <scene_dir>
+    if traj_parent.name == "benchmark" and traj_parent.parent.name == "demos":
+        scene_dir = traj_parent.parent.parent
+        if scene_dir.is_dir():
+            return str(scene_dir)
+    return None
+
+
+def _build_env_config(args: Args, json_data: dict, traj_path: str):
+    """Build env_id/env_kwargs with dsynth-friendly fallbacks and CLI overrides."""
+    env_info = json_data.get("env_info", {})
+    env_id = args.env_id or env_info.get("env_id") or "PickToBasketContActorEvalEnv"
+    ori_env_kwargs = dict(env_info.get("env_kwargs", {}))
+    env_kwargs = ori_env_kwargs.copy()
+
+    # Common dsynth replay fallbacks when metadata is incomplete.
+    if "config_dir_path" not in env_kwargs or not env_kwargs.get("config_dir_path"):
+        inferred = args.config_dir_path or _infer_config_dir_from_traj_path(traj_path)
+        if inferred is not None:
+            env_kwargs["config_dir_path"] = inferred
+            ori_env_kwargs["config_dir_path"] = inferred
+    elif args.config_dir_path is not None:
+        env_kwargs["config_dir_path"] = args.config_dir_path
+        ori_env_kwargs["config_dir_path"] = args.config_dir_path
+
+    if args.robot_uids is not None:
+        env_kwargs["robot_uids"] = args.robot_uids
+        ori_env_kwargs["robot_uids"] = args.robot_uids
+
+    return env_id, ori_env_kwargs, env_kwargs, env_info
 
 
 def sanity_check_and_format_seed(episode):
@@ -112,7 +154,7 @@ def sanity_check_and_format_seed(episode):
 
 
 def replay_parallelized_sim(
-    args: Args, env: RecordEpisode, pbar, episodes, trajectories
+    args: Args, env: MyRecordEpisode, pbar, episodes, trajectories
 ):
     pbar.reset(total=len(episodes))
     warned_reset_kwargs_options = False
@@ -251,7 +293,7 @@ def replay_parallelized_sim(
 
 
 def replay_cpu_sim(
-    args: Args, env: RecordEpisode, ori_env, pbar, episodes, trajectories
+    args: Args, env: MyRecordEpisode, ori_env, pbar, episodes, trajectories
 ):
     successful_replays = 0
     for episode in episodes:
@@ -439,7 +481,7 @@ def _main(
     else:
         pass
 
-    env = wrappers.RecordEpisode(
+    env = MyRecordEpisode(
         env,
         output_dir,
         trajectory_name=new_traj_name,
@@ -480,10 +522,9 @@ def main(args: Args):
     json_path = traj_path.replace(".h5", ".json")
     json_data = io_utils.load_json(json_path)
 
-    env_info = json_data["env_info"]
-    env_id = env_info["env_id"]
-    ori_env_kwargs = env_info["env_kwargs"]
-    env_kwargs = ori_env_kwargs.copy()
+    env_id, ori_env_kwargs, env_kwargs, env_info = _build_env_config(
+        args, json_data, traj_path
+    )
 
     ### Checks and setting up env kwargs ###
     # First we determine how to setup the environment to replay demonstrations and raise relevant warnings to the user
@@ -549,7 +590,7 @@ def main(args: Args):
         env_kwargs["sim_backend"] = "physx_cpu"
     if env_kwargs["sim_backend"] not in CPU_SIM_BACKENDS:
         env_kwargs["num_envs"] = args.num_envs
-        record_episode_kwargs["max_steps_per_video"] = env_info["max_episode_steps"]
+        record_episode_kwargs["max_steps_per_video"] = env_info.get("max_episode_steps", 1000)
         _, replay_result = _main(
             args,
             use_cpu_backend=False,
