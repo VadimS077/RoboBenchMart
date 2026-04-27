@@ -12,3 +12,4 @@ outputs
 *.csv
 forge/
 openpi/
+generated_envs/

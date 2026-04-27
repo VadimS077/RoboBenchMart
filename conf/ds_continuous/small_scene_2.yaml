@@ -21,12 +21,13 @@ active_shelvings_list:
     shuffle_items_on_board: True
     shuffle_boards: True
     filling_type: BOARDWISE_COLUMNS
-    x_gap: 0.1
+    x_gap: 0.08
     y_gap: 0.05
-    noise_std_x: 0.001
-    noise_std_y: 0.001
-    rotation_lower: -0.2
-    rotation_upper: 0.2
+    noise_std_x: 0.01
+    noise_std_y: 0.01
+    rotation_lower: -0.3
+    rotation_upper: 0.3
+    delta_x: 0.1
     shelf_asset: fixtures.shelf_metal
     board_product_numcol:
       0:

@@ -30,16 +30,16 @@ ds_continuous:
         food.drinks.coffeePaperBag: 2
         food.STRONG_ALCO.PierceRum: 2
         food.HOUSEHOLD.AviasParquetDetergent: 2
-    x_gap: 0.1
+    x_gap: 0.08
     y_gap: 0.05
-    delta_x: 0.0
+    delta_x: 0.1
     delta_y: 0.0
     start_point_x: -1.0
     start_point_y: -1.0
-    noise_std_x: 0.001
-    noise_std_y: 0.001
-    rotation_lower: -0.2
-    rotation_upper: 0.2
+    noise_std_x: 0.01
+    noise_std_y: 0.01
+    rotation_lower: -0.3
+    rotation_upper: 0.3
     shelf_asset: fixtures.shelf_metal
     shelf_type: SHELF
   active_wall_shelvings_list: []
@@ -62,7 +62,7 @@ ds_continuous:
     fixtures.small_shelf_two_sided:
     - fixtures.small_shelf_two_sided_fake_1
     - fixtures.small_shelf_two_sided_fake_1
-  num_scenes: 5
+  num_scenes: 1
   num_workers: 1
   output_dir: generated_envs/${ds_continuous.name}
   rewrite: true
