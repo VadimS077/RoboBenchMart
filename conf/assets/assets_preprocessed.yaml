@@ -114,12 +114,14 @@ products_hierarchy:
         ss_params:
           scale: 1
           origin: [com, com, bottom]
+          transform: [[0, -1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
       coffeePackaging1:
         asset_file_path: ${assets.assets_dir_path}/preprocessed/coffeePackaging1.glb
         asset_name: coffee package
         ss_params:
           scale: 1
           origin: [com, com, bottom]
+          transform: [[0, -1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
       coffeeCapsulesDolceGusto:
         asset_file_path: ${assets.assets_dir_path}/preprocessed/coffeeCapsulesDolceGusto.glb
         asset_name: capsules dolce gusto
@@ -885,6 +887,7 @@ products_hierarchy:
         ss_params:
           scale: 1
           origin: [com, com, bottom]
+          transform: [[0, -1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
       HeadAndShouldersShampooSensitive:
         asset_file_path: ${assets.assets_dir_path}/preprocessed/head__shoulder_shampoo_tube.glb
         asset_name: Head And Shoulders Shampoo Sensitive
@@ -939,6 +942,7 @@ products_hierarchy:
         ss_params:
           scale: 1
           origin: [com, com, bottom]
+          transform: [[0, -1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
       GrandesHeroesShampoo:
         asset_file_path: ${assets.assets_dir_path}/preprocessed/shampoo_grandes_heroes_rotated.glb
         asset_name: Grandes Heroes Shampoo
@@ -1005,12 +1009,14 @@ products_hierarchy:
         ss_params:
           scale: 1
           origin: [com, com, bottom]
+          transform: [[0, -1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
       AxeApolloDeodorant:
         asset_file_path: ${assets.assets_dir_path}/preprocessed/axe_deodorant_rotated.glb
         asset_name: Axe Apollo Deodorant
         ss_params:
           scale: 1
           origin: [com, com, bottom]
+          transform: [[0, -1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
       DeodorantKrakengard:
         asset_file_path: ${assets.assets_dir_path}/preprocessed/deodrant_rotated.glb
         asset_name: Deodorant Krakengard
@@ -1035,6 +1041,7 @@ products_hierarchy:
         ss_params:
           scale: 1
           origin: [com, com, bottom]
+          transform: [[0, 1, 0, 0], [-1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
       TododiaBodySpray:
         asset_file_path: ${assets.assets_dir_path}/preprocessed/tododia_spray_datiles_y_canela_rotated.glb
         asset_name: Tododia Body Spray
@@ -1077,6 +1084,7 @@ products_hierarchy:
         ss_params:
           scale: 1
           origin: [com, com, bottom]
+          transform: [[0, -1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
       BarbasolShavingCream:
         asset_file_path: ${assets.assets_dir_path}/preprocessed/barbasol_shaving_cream_can_rotated.glb
         asset_name: Barbasol Shaving Cream
@@ -1174,6 +1182,7 @@ products_hierarchy:
         ss_params:
           scale: 1
           origin: [com, com, bottom]
+          transform: [[0, -1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
       CookiesAndBiscuitsBox:
         asset_file_path: ${assets.assets_dir_path}/preprocessed/boite_biscuits_en_metal_cookies_box_rotated.glb
         asset_name: Cookies And Biscuits Box
@@ -1222,6 +1231,7 @@ products_hierarchy:
         ss_params:
           scale: 1
           origin: [com, com, bottom]
+          transform: [[0, -1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
       BananiaCookies:
         asset_file_path: ${assets.assets_dir_path}/preprocessed/banania_boite_en_tole.glb
         asset_name: Banania Cookies
@@ -1466,6 +1476,7 @@ products_hierarchy:
         ss_params:
           scale: 1
           origin: [com, com, bottom]
+          transform: [[-1, 0, 0, 0], [0, -1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
       VanishStainRemover:
         asset_file_path: ${assets.assets_dir_path}/preprocessed/vanish_remover.glb
         asset_name: Vanish Stain Remover
@@ -1945,6 +1956,7 @@ products_hierarchy:
         ss_params:
           scale: 1
           origin: [com, com, bottom]
+          transform: [[0, -1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
       PirateRumBottle:
         asset_file_path: ${assets.assets_dir_path}/preprocessed/pirate_rum_bottle_rotated.glb
         asset_name: Pirate Rum Bottle
@@ -2349,6 +2361,7 @@ products_hierarchy:
         ss_params:
           scale: 1
           origin: [com, com, bottom]
+          transform: [[0, -1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
       RoyalBioPinkGuavaNectar:
         asset_file_path: ${assets.assets_dir_path}/preprocessed/royal_goyave_rose_bio_1l_rotated.glb
         asset_name: Royal Bio Pink Guava Nectar

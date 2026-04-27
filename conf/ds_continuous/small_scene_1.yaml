@@ -6,7 +6,7 @@ name: 'ds_small_scene_1'
 rewrite: true
 size_x: 12
 size_y: 10
-num_scenes: 1
+num_scenes: 5
 num_workers: 1
 layout_gen_type: PROCEDURAL_TENSOR_FIELD
 randomize_layout: true
@@ -36,7 +36,7 @@ active_shelvings_list:
       1: 
         food.HOUSEHOLD.AceDetergent: 2
         food.QUICK_FOOD.NissinCurry: 2
-        food.HOUSEHOLD.BlenderKitchenCleaningSpray: 2
+        
       2:
         food.COOKING.Allinson'SBreadFlour: 2
         food.CRACKERS_COOKIES.AlmondCookies: 2

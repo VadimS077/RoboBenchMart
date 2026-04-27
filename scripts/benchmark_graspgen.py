@@ -75,16 +75,71 @@ from dsynth.planning.utils import (
 from grasp_gen.serving.zmq_client import GraspGenClient
 
 PRODUCT_SLUG_MAP = {
+    "nissin": "NissinCurry",
+    "allinson": "Allinson'SBreadFlour",
+    "baileys": "BaileysTiramisu",
+    "ace": "AceDetergent",
+    "mlekarna": "MlekarnaKuninMilk",
+    "axe": "AxeApolloDeodorant",
+    "almond": "AlmondCookies",
+    "tequila_blue": "BotellaDeTequilaBlueAgave",
+    "rum": "PierceRum",
+    "ramen": "Jin-RamenNoodles",
+    "kasivoide": "KasivoideHandCream",
+    "avias": "AviasParquetDetergent", #first
+    "salt": "JapaneseSalt",
+    "volcan_tequila": "VolcanDeMiTierraTequila",
+    "wonka": "WonkaRuntsCandies",
+    "niveasun": "NiveaSunProtegeFp50",
+    "perwoll": "PerwollDetergent",
+    "olive_oil": "MarikenAndMartinOliveOil",
+    "oldspice": "OldspiceNightpantherDeodorant",
+    "heb": "HebMouthRinse",
+    "savannah": "SavannahHandWash",
+    "amita": "AmitaPeachJuice",
+    "whisky": "TopvaluWhisky",
+    "pepsi": "PepsiMaxNoSugar0.33L",#second
+    "coffee_packaging1": "coffeePackaging1",
+    "barry_chunks": "BarryCallebautMilkChockolateChunks",
+    "milk": "ReducedFatMilk",
+    "coffee_paper_bag": "coffeePaperBag",
     "oreo": "OreoLemonCremeSandwichCookies",
     "monster": "MonsterEnergyDrink",
-    "vanish": "VanishStainRemover",
+    "vanish": "VanishStainRemover"
 }
 
 # Имена product_name в products_df (как в PickToBasketCont*Env.TARGET_PRODUCT_NAME)
 PRODUCT_DISPLAY_NAMES = {
+    "nissin": "Nissin Curry",
+    "allinson": "Allinson's Bread Flour",
+    "baileys": "Baileys Tiramisu",
+    "ace": "Ace Detergent",
+    "axe": "Axe Apollo Deodorant",
+    "almond": "Almond Cookies",
+    "tequila_blue": "Botella De Tequila Blue Agave", # test
+    "rum": "Pierce Rum",
+    "ramen": "Jin-Ramen Noodles", # test
+    "kasivoide": "Kasivoide Hand Cream", # test
+    "avias": "Avias Parquet Detergent", #first
+    "salt": "Japanese Salt", # test
+    "volcan_tequila": "Volcan De Mi Tierra Tequila",
+    "wonka": "Wonka Runts Candies",
+    "niveasun": "Nivea Sun Protege FP50",
+    "perwoll": "Perwoll Detergent",
+    "olive_oil": "Mariken and Martin Olive Oil",
+    "oldspice": "OldSpice Nightpanther Deodorant", # test
+    "heb": "HEB Mouth Rinse",
+    "savannah": "Savannah Hand Wash", # test
+    "amita": "Amita Peach Juice",
+    "whisky": "Topvalu Whisky",
+    "pepsi": "Pepsi Max No Sugar 0.33L", #second
+    "coffee_packaging": "coffee package",
+    "barry_chunks": "Barry Callebaut Milk Chockolate Chunks", #test
+    "milk": "Reduced Fat Milk", #test
+    "coffee_paper": "paper coffee package",
     "oreo": "Oreo Lemon Creme Sandwich Cookies",
-    "monster": "Monster Energy Drink",
-    "vanish": "Vanish Stain Remover",
+    "monster": "Monster Energy Drink", # test
+    "vanish": "Vanish Stain Remover" # test, third
 }
 
 
@@ -818,6 +873,12 @@ def _make_env(
 def parse_args():
     p = argparse.ArgumentParser(description="Benchmark GraspGen vs dummy MP")
     p.add_argument("--scenes-root", type=Path, default=ROOT_DIR / "generated_envs", help="Dir with ds_small_scene_* dirs")
+    p.add_argument(
+        "--scene-names",
+        nargs="+",
+        default=None,
+        help="Optional subset of scene directory names to process",
+    )
     p.add_argument("--products", nargs="+", default=["oreo", "monster", "vanish"])
     p.add_argument("--num-traj", type=int, default=5,
                    help="Число эпизодов на (сцену, продукт) для обоих режимов")
@@ -875,6 +936,11 @@ def _close_env_safely(env) -> None:
         print(f"[Env] close() warning: {e}")
 
 
+def _should_count_episode(success: bool, only_count_success: bool) -> bool:
+    """Whether this episode should decrement per-product quota."""
+    return success if only_count_success else True
+
+
 def _run_scene_benchmark(
     args: argparse.Namespace,
     scene_dir: Path,
@@ -887,7 +953,7 @@ def _run_scene_benchmark(
     record_dir = str(scene_dir / "demos" / "benchmark")
     products = list(args.products)
     episodes_target = int(args.num_traj) * len(products)
-    max_attempts = max(episodes_target * 20, 100)
+    max_attempts = max(episodes_target * 100, 100)
 
     gg_enabled = (not args.skip_graspgen) and (graspgen_client is not None)
     dm_enabled = not args.skip_dummy
@@ -938,7 +1004,6 @@ def _run_scene_benchmark(
                             save_video=args.save_video,
                             only_success=args.only_count_success,
                         )
-                    pbar.update(1)
                     continue
                 product_slug = selectable[int(rng_ep.integers(len(selectable)))]
                 gg_targets = cand[product_slug]
@@ -965,7 +1030,9 @@ def _run_scene_benchmark(
                 trials.append(BenchTrial(seed_idx, product_slug, target_actor))
                 overall_gg.append(ok_gg)
                 by_prod_gg[product_slug].append(ok_gg)
-                remaining[product_slug] -= 1
+                counted_gg = _should_count_episode(ok_gg, args.only_count_success)
+                if counted_gg:
+                    remaining[product_slug] -= 1
                 print(f"  GraspGen: success={ok_gg}, dist={dist_gg:.4f}, left={remaining[product_slug]}")
                 if record:
                     _flush_episode(
@@ -974,7 +1041,8 @@ def _run_scene_benchmark(
                         save_video=args.save_video,
                         only_success=args.only_count_success,
                     )
-                pbar.update(1)
+                if counted_gg:
+                    pbar.update(1)
         finally:
             _close_env_safely(env_gg)
         if attempts >= max_attempts and not _all_product_quotas_done(remaining):
@@ -997,7 +1065,7 @@ def _run_scene_benchmark(
                 args.save_video,
                 args.video_fps,
             )
-            if trials:
+            if trials and not args.only_count_success:
                 for i, trial in enumerate(trials, start=1):
                     _, _ = env_dm.reset(seed=trial.seed_idx, options={"reconfigure": True})
                     print(
@@ -1048,7 +1116,6 @@ def _run_scene_benchmark(
                                 save_video=args.save_video,
                                 only_success=args.only_count_success,
                             )
-                        pbar.update(1)
                         continue
                     product_slug = selectable[int(rng_ep.integers(len(selectable)))]
                     dm_targets = cand[product_slug]
@@ -1072,7 +1139,9 @@ def _run_scene_benchmark(
                         ok_dm, dist_dm = False, float("inf")
                     overall_dm.append(ok_dm)
                     by_prod_dm[product_slug].append(ok_dm)
-                    remaining[product_slug] -= 1
+                    counted_dm = _should_count_episode(ok_dm, args.only_count_success)
+                    if counted_dm:
+                        remaining[product_slug] -= 1
                     print(
                         f"  Dummy: success={ok_dm}, dist={dist_dm:.4f}, left={remaining[product_slug]}"
                     )
@@ -1083,7 +1152,8 @@ def _run_scene_benchmark(
                             save_video=args.save_video,
                             only_success=args.only_count_success,
                         )
-                    pbar.update(1)
+                    if counted_dm:
+                        pbar.update(1)
                 if attempts >= max_attempts and not _all_product_quotas_done(remaining):
                     print(
                         f"[{scene_name}] Dummy: достигнут предел попыток ({max_attempts}); "
@@ -1165,11 +1235,14 @@ def _print_results_summary(results: Dict[str, Any]) -> None:
 def main():
     args = parse_args()
     scenes_root = args.scenes_root.resolve()
-    scene_dirs = sorted([d for d in scenes_root.iterdir() if d.is_dir() and (d / "scene_items.csv").is_file()])
+    scene_dirs = sorted([d for d in scenes_root.iterdir() if d.is_dir()])
+    if args.scene_names:
+        wanted = {name.strip() for name in args.scene_names if name.strip()}
+        scene_dirs = [d for d in scene_dirs if d.name in wanted]
 
-    if not scene_dirs:
-        print(f"No scene dirs with scene_items.csv found in {scenes_root}")
-        return
+    # if not scene_dirs:
+    #     print(f"No scene dirs with scene_items.csv found in {scenes_root}")
+    #     return
 
     print(f"Scenes: {[d.name for d in scene_dirs]}")
     print(f"Product pool: {args.products}")

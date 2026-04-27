@@ -1,7 +1,6 @@
 .vscode
 __pycache__
 assets*/
-!conf/assets
 !dsynth/assets
 .ipynb_checkpoints
 .hydra
@@ -12,3 +11,4 @@ outputs
 *.jpg
 *.csv
 forge/
+openpi/
